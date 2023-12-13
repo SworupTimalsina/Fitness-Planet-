@@ -1,0 +1,52 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../images/ng.png");
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.input-container {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+input {
+    width: calc(100% + 20px);
+    height: 55px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background: transparent;
+    color: grey;
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    marginTop: 15px; /* Use camelCase for marginTop */
+}
+
+#ResetPassword {
+    position: absolute;
+    top: 175px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
