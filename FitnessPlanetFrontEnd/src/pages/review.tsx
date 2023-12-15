@@ -1,7 +1,8 @@
 import './review.css';
 import dumbell from '../images/Dumbell.png';
 import React, {useState} from 'react';
-// import Description from './Description.tsx'; // Import your Page1 component
+import DescriptionContent from './DescriptionContent.tsx'; // Import your Page1 component
+import ReviewContent from "./ReviewContent.tsx";
 
 const Review: React.FC = () => {
 
@@ -10,22 +11,24 @@ const Review: React.FC = () => {
     const handleToggle = () => {
         setChecked(!checked); // Toggle the state
     };
+
     // const [showDescription, setShowDescription] = useState(true); // State to track which page to display
 
     // const handleToggle = () => {
     //     setShowDescription(!showDescription); // Toggle the state to switch between pages
     // };
 
+
     return (
         <body className="reviewbody">
         <div>
         <div className="top-buttons">
-            <button style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></button>
+            <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
             <div className="buttons">
-            <button style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></button>
-            <button style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></button>
-            <button style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></button>
-            <button style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></button>
+            <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
+                <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
+                <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
+                <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
             </div>
 
         </div>
@@ -38,7 +41,7 @@ const Review: React.FC = () => {
 
                 </span>
             </label>
-            <p>{checked ? 'Enabled' : 'Disabled'}</p>
+            <p>{checked ? <ReviewContent /> : <DescriptionContent />}</p>
         </form></div>
 
         </body>
