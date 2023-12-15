@@ -5,6 +5,8 @@ import Home from "./pages/home.tsx";
 import ForgotPass from "./pages/forgotpass.tsx";
 import Registration from "./pages/registration.tsx";
 import Dashboard from "./pages/dashboard.tsx";
+import Review from "./pages/review.tsx";
+
 
 const router = createBrowserRouter(
     [
@@ -32,6 +34,10 @@ const router = createBrowserRouter(
             path:"/dashboard",
             element:<Dashboard/>
         },
+        {
+            path:"/review",
+            element:<Review/>
+        }
 
     ]
 )
