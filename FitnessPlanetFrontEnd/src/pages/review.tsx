@@ -35,7 +35,7 @@ const Review: React.FC = () => {
             <label className="switch">
                 <input type="checkbox" checked={checked} onChange={handleToggle} />
                 <span className="slider round">
-                     {checked ? 'Description' : 'Review'}
+
                 </span>
             </label>
             <p>{checked ? 'Enabled' : 'Disabled'}</p>
