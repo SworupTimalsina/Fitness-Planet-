@@ -2,7 +2,7 @@ package com.example.fitnessplanet.fitnessplanet.controller;
 
 
 
-import com.example.fitnessplanet.fitnessplanet.User;
+import com.example.fitnessplanet.fitnessplanet.entity.User;
 import com.example.fitnessplanet.fitnessplanet.dto.UserDTO;
 import com.example.fitnessplanet.fitnessplanet.service.UserService;
 import lombok.RequiredArgsConstructor;

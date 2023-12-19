@@ -1,4 +1,4 @@
-package com.example.fitnessplanet.fitnessplanet;
+package com.example.fitnessplanet.fitnessplanet.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,14 +20,14 @@ public class User {
     @GeneratedValue(generator = "users_seq_gen", strategy = GenerationType.SEQUENCE)
     private Integer id;
 
-    @Column(name = "fullname", nullable = false)
-    private String fullName;
+    @Column(name = "firstName", nullable = false)
+    private String firstName;
+
+    @Column(name = "lastName", nullable = false)
+    private String lastName;
 
     @Column(nullable = false)
     private String email;
-
-    @Column(name = "mobile_no")
-    private String mobileNo;
 
     @Column(name = "password", nullable = false)
     private String password;

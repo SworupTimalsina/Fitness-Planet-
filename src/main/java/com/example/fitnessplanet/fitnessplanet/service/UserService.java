@@ -1,6 +1,6 @@
 package com.example.fitnessplanet.fitnessplanet.service;
 
-import com.example.fitnessplanet.fitnessplanet.User;
+import com.example.fitnessplanet.fitnessplanet.entity.User;
 import com.example.fitnessplanet.fitnessplanet.dto.UserDTO;
 
 

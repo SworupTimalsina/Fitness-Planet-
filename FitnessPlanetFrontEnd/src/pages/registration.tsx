@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './registration.css'; // Import your CSS file
 
 interface FormData {
-    fullname: string;
+    firstname: string;
+    lastname:string;
     email: string;
     username: string;
     password: string;
@@ -11,7 +12,8 @@ interface FormData {
 
 const RegistrationForm: React.FC = () => {
     const [formData, setFormData] = useState<FormData>({
-        fullname: '',
+        firstname: '',
+        lastname:'',
         email: '',
         username: '',
         password: '',
@@ -33,7 +35,7 @@ const RegistrationForm: React.FC = () => {
     };
 
     const validateRegistration = () => {
-        const { username, email, password, repeatPassword } = formData;
+        const { firstname, lastname, username, email, password, repeatPassword } = formData;
 
         if (username && email && password && repeatPassword && password === repeatPassword) {
             alert('Registration successful!');
@@ -51,11 +53,21 @@ const RegistrationForm: React.FC = () => {
             <div id="input-container">
                 <input
                     type="text"
-                    id="fullname"
-                    name="fullname"
-                    placeholder="Full Name"
+                    id="firstname"
+                    name="firstname"
+                    placeholder="First Name"
                     required
-                    value={formData.fullname}
+                    value={formData.firstname}
+                    onChange={handleChange}
+                />
+
+                <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Last Name"
+                    required
+                    value={formData.lastname}
                     onChange={handleChange}
                 />
 

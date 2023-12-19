@@ -12,13 +12,14 @@
 }
 
 .profile-button {
-    margin-right: 500px; /* Adjust the margin to create space */
+    margin-right: 550px; /* Adjust the margin to create space */
+    margin-left: 50px;
 }
 
 .buttons{
-    gap: 50px;
+    gap: 120px;
     display: flex;
-    margin-left: 150px;
+    margin-left: 90px;
     /*margin-right: 50px;*/
     font-family: Poppins, sans-serif;
 
@@ -41,6 +42,9 @@
 
 .change-page{
     background-color: white;
+    display: flex;
+    align-content: center;
+    text-align: center;
     /*width: 500px;*/
     /*height: 800px;*/
     /*border: 2px;*/
