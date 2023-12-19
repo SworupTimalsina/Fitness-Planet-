@@ -48,27 +48,4 @@ public class UserController {
         userService.deleteById(id);
     }
 
-//    @PostMapping("/login")
-//    public String login(@RequestBody UserDTO userDTO) {
-//        Optional<User> userOptional = userService.getByUsername(userDTO.getUsername());
-//
-//        if (userOptional.isPresent()) {
-//            User user = userOptional.get();
-//
-//            if (user.getPassword().equals(userDTO.getPassword())) {
-//                return "Login successful!";
-//            } else {
-//                return "Invalid password. Please try again.";
-//            }
-//        } else {
-//            return "User not found. Please register first.";
-//        }
-//    }
 }
-
-
-
-
-
-
-

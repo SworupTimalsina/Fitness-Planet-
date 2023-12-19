@@ -18,7 +18,7 @@
 }
 
 .buttons{
-    gap: 50px;
+    gap: 120px;
     display: flex;
     margin-right: 10px;
     /*margin-right: 50px;*/
@@ -43,6 +43,9 @@
 
 .change-page{
     background-color: white;
+    display: flex;
+    align-content: center;
+    text-align: center;
     /*width: 500px;*/
     /*height: 800px;*/
     /*border: 2px;*/

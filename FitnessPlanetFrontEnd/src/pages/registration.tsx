@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './registration.css'; // Import your CSS file
 
 interface FormData {
-    fullname: string;
+    firstname: string;
+    lastname:string;
     email: string;
     username: string;
     password: string;
@@ -11,7 +12,8 @@ interface FormData {
 
 const RegistrationForm: React.FC = () => {
     const [formData, setFormData] = useState<FormData>({
-        fullname: '',
+        firstname: '',
+        lastname:'',
         email: '',
         username: '',
         password: '',
@@ -32,17 +34,17 @@ const RegistrationForm: React.FC = () => {
         setShowPassword((prevShowPassword) => !prevShowPassword);
     };
 
-    const validateRegistration = () => {
-        const { username, email, password, repeatPassword } = formData;
-
-        if (username && email && password && repeatPassword && password === repeatPassword) {
-            alert('Registration successful!');
-        } else if (password !== repeatPassword) {
-            alert('Passwords do not match. Please try again.');
-        } else {
-            alert('Please fill in all the fields.');
-        }
-    };
+    // const validateRegistration = () => {
+    //     const { firstname, lastname, username, email, password, repeatPassword } = formData;
+    //
+    //     if (username && email && password && repeatPassword && password === repeatPassword) {
+    //         alert('Registration successful!');
+    //     } else if (password !== repeatPassword) {
+    //         alert('Passwords do not match. Please try again.');
+    //     } else {
+    //         alert('Please fill in all the fields.');
+    //     }
+    // };
 
     return (
         <div className="container">
@@ -58,7 +60,7 @@ const RegistrationForm: React.FC = () => {
                     name="firstname"
                     placeholder="      First Name"
                     required
-                    value={formData.fullname}
+                    value={formData.lastname}
                     onChange={handleChange}
                 />
 
@@ -116,7 +118,7 @@ const RegistrationForm: React.FC = () => {
                     <label>Show Password</label>
                 </div>
 
-                <button type="button" onClick={validateRegistration} className="regbutton" style={{backgroundColor:"red"}}>
+                <button type="button" className="regbutton" style={{backgroundColor:"red"}}>
                     Register
                 </button>
             </div>
