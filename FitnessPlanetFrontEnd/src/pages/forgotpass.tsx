@@ -7,7 +7,7 @@ function Forgotpass(){
 
         if (email) {
             alert('Password reset link sent to ' + email);
-  //          window.location.href = 'forgotpass1.html';
+            //          window.location.href = 'forgotpass1.html';
         } else {
             alert('Please enter your email address.');
         }
@@ -16,13 +16,14 @@ function Forgotpass(){
     return (
         <div className="container">
             <label id="ResetPassword">Reset Password</label>
-        <div className="input-container">
+            <div className="input-container">
 
-            <input type="email" placeholder="Email" id="email" name="email" required />
-            <button type="submit" onClick={sendResetLink} style={{backgroundColor: 'red'}}>
-                Send Reset Link
-            </button>
-        </div>
+                <input type="email" placeholder="       Email" id="email" name="email" required />
+                <button type="submit" onClick={sendResetLink} style={{backgroundColor: 'red', color:"white"}} id="sendbutton">
+                    Send Reset Link
+                </button>
+                <a href="/login" className="login-nav">Go to Login Page</a>
+            </div>
         </div>
     );
 };

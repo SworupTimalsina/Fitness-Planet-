@@ -34,17 +34,17 @@ const RegistrationForm: React.FC = () => {
         setShowPassword((prevShowPassword) => !prevShowPassword);
     };
 
-    const validateRegistration = () => {
-        const { firstname, lastname, username, email, password, repeatPassword } = formData;
-
-        if (username && email && password && repeatPassword && password === repeatPassword) {
-            alert('Registration successful!');
-        } else if (password !== repeatPassword) {
-            alert('Passwords do not match. Please try again.');
-        } else {
-            alert('Please fill in all the fields.');
-        }
-    };
+    // const validateRegistration = () => {
+    //     const { firstname, lastname, username, email, password, repeatPassword } = formData;
+    //
+    //     if (username && email && password && repeatPassword && password === repeatPassword) {
+    //         alert('Registration successful!');
+    //     } else if (password !== repeatPassword) {
+    //         alert('Passwords do not match. Please try again.');
+    //     } else {
+    //         alert('Please fill in all the fields.');
+    //     }
+    // };
 
     return (
         <div className="container">
@@ -118,7 +118,7 @@ const RegistrationForm: React.FC = () => {
                     <label>Show Password</label>
                 </div>
 
-                <button type="button" onClick={validateRegistration} className="regbutton" style={{backgroundColor:"red"}}>
+                <button type="button" className="regbutton" style={{backgroundColor:"red"}}>
                     Register
                 </button>
             </div>
