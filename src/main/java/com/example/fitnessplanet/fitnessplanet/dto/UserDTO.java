@@ -12,16 +12,18 @@ public class UserDTO {
 
     private Integer id;
     @NotNull
-    private String fullName;
+    private String firstName;
+    @NotNull
+    private String lastName;
+    @NotNull
+    private String username;
     @NotNull
     private String email;
-    @NotNull
-    private String mobileNo;
     @NotNull
     private String password;
 
 
     public String getUsername() {
-        return email;
+        return username;
     }
 }
