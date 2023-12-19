@@ -1,6 +1,6 @@
 package com.example.fitnessplanet.fitnessplanet.service;
 
-import com.example.fitnessplanet.fitnessplanet.User;
+import com.example.fitnessplanet.fitnessplanet.entity.User;
 import com.example.fitnessplanet.fitnessplanet.dto.UserDTO;
 
 
@@ -15,4 +15,12 @@ public interface UserService {
     Optional<User> getById(Integer id);
 
     void deleteById(Integer id);
+
+//    Optional<User> getByUsername(String username);
+//
+//    Optional<User> getByEmail(String email);
+
+
+
 }
+

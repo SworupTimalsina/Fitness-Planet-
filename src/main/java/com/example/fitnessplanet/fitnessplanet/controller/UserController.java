@@ -2,7 +2,7 @@ package com.example.fitnessplanet.fitnessplanet.controller;
 
 
 
-import com.example.fitnessplanet.fitnessplanet.User;
+import com.example.fitnessplanet.fitnessplanet.entity.User;
 import com.example.fitnessplanet.fitnessplanet.dto.UserDTO;
 import com.example.fitnessplanet.fitnessplanet.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -48,4 +48,27 @@ public class UserController {
         userService.deleteById(id);
     }
 
+//    @PostMapping("/login")
+//    public String login(@RequestBody UserDTO userDTO) {
+//        Optional<User> userOptional = userService.getByUsername(userDTO.getUsername());
+//
+//        if (userOptional.isPresent()) {
+//            User user = userOptional.get();
+//
+//            if (user.getPassword().equals(userDTO.getPassword())) {
+//                return "Login successful!";
+//            } else {
+//                return "Invalid password. Please try again.";
+//            }
+//        } else {
+//            return "User not found. Please register first.";
+//        }
+//    }
 }
+
+
+
+
+
+
+

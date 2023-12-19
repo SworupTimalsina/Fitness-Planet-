@@ -1,4 +1,4 @@
-package com.example.fitnessplanet.fitnessplanet;
+package com.example.fitnessplanet.fitnessplanet.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

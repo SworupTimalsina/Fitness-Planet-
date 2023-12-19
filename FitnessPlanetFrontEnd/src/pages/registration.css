@@ -1,77 +1,165 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-size: 100% 100%;
+.container{
+    background-image: url('../images/ng.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.firstname{
+
+    width: 425px;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.14);
+    margin-left: 45px;
+    margin-top: 30px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 15px 0  0 15px;
+    font-family: Poppins,sans-serif;
+    font-size: 24px;
+
+}
+
+.lastname{
+    width: 425px;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.14);
+    margin-top: 30px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 0 15px 15px 0;
+    font-family: Poppins,sans-serif;
+    font-size: 24px;
 }
 
 
+.user,.email{
 
-/* form {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-} */
+    width: 100%;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.14);
+    margin-left: 45px;
+    margin-top: 15px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    font-family: Poppins,sans-serif;
+    font-size: 24px;
+
+}
+
+.pass{
+
+    width: 425px;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.14);
+    margin-left: 45px;
+    margin-top: 15px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 15px 0  0 15px;
+    font-family: Poppins,sans-serif;
+    font-size: 24px;
+
+}
+
+.repeatPassword{
+
+    width: 425px;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.14);
+    margin-top: 15px;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 0 15px 15px 0;
+    font-family: Poppins,sans-serif;
+    font-size: 24px;
+
+}
+
+
 #input-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
+    width: 850px;
+    color: white;
+
 
 }
 
-#showpass{
-    align-items: start;
-}
-input{
-    width: 100%;
-    height : 55px;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    background: transparent;
-    color: grey;
-    border: 2px solid #fff;
-    border-radius: 8px;
-
+.firstlast{
+    display: flex;
 }
 
-button {
+.passre{
+    display: flex;
+}
+
+.firstname::placeholder,.lastname::placeholder,.user::placeholder,.pass::placeholder,.repeatPassword::placeholder,.email::placeholder{
+    color: white;
+
+}
+/*#showpass{*/
+/*    align-items: start;*/
+/*}*/
+
+
+.regbutton {
     background-color: red;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    margin-top: 10px;
+    width: 250px;
+    height: 50px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
 }
 
 
 
-input[type="checkbox"] {
 
-    width: 20px;
-    height: 20px;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    outline: none;
-    left: 0;
-    cursor: pointer;
+/*input[type="checkbox"] {*/
 
-}
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    background-color: #eee;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 3px;*/
+/*    outline: none;*/
+/*    left: 0;*/
+/*    cursor: pointer;*/
+
+/*}*/
 
 #registertxt{
     position: absolute;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 40px;
     font-family: Poppins;
     color: white;
+}
+
+.login-navi{
+    position: absolute;
+    bottom: 50px;
+    left: 39%;
+    color: white;
+    font-family: Poppins,sans-serif;
+    font-size: 20px;
+
+}
+
+.login-navi:hover{
+    color: red;
 }

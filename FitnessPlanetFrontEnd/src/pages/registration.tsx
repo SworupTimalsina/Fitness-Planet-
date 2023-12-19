@@ -45,25 +45,31 @@ const RegistrationForm: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="container">
+            <div className="regtxt">
             <label id="registertxt">Register</label>
+            </div>
 
             <div id="input-container">
+                <div className="firstlast">
                 <input
                     type="text"
-                    id="fullname"
-                    name="fullname"
-                    placeholder="Full Name"
+                    className="firstname"
+                    name="firstname"
+                    placeholder="      First Name"
                     required
                     value={formData.fullname}
                     onChange={handleChange}
                 />
 
+                <input type="text"  placeholder="      Last Name" className="lastname"/>
+                </div>
+
                 <input
                     type="email"
-                    id="email"
+                    className="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="      Email"
                     required
                     value={formData.email}
                     onChange={handleChange}
@@ -71,19 +77,19 @@ const RegistrationForm: React.FC = () => {
 
                 <input
                     type="text"
-                    id="username"
+                    className="user"
                     name="username"
-                    placeholder="Username"
+                    placeholder="      Username"
                     required
                     value={formData.username}
                     onChange={handleChange}
                 />
-
+                <div className="passre">
                 <input
                     type={showPassword ? 'text' : 'password'}
-                    id="password"
+                    className="pass"
                     name="password"
-                    placeholder="Password"
+                    placeholder="      Password"
                     required
                     value={formData.password}
                     onChange={handleChange}
@@ -91,13 +97,14 @@ const RegistrationForm: React.FC = () => {
 
                 <input
                     type={showPassword ? 'text' : 'password'}
-                    id="repeatPassword"
+                    className="repeatPassword"
                     name="repeatPassword"
-                    placeholder="Repeat Password"
+                    placeholder="      Repeat Password"
                     required
                     value={formData.repeatPassword}
                     onChange={handleChange}
                 />
+                </div>
 
                 <div id="showpass">
                     <input
@@ -109,9 +116,14 @@ const RegistrationForm: React.FC = () => {
                     <label>Show Password</label>
                 </div>
 
-                <button type="button" onClick={validateRegistration}>
+                <button type="button" onClick={validateRegistration} className="regbutton" style={{backgroundColor:"red"}}>
                     Register
                 </button>
+            </div>
+
+            <div className="loginnav">
+                <a href="/login" className="login-navi">Already have an account? Login</a>
+
             </div>
         </div>
     );

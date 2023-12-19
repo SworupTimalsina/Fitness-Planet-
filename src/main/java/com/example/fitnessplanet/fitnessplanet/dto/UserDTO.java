@@ -19,4 +19,9 @@ public class UserDTO {
     private String mobileNo;
     @NotNull
     private String password;
+
+
+    public String getUsername() {
+        return email;
+    }
 }
