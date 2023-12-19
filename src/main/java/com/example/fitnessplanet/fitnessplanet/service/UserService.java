@@ -15,4 +15,12 @@ public interface UserService {
     Optional<User> getById(Integer id);
 
     void deleteById(Integer id);
+
+//    Optional<User> getByUsername(String username);
+//
+//    Optional<User> getByEmail(String email);
+
+
+
 }
+

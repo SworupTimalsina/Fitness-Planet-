@@ -1,12 +1,12 @@
 import './App.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from "./pages/login.tsx";
-import Home from "./pages/home.tsx";
 import ForgotPass from "./pages/forgotpass.tsx";
 import Registration from "./pages/registration.tsx";
 import Dashboard from "./pages/dashboard.tsx";
 import Review from "./pages/review.tsx";
 
+import Products from "./pages/products.tsx";
 
 const router = createBrowserRouter(
     [
@@ -18,10 +18,7 @@ const router = createBrowserRouter(
             path:"/login",
             element:<Login />
         },
-        {
-            path:"/home",
-            element:<Home/>
-        },
+
         {
             path:"/forgotpass",
             element:<ForgotPass/>
@@ -37,7 +34,12 @@ const router = createBrowserRouter(
         {
             path:"/review",
             element:<Review/>
-        }
+        },
+
+        {
+            path:"/products",
+            element:<Products/>
+        },
 
     ]
 )

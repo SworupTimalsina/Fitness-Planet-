@@ -1,66 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    /*background-image: url('../images/DashBoard.png');*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-size: 100% 100%;
-    background-position: center;
-    min-height: 100vh;
-}
 
-nav {
-    background-image: inherit;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-start;
-    padding: 0;
-}
 
-nav a {
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 200%;
-}
+/*nav {*/
+/*    background-image: inherit;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    overflow: hidden;*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    padding: 0;*/
+/*}*/
 
-nav a:first-child {
-    margin-left: 0;
-}
+/*nav a {*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*    margin-left: 10px;*/
+/*    font-weight: bold;*/
+/*    font-size: 200%;*/
+/*}*/
 
-nav a[href="dashboard.html"] {
-    color: darkred;
-}
+/*nav a:first-child {*/
+/*    margin-left: 0;*/
+/*}*/
 
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
+/*nav a[href="dashboard.html"] {*/
+/*    color: darkred;*/
+/*}*/
 
-main {
-    padding: 20px;
-    position: fixed;
-    bottom: 20px;
-    right: 50px;
-}
+/*nav a:hover {*/
+/*    background-color: #ddd;*/
+/*    color: black;*/
+/*}*/
 
-button.create-plan {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
+/*!*main {*!*/
+/*!*    padding: 20px;*!*/
+/*!*    position: fixed;*!*/
+/*!*    bottom: 20px;*!*/
+/*!*    right: 50px;*!*/
+/*!*}*!*/
 
-a[href="profile.html"] {
-    margin-right: auto;
-}
+/*button.create-plan {*/
+/*    background-color: #4caf50;*/
+/*    color: white;*/
+/*    padding: 10px 20px;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    font-size: 16px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*a[href="profile.html"] {*/
+/*    margin-right: auto;*/
+/*}*/

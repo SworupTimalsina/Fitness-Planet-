@@ -1,41 +1,131 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    /*background-image: url('../images/Login.png');*/
-    background-size: 100% 100%;
+.login-bg{
+    background-image: url('../images/Login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#loginForm {
+.loginForm {
+    display: flex;
     margin-left: 700px;
+    flex-direction: column;
+    width: 35%;
+    height: 400px;
+    background-color: rgba(217, 217, 217, 0.26);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.login-text{
+    position: absolute;
+    top: 65px;
+    left: 1100px;
+    transform: translateX(-50%);
+    font-family: Poppins, sans-serif;
+    font-size: 35px;
+
+}
+
+
+
+
+
+
+.username{
+    width: 85%;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.46);
+    margin-left: 45px;
+    margin-top: 60px;
+    color: grey;
+    border: 1px solid #fff;
+    border-radius: 15px 15px 0 0;
+    font-family: Poppins,sans-serif;
+    font-size: 24px;
+
+
+}
+.password{
+    width: 85%;
+    height: 75px;
+    margin-left: 45px;
+    background-color: rgba(0, 0, 0, 0.46);
+    color: grey;
+    border: 1px solid #fff;
+    border-radius: 0 0 15px 15px;
+    font-family: Poppins,sans-serif;
+    font-size: 24px;
+}
+
+.input-boxes{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 500px;
+    gap: 0px;
+
+
 }
 
-input {
-    width: 100%;
-    height: 55px;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    background: transparent;
-    color: grey;
-    border: 2px solid #fff;
-    border-radius: 8px;
-}
-
-button {
+.loginbutton {
     background-color: #ff0000;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    font-family: Poppins, sans-serif;
+    width: 85%;
+    height: 55px;
+    font-size: 20px;
+    margin-top: 50px;
+
+
+}
+.regi-link{
+    position: absolute;
+    left: 945px;
+    bottom: 70px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    color: white;
+
+}
+
+
+.check-container{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
+    flex-direction: row;
+    font-family: Poppins, sans-serif;
+    text-align: justify;
+}
+
+.forgotpass{
+    margin-left: 150px;
+    color: white;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+
+
+}
+
+.forgotpass:hover{
+    color: red;
+}
+
+.regsiterlink{
+    color: white;
+    transition: color 0.3s ease;
+
+}
+
+.regsiterlink:hover{
+    color: red;
 }
 

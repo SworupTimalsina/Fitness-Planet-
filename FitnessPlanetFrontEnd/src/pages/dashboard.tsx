@@ -12,13 +12,13 @@ const Dashboard: React.FC = () => {
 
     return (
         <div>
-    //         <nav>
-    //             <a href="profile.html">Profile</a>
-    //         <a href="dashboard.html">Home</a>
-    //     <a href="products.html">Products</a>
-    //     <a href="tracking.html">Tracking</a>
-    //     <a href="aboutus.html">About Us</a>
-    // </nav>
+          <nav>
+              <a href="profile.html">Profile</a>
+            <a href="dashboard.html">Home</a>
+         <a href="products.html">Products</a>
+         <a href="tracking.html">Tracking</a>
+         <a href="aboutus.html">About Us</a>
+     </nav>
 
 
     <button onClick={createFitnessPlan}>
