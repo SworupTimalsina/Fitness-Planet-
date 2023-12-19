@@ -1,7 +1,12 @@
-.login-bg {
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
     background-image: url('../images/Login.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     min-height: 100vh;
     display: flex;
