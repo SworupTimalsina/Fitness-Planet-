@@ -1,29 +1,37 @@
 import React from 'react';
 // import { useHistory } from 'react-router-dom';
-import './Dashboard.css'; // Import your CSS file
+import './dashboard.css'; // Import your CSS file
+
 
 const Dashboard: React.FC = () => {
-    // const history = useHistory();
 
-    const createFitnessPlan = () => {
-        alert('Redirect to create fitness plan page or perform desired action.');
-        // You can replace the alert with actual logic to navigate or perform an action
-    };
+
+
 
     return (
-        <div>
-          <nav>
-              <a href="profile.html">Profile</a>
-            <a href="dashboard.html">Home</a>
-         <a href="products.html">Products</a>
-         <a href="tracking.html">Tracking</a>
-         <a href="aboutus.html">About Us</a>
-     </nav>
+        <div className="homepage">
+            <div className="top-buttons">
+                <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
+                <div className="buttons">
+                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
+                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
+                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
+                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
+                </div>
+            </div>
+
+            <div className="createplan">
+                <button className="createfit">CLICK HERE</button>
+
+            </div>
+
+            <div className="blackbg">
+
+            </div>
+            <div className="quote">
 
 
-    <button onClick={createFitnessPlan}>
-        CLICK HERE
-    </button>
+            </div>
     </div>
 );
 };
