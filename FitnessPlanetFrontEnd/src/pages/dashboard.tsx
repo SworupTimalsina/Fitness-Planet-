@@ -35,11 +35,12 @@ const Dashboard: React.FC = () => {
 
             <div className="our-prodcuts">
                 <label className="pro-text">Our Products</label>
-                <div>
-                    <a href="#" className="dumbel"></a>
-                    <a href="#" className="dumbel"></a>
-                    <a href="#" className="dumbel"></a>
+                <div className="pro-but">
+                    <button className="dum"> Dumbell </button>
+                    <button className="home-eq"> Home Equipment</button>
+                    <button className="jump"> Jump Ropes</button>
                 </div>
+                <button className="browse-btn"> <b>Browse More</b> </button>
 
             </div>
     </div>
