@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import { useHistory } from 'react-router-dom';
 import './dashboard.css'; // Import your CSS file
 
 
 const Dashboard: React.FC = () => {
+
+        const [isHovered, setHovered] = useState(false);
 
 
     return (
@@ -36,11 +38,15 @@ const Dashboard: React.FC = () => {
             <div className="our-prodcuts">
                 <label className="pro-text">Our Products</label>
                 <div className="pro-but">
-                    <button className="dum"> Dumbell </button>
+                    <button className="dum" onMouseEnter={() => setHovered(true)}  onMouseLeave={() => setHovered(false)}> {isHovered && <div className="hover-text"></div>} <div className="dum-text"> Dumbells </div> </button>
                     <button className="home-eq"> Home Equipment</button>
                     <button className="jump"> Jump Ropes</button>
+                    <button className="jump"> Jump Ropes</button>
                 </div>
-                <button className="browse-btn"> <b>Browse More</b> </button>
+                <button className="browse-btn" >
+                    <b>Browse More</b>
+
+                </button>
 
             </div>
     </div>

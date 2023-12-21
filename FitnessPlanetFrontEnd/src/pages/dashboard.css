@@ -123,23 +123,60 @@
 .pro-but{
     display: flex;
     margin-top: 100px;
-    margin-left: 115px;
+    margin-left: 90px;
     gap: 30px;
 }
 
 .dum{
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    background-image: url("../images/dumb.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: "julius sans one", sans-serif;
+    font-size: 28px;
+    color: white;
+
+
+
 }
 
+.dum-text{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 40%;
+    padding-top: 50%;
+
+
+}
+
+
+
+
 .home-eq{
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 400px;
+    background-color:    white;
+    background-image: url("../images/homequip.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    color: black;
+    border-radius: 0;
+
 }
 
 .jump{
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    background-image: url("../images/jumprope.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    color: black;
+    border-radius: 0;
 }
 
 .browse-btn{
@@ -154,10 +191,12 @@
     font-size: 20px;
 
 
+
 }
 
 .browse-btn:hover{
     border: 2px solid black;
     transform: translateY(-10px) translateX(2px);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 
 }
