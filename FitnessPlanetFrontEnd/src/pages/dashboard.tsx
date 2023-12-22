@@ -73,6 +73,7 @@ const Dashboard: React.FC = () => {
 
                 </button>
 
+
             </div>
 
             <div className="quote2">
@@ -93,7 +94,13 @@ const Dashboard: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <div className="about">
+
+
+            </div>
     </div>
+
+
 
 );
 };
