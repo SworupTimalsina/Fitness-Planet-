@@ -93,7 +93,17 @@ const Dashboard: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <div className="about">
+                <div className="about-buttons">
+                <button>About Us</button>
+                <button>News</button>
+                <button>Privacy Policy</button>
+
+                </div>
+                <label className="copyright">Copyright © 2023 Fitness planet</label>
+            </div>
     </div>
+
 
 );
 };
