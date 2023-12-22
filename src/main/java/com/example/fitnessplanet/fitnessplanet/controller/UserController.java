@@ -16,6 +16,7 @@ import java.util.Optional;
 @RestController // restful API
 @RequestMapping("/user")
 @RequiredArgsConstructor // to inject dependency, reduced code
+@CrossOrigin(origins = "http://localhost:5173")
 
 public class UserController {
 

@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
     return (
         <div className="homepage">
             <nav className="top-buttons">
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
+                <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
                 <div className="buttons">
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
