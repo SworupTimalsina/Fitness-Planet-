@@ -39,13 +39,19 @@ public class UserServiceImpl implements UserService {
         // Implement delete by id logic here
     }
 
-//    @Override
-//    public Optional<User> getByUsername(String username) {
-//        return userRepository.findByUsername(username);
-//    }
-//
-//    @Override
-//    public Optional<User> getByEmail(String email) {
-//        return userRepository.findByEmail(email);
-//    }
-}
+    @Override
+    public boolean validateLogin(String username, String password) {
+            // Retrieve the user by username from the database
+            Optional<User> userOptional = userRepository.findByUsername(username);
+
+            // Check if the user exists and the password matches
+            if (userOptional.isPresent()) {
+                User user = userOptional.get();
+                return user.getPassword().equals(password);
+            }
+
+            return false; // Username not found or password does not match
+        }
+
+
+    }

@@ -16,6 +16,8 @@ public interface UserService {
 
     void deleteById(Integer id);
 
+    boolean validateLogin(String username, String password);
+
 //    Optional<User> getByUsername(String username);
 //
 //    Optional<User> getByEmail(String email);

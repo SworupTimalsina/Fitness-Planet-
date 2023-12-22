@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
     return (
         <div className="homepage">
             <nav className="top-buttons">
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
+                <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
                 <div className="buttons">
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
@@ -93,7 +93,17 @@ const Dashboard: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <div className="about">
+                <div className="about-buttons">
+                <button>About Us</button>
+                <button>News</button>
+                <button>Privacy Policy</button>
+
+                </div>
+                <label className="copyright">Copyright © 2023 Fitness planet</label>
+            </div>
     </div>
+
 
 );
 };
