@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
 
             </div>
 
-            <div className="our-prodcuts">
+            <div className="our-products">
                 <label className="pro-text">Our Products</label>
                 <div className="pro-but">
 
@@ -73,6 +73,25 @@ const Dashboard: React.FC = () => {
 
                 </button>
 
+            </div>
+
+            <div className="quote2">
+                <br/>
+                <br/>
+                <div className="sta">Let's Begin.</div>
+
+            </div>
+
+            <div className="beginnertips">
+                <label className="bt-text">Beginner Tips</label>
+                <div className="bt-but">
+
+            <button className="homeworkout">Home Workout Tips</button>
+                    <div className="sepbuttons">
+                <button className="gym">Gym Tips</button>
+                <button className="nutritional">Nutritional Tips</button>
+                    </div>
+                </div>
             </div>
     </div>
 

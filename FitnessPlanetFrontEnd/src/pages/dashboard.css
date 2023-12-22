@@ -41,6 +41,7 @@
     border-radius: 30px;
     font-size: 30px;
     font-family: Poppins, sans-serif;
+    color: white;
 
 }
 
@@ -81,7 +82,7 @@
     font-family: "julius sans one", sans-serif;
     text-align: center;
     font-size: 40px;
-
+    color: white;
 
 }
 
@@ -103,15 +104,15 @@
 }
 
 .blackbg{
-    background-color: black;
+    background-color: white;
     width: 100%;
-    height: 60px;
+    height: 90px;
 
 }
 
-.our-prodcuts{
+.our-products{
     max-width: 100vw;
-    height: 950px;
+    height: 800px;
     background-color: white;
     text-align: center;
     border: 1px solid black;
@@ -125,7 +126,6 @@
     font-size: 50px;
     font-family: Poppins, sans-serif;
     text-align: center;
-
 }
 
 .dumbel{
@@ -141,6 +141,7 @@
     margin-left: 90px;
     gap: 30px;
 }
+
 /*buttons*/
 .dum{
     width: 300px;
@@ -278,7 +279,8 @@
 }
 
 .browse-btn{
-    margin-top: 100px;
+    margin-top: 70px;
+    /*margin-bottom: 50px;*/
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid black;
     color: black;
@@ -288,8 +290,6 @@
     width: 250px;
     font-size: 20px;
 
-
-
 }
 
 .browse-btn:hover{
@@ -297,4 +297,105 @@
     transform: translateY(-10px) translateX(2px);
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 
+}
+
+.quote2{
+    background-image: url("../images/quote.png");
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    font-family: "julius sans one", sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.beginnertips{
+    height: 900px;
+    border: 2px solid black;
+}
+
+.bt-text{
+    color: black;
+    position: relative;
+    top: 60px;
+    font-size: 50px;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    margin-left: 560px;
+}
+
+.bt-but{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 90px;
+    gap: 30px;
+
+}
+
+.homeworkout{
+    width: 550px;
+    height: 550px;
+    background-color: white;
+    background-image: url("../images/workout.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    font-family: "julius sans one", sans-serif;
+    font-size: 35px;
+    color: white;
+    margin-left: 80px;
+}
+
+.gym{
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    background-image: url("../images/gym.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    font-family: "julius sans one", sans-serif;
+    font-size: 35px;
+    color: white;
+
+}
+
+.nutritional{
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    background-image: url("../images/nutritional.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    font-family: "julius sans one", sans-serif;
+    font-size: 35px;
+    color: white;
+    margin-top: 50px;
+
+}
+
+.sepbuttons{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.homeworkout:hover{
+    transform: translateY(5px) translateX(-5px);
+    width: 540px;
+    height: 540px;
+}
+
+.gym:hover{
+    transform: translateY(5px) translateX(-5px);
+    width: 490px;
+    height: 240px;
+}
+
+.nutritional:hover{
+    transform: translateY(5px) translateX(-5px);
+    width: 490px;
+    height: 240px;
 }
