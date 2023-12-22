@@ -135,7 +135,7 @@
     background-color: white;
 
 }
-/*product ko buttons*/
+/*product buttons*/
 .pro-but{
     display: flex;
     margin-top: 100px;
@@ -157,13 +157,15 @@
     color: white;
 
 }
-/*dum vanne button mathi hover garda k hunu parne hunxa*/
+/*action while hovering on buttons*/
 .dum:hover{
     width: 280px;
     height: 380px;
     transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
+    margin-right: 20px;
 }
-/*hover gare paxi aaune text*/
+/*text which comes after hovering*/
 .hover-text{
     width: 100%;
     background-color: rgba(0, 0, 0, 0.35);
@@ -202,6 +204,8 @@
     width: 280px;
     height: 380px;
     transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
+    margin-right: 20px;
 }
 
 .hover1-text{
@@ -233,6 +237,8 @@
     width: 280px;
     height: 380px;
     transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
+    margin-right: 20px;
 }
 
 .hover2-text{
@@ -264,6 +270,8 @@
     width: 280px;
     height: 380px;
     transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
+    margin-right: 20px;
 }
 
 .hover3-text{
@@ -310,6 +318,7 @@
     color: white;
 }
 
+/*beginner tips frame*/
 .beginnertips{
     height: 800px;
     border: 2px solid black;
@@ -325,6 +334,7 @@
     margin-left: 560px;
 }
 
+/*beginner tips buttons*/
 .bt-but{
     display: flex;
     margin-top: 100px;
@@ -386,18 +396,24 @@
     transform: translateY(5px) translateX(-5px);
     width: 540px;
     height: 540px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
 }
 
 .gym:hover{
     transform: translateY(5px) translateX(-5px);
     width: 490px;
     height: 240px;
+    transition: all 0.5s ease;
+    margin-bottom: 10px;
 }
 
 .nutritional:hover{
     transform: translateY(5px) translateX(-5px);
     width: 490px;
     height: 240px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
 }
 
 .about{
@@ -414,3 +430,4 @@
 .copyright{
    margin-top: 50px;
 }
+
