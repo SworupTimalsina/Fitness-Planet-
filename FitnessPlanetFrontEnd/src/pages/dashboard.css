@@ -140,7 +140,7 @@
     margin-left: 90px;
     gap: 30px;
 }
-
+/*buttons*/
 .dum{
     width: 300px;
     height: 400px;
@@ -153,24 +153,34 @@
     font-size: 28px;
     color: white;
 
-
-
+}
+/*dum vanne button mathi hover garda k hunu parne hunxa*/
+.dum:hover{
+    width: 280px;
+    height: 380px;
+    transform: translateX(10px) translateY(10px);
+}
+/*hover gareko paxi aaune text*/
+.hover-text{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 35%;
+    padding-top: 25%;
+    font-size: 25px;
+    transition: background-color 1s;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 .dum-text{
-    display: flex;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.35);
-    height: 40%;
-    padding-top: 10px;
-
-
-
+    /*width: 100%;*/
+    /*background-color: rgba(0, 0, 0, 0.35);*/
+    /*height: 70%;*/
+    /*padding-top: 50%;*/
+    font-size: 34px;
 
 }
-
-
-
 
 .home-eq{
     width: 300px;
@@ -180,9 +190,28 @@
     background-position: center;
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    color: black;
+    color: white;
     border-radius: 0;
+    font-size: 30px;
+    font-family: "julius sans one", sans-serif;
+}
 
+.home-eq:hover{
+    width: 280px;
+    height: 380px;
+    transform: translateX(10px) translateY(10px);
+}
+
+.hover1-text{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 35%;
+    padding-top: 25%;
+    font-size: 25px;
+    transition: background-color 1s;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 .jump{
@@ -192,8 +221,59 @@
     background-image: url("../images/jumprope.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    color: black;
+    color:white;
     border-radius: 0;
+    font-size: 32px;
+    font-family: "julius sans one", sans-serif;
+}
+
+.jump:hover{
+    width: 280px;
+    height: 380px;
+    transform: translateX(10px) translateY(10px);
+}
+
+.hover2-text{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 35%;
+    padding-top: 25%;
+    font-size: 25px;
+    transition: background-color 1s;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.bikes{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    background-image: url("../images/bike.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    color:white;
+    border-radius: 0;
+    font-size: 32px;
+    font-family: "julius sans one", sans-serif;
+}
+
+.bikes:hover{
+    width: 280px;
+    height: 380px;
+    transform: translateX(10px) translateY(10px);
+}
+
+.hover3-text{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 35%;
+    padding-top: 25%;
+    font-size: 25px;
+    transition: background-color 1s;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 .browse-btn{
