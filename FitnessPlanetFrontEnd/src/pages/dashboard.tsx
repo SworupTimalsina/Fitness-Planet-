@@ -38,7 +38,7 @@ const Dashboard: React.FC = () => {
             <div className="our-prodcuts">
                 <label className="pro-text">Our Products</label>
                 <div className="pro-but">
-                    <button className="dum" onMouseEnter={() => setHovered(true)}  onMouseLeave={() => setHovered(false)}> {isHovered && <div className="hover-text"></div>} <div className="dum-text"> Dumbells </div> </button>
+                    <button className="dum" onMouseEnter={() => setHovered(true)}  onMouseLeave={() => setHovered(false)}> {isHovered && <div className="hover-text"> ok </div>} <div className="dum-text"> Dumbells </div> </button>
                     <button className="home-eq"> Home Equipment</button>
                     <button className="jump"> Jump Ropes</button>
                     <button className="jump"> Jump Ropes</button>

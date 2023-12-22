@@ -1,21 +1,38 @@
 import './login.css';
-// import backgroundImage from '../images/Login.png';
 import React, {useState} from 'react';
 
 
 const Login: React.FC = () => {
 
-    const imagePath = `../images/Login.png`;
 
-    document.body.style.backgroundImage = `url(${imagePath})`;
-    const validateLogin = () => {
+
+    const validateLogin = async () => {
         const username = (document.getElementById('username') as HTMLInputElement).value;
         const password = (document.getElementById('password') as HTMLInputElement).value;
 
-        if (username === 'yourUsername' && password === 'yourPassword') {
-            alert('Login successful!');
-        } else {
-            alert('Invalid username or password. Please try again.');
+        alert("login button");
+
+
+        alert('Username:'+ username);
+        alert('Password:'+ password);
+
+        try {
+
+            const response = await fetch('http://localhost:8080/user/validateLogin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({username,password}),
+            });
+
+            if (response.ok) {
+                alert('Login successful!');
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        } catch (error) {
+            alert('Error during login:'+ error);
         }
     };
 
@@ -25,8 +42,10 @@ const Login: React.FC = () => {
         setShowPassword((prevShowPassword) => !prevShowPassword);
     };
 
+
     return (
         <div>
+
         <div className="login-bg">
 
             <div className="login-text">
