@@ -32,11 +32,24 @@ const Review: React.FC = () => {
             </div>
 
         </div>
+<<<<<<< HEAD
+            <div className="image"><img src={dumbell}
+                                        alt="Product Image"
+                                        width="400"
+                                        height="400"
+                                        /></div>
+        </div>
+        <div className="change-page"><form className="sliding-page">
+            <label className="switch">
+                <input type="checkbox" checked={checked} onChange={handleToggle} />
+                <span className="slider round">
+=======
             <div className="image"><img src={dumbell} width="400" height="400"/></div>
             <div className="change-page"><form className="sliding-page">
                 <label className="switch">
                     <input type="checkbox" checked={checked} onChange={handleToggle} />
                     <span className="slider round">
+>>>>>>> 8b44b9fc449b4667fb6b59613cf6d632c0961a8b
 
                 </span>
                 </label>
