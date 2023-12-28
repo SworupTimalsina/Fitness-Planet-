@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './registration.css'; // Import your CSS file
-
+import './registration.css';
 interface FormData {
     firstname: string;
     lastname:string;

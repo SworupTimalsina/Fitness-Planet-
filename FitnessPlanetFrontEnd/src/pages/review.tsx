@@ -32,7 +32,11 @@ const Review: React.FC = () => {
             </div>
 
         </div>
-            <div className="image"><img src={dumbell} width="400" height="400"/></div>
+            <div className="image"><img src={dumbell}
+                                        alt="Product Image"
+                                        width="400"
+                                        height="400"
+                                        /></div>
         </div>
         <div className="change-page"><form className="sliding-page">
             <label className="switch">
