@@ -5,6 +5,7 @@ import ForgotPass from "./pages/forgotpass.tsx";
 import Registration from "./pages/registration.tsx";
 import Dashboard from "./pages/dashboard.tsx";
 import Review from "./pages/review.tsx";
+import DescriptionContent from "./pages/DescriptionContent.tsx";
 
 import Products from "./pages/products.tsx";
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter(
         {
             path:"/products",
             element:<Products/>
+        },
+        {
+            path:"/Description",
+            element:<DescriptionContent/>
         },
 
 
