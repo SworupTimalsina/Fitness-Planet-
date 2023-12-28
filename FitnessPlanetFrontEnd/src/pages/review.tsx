@@ -21,7 +21,7 @@ const Review: React.FC = () => {
 
     return (
         <body className="reviewbody">
-        <div>
+        <div className="page-body">
         <div className="top-buttons">
             <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
             <div className="buttons">
@@ -33,16 +33,17 @@ const Review: React.FC = () => {
 
         </div>
             <div className="image"><img src={dumbell} width="400" height="400"/></div>
-        </div>
-        <div className="change-page"><form className="sliding-page">
-            <label className="switch">
-                <input type="checkbox" checked={checked} onChange={handleToggle} />
-                <span className="slider round">
+            <div className="change-page"><form className="sliding-page">
+                <label className="switch">
+                    <input type="checkbox" checked={checked} onChange={handleToggle} />
+                    <span className="slider round">
 
                 </span>
-            </label>
-            <p>{checked ? <ReviewContent /> : <DescriptionContent />}</p>
-        </form></div>
+                </label>
+                <p>{checked ? <ReviewContent /> : <DescriptionContent />}</p>
+            </form></div>
+
+        </div>
 
         </body>
     );
