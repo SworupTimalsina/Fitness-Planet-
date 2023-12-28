@@ -2,4 +2,42 @@
     height: 200px;
     width: 250px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.feedbacks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add space between feedback and button */
+    text-align: start;
+    margin-left: 150px;
+    font-size: 22px;
+}
+
+
+.bullet {
+    display: inline-block;
+    width: 20px; /* Diameter of the bullet */
+    height: 20px; /* Diameter of the bullet */
+    background-color: grey; /* Bullet color */
+    border-radius: 50%; /* Shape it into a circle */
+    margin-right: 5px; /* Adjust spacing between bullets and text */
+    vertical-align: middle; /* Align bullets vertically */
+}
+
+.divider {
+    border: none; /* Remove default border */
+    height: 2px; /* Height of the divider */
+    background-color: black; /* Divider color */
+    margin: 10px 0; /* Adjust space around the divider */
+}
+
+.add-review-btn {
+    position: absolute;
+    right: 150px;
+    bottom: 100px;
+    color: white;
+    background-color: red;
 }
