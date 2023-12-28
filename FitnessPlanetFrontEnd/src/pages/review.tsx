@@ -3,14 +3,24 @@ import dumbell from '../images/Dumbell.png';
 import React, {useState} from 'react';
 import DescriptionContent from './DescriptionContent.tsx'; // Import your Page1 component
 import ReviewContent from "./ReviewContent.tsx";
+import ComparePop from "./comparepop.tsx";
 
 const Review: React.FC = () => {
 
     const [checked, setChecked] = useState(false);
-
+    const [comparePopVisible, setComparePopVisible] = useState(false);
     const handleToggle = () => {
         setChecked(!checked); // Toggle the state
     };
+
+    const handleCompareButtonClick = () => {
+        setComparePopVisible(true);
+    };
+
+    const closeComparePop = () => {
+        setComparePopVisible(false);
+    };
+
 
     // const [showDescription, setShowDescription] = useState(true); // State to track which page to display
 
@@ -32,24 +42,15 @@ const Review: React.FC = () => {
             </div>
 
         </div>
-<<<<<<< HEAD
-            <div className="image"><img src={dumbell}
-                                        alt="Product Image"
-                                        width="400"
-                                        height="400"
-                                        /></div>
-        </div>
-        <div className="change-page"><form className="sliding-page">
-            <label className="switch">
-                <input type="checkbox" checked={checked} onChange={handleToggle} />
-                <span className="slider round">
-=======
+            <button className="coamper" onClick={handleCompareButtonClick}>
+                Compare
+            </button>
+            {comparePopVisible && <ComparePop onClose={closeComparePop} />}
             <div className="image"><img src={dumbell} width="400" height="400"/></div>
             <div className="change-page"><form className="sliding-page">
                 <label className="switch">
                     <input type="checkbox" checked={checked} onChange={handleToggle} />
                     <span className="slider round">
->>>>>>> 8b44b9fc449b4667fb6b59613cf6d632c0961a8b
 
                 </span>
                 </label>
