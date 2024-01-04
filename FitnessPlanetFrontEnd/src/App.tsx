@@ -8,6 +8,8 @@ import Review from "./pages/review.tsx";
 import DescriptionContent from "./pages/DescriptionContent.tsx";
 
 import Products from "./pages/products.tsx";
+import Trainers from "./pages/trainer.tsx";
+import GymTip from "./pages/gymtips.tsx";
 
 const router = createBrowserRouter(
     [
@@ -45,6 +47,14 @@ const router = createBrowserRouter(
             path:"/Description",
             element:<DescriptionContent/>
         },
+        {
+            path: "/trainers",
+            element:<Trainers/>
+        },
+        {
+            path:"/gymtips",
+            element:<GymTip/>
+        }
 
 
 
