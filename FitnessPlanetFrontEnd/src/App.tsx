@@ -6,6 +6,7 @@ import Registration from "./pages/registration.tsx";
 import Dashboard from "./pages/dashboard.tsx";
 import Review from "./pages/review.tsx";
 import DescriptionContent from "./pages/DescriptionContent.tsx";
+import Nutritionaltips from "./pages/nutritionaltips.tsx";
 
 import Products from "./pages/products.tsx";
 
@@ -45,7 +46,10 @@ const router = createBrowserRouter(
             path:"/Description",
             element:<DescriptionContent/>
         },
-
+        {
+            path:"/Nutrition",
+            element:<Nutritionaltips/>
+        }
 
 
     ]

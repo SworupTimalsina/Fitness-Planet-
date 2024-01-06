@@ -90,6 +90,7 @@ const Dashboard: React.FC = () => {
             <button className="homeworkout">Home Workout Tips</button>
                     <div className="sepbuttons">
                 <button className="gym">Gym Tips</button>
+
                 <button className="nutritional">Nutritional Tips</button>
                     </div>
                 </div>
