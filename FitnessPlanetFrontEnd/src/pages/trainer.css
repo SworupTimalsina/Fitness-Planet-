@@ -1,0 +1,19 @@
+.trainers-cards{
+    border: 1px solid #ccc;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 100px;
+    color: black;
+}
+
+.trainer-body{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+.train{
+    margin-left: 350px;
+}

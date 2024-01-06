@@ -9,6 +9,8 @@ import DescriptionContent from "./pages/DescriptionContent.tsx";
 import Nutritionaltips from "./pages/nutritionaltips.tsx";
 
 import Products from "./pages/products.tsx";
+import Trainers from "./pages/trainer.tsx";
+import GymTip from "./pages/gymtips.tsx";
 
 const router = createBrowserRouter(
     [
@@ -49,7 +51,15 @@ const router = createBrowserRouter(
         {
             path:"/Nutrition",
             element:<Nutritionaltips/>
+        }        {
+            path: "/trainers",
+            element:<Trainers/>
+        },
+        {
+            path:"/gymtips",
+            element:<GymTip/>
         }
+
 
 
     ]
