@@ -51,7 +51,8 @@ const router = createBrowserRouter(
         {
             path:"/Nutrition",
             element:<Nutritionaltips/>
-        }        {
+        },
+        {
             path: "/trainers",
             element:<Trainers/>
         },
