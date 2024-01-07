@@ -9,6 +9,7 @@
     width: 100%;
     background-color: black;
     align-items: center;
+    z-index: 10;
 }
 
 .profile-button {
