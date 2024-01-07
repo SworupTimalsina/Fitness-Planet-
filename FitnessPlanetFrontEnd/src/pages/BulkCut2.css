@@ -1,0 +1,41 @@
+h2 {
+    font-size: 35px;
+    color: black;
+    margin-top: 120px;
+}
+
+.bottom-images {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 100px;
+    gap: 40px;
+}
+
+
+.image-bottom,
+.image-bottom2,
+.image-bottom3 {
+    width: 580px;
+    height: 100px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 450px;
+}
+
+.image-bottom img,
+.image-bottom2 img,
+.image-bottom3 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.submit-button{
+    margin-left: 700px;
+    margin-top: 20px;
+}
+
