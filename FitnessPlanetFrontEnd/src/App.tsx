@@ -6,7 +6,10 @@ import Registration from "./pages/registration.tsx";
 import Dashboard from "./pages/dashboard.tsx";
 import Review from "./pages/review.tsx";
 import DescriptionContent from "./pages/DescriptionContent.tsx";
+import Nutritionaltips from "./pages/nutritionaltips.tsx";
 import Products from "./pages/products.tsx";
+import Trainers from "./pages/trainer.tsx";
+import GymTip from "./pages/gymtips.tsx";
 import BulkCut from "./pages/BulkCut.tsx";
 import BulkCut2 from "./pages/BulkCut2.tsx";
 
@@ -47,14 +50,6 @@ const router = createBrowserRouter(
             element:<DescriptionContent/>
         },
 
-        {
-            path:"/BulkCut",
-            element:<BulkCut/>
-        },
-        {
-            path:"/BulkCut2",
-            element:<BulkCut2/>
-        },
 
 
     ]

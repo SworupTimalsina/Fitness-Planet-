@@ -12,6 +12,8 @@ const Dashboard: React.FC = () => {
 
 
     return (
+        <>
+        <head><title>Fitness Planet</title></head>
         <div className="homepage">
             <nav className="top-buttons">
                 <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
@@ -90,6 +92,7 @@ const Dashboard: React.FC = () => {
             <button className="homeworkout">Home Workout Tips</button>
                     <div className="sepbuttons">
                 <button className="gym">Gym Tips</button>
+
                 <button className="nutritional">Nutritional Tips</button>
                     </div>
                 </div>
@@ -104,6 +107,7 @@ const Dashboard: React.FC = () => {
                 <label className="copyright">Copyright © 2023 Fitness planet</label>
             </div>
     </div>
+        </>
 
 
 );
