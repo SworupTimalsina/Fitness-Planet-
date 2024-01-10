@@ -12,6 +12,7 @@ import Trainers from "./pages/trainer.tsx";
 import GymTip from "./pages/gymtips.tsx";
 import BulkCut from "./pages/BulkCut.tsx";
 import BulkCut2 from "./pages/BulkCut2.tsx";
+import Dumbbell from "./pages/dumbbell.tsx";
 
 const router = createBrowserRouter(
     [
@@ -48,6 +49,10 @@ const router = createBrowserRouter(
         {
             path:"/Description",
             element:<DescriptionContent/>
+        },
+        {
+            path:"/step",
+            element : <Dumbbell />
         },
 
 
