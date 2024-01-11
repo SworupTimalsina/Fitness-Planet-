@@ -9,3 +9,50 @@
 .gym-page{
 
 }
+
+.chest{
+    position: absolute;
+    top: 410px;
+    left: 300px;
+    background-color: red;
+}
+.arms{
+    position: absolute;
+    top: 490px;
+    left: 1300px;
+    background-color: red;
+}
+.shoulders{
+    position: absolute;
+    top: 815px;
+    left: 170px;
+    background-color: red;
+}
+
+.lats{
+    position: absolute;
+    top: 830px;
+    left: 1200px;
+    background-color: red;
+}
+
+.abs{
+    position: absolute;
+    top: 930px;
+    left: 1000px;
+    background-color: red;
+}
+
+.legs{
+    position: absolute;
+    top: 1270px;
+    left: 1100px;
+    background-color: red;
+}
+
+.calves{
+    position: absolute;
+    top: 1745px;
+    left: 410px;
+    background-color: red;
+}

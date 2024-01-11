@@ -23,6 +23,30 @@ const GymTip: React.FC = () => {
 
                 <div className="mann">
 
+                    <button className="chest">
+                        Chest
+                    </button>
+
+                    <button className="arms">
+                        Arms
+                    </button>
+                    <button className="shoulders">
+                        Shoulders
+                    </button>
+                    <button className="lats">
+                        Lats
+                    </button>
+                    <button className="abs">
+                        Abs
+                    </button>
+                    <button className="legs">
+                        Legs
+                    </button>
+                    <button className="calves">
+                        Calves
+                    </button>
+
+
                 </div>
 
             </div>

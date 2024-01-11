@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
-import './dashboard.css'; // Import your CSS file
+import './dashboard.css';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
 const Dashboard: React.FC = () => {
@@ -106,6 +107,11 @@ const Dashboard: React.FC = () => {
                 </div>
                 <label className="copyright">Copyright © 2023 Fitness planet</label>
             </div>
+
+            <MessengerCustomerChat
+                pageId="185039364700360"
+                appId="628231029368079"
+            />
     </div>
         </>
 
