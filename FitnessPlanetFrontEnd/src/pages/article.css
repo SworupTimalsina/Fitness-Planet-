@@ -1,0 +1,16 @@
+.image-box {
+    border: 1px solid #000; /* Adding a black border around the box */
+    padding: 10px; /* Adding padding to the box */
+    margin-top: 150px; /* Adjust margin top as needed */
+    margin-left: 50px;
+}
+
+.image-box img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.arti {
+    display:flex;
+
+}
