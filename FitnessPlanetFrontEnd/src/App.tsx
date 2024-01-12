@@ -7,10 +7,14 @@ import Dashboard from "./pages/dashboard.tsx";
 import Review from "./pages/review.tsx";
 import DescriptionContent from "./pages/DescriptionContent.tsx";
 import Nutritionaltips from "./pages/nutritionaltips.tsx";
-
 import Products from "./pages/products.tsx";
 import Trainers from "./pages/trainer.tsx";
 import GymTip from "./pages/gymtips.tsx";
+import BulkCut from "./pages/BulkCut.tsx";
+import BulkCut2 from "./pages/BulkCut2.tsx";
+import Dumbbell from "./pages/dumbbell.tsx";
+import Gymtips from "./pages/gymtips.tsx";
+import Article from "./pages/article.tsx";
 
 const router = createBrowserRouter(
     [
@@ -48,18 +52,42 @@ const router = createBrowserRouter(
             path:"/Description",
             element:<DescriptionContent/>
         },
+
         {
-            path:"/Nutrition",
+            path:"/article",
+            element:<Article/>
+        },
+        {
+            path:"/BulkCut",
+            element:<BulkCut/>
+        },
+
+        {
+            path:"/BulkCut2",
+            element:<BulkCut2/>
+        },
+
+        {
+            path:"/Nutrionaltips",
             element:<Nutritionaltips/>
         },
         {
-            path: "/trainers",
+            path:"/Trainers",
             element:<Trainers/>
         },
         {
-            path:"/gymtips",
+            path:"/GymTips",
             element:<GymTip/>
-        }
+        },
+
+        {
+            path:"/Gymtips",
+            element:<Gymtips/>
+        },
+
+
+
+
 
 
 
