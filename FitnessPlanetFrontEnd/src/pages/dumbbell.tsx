@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './dumbbell.css';
 
 const Dumbbell: React.FC = () => {
     return (
@@ -19,7 +19,7 @@ const Dumbbell: React.FC = () => {
                 </p>
             </section>
 
-            <section className="equipment-section">
+            <section className="jumprope-section">
                 <h2>Home Equipment</h2>
                 <p>
                     Home gym equipments are subjects of risk.Please be mindful and follow the given steps to use them effectively:
@@ -33,7 +33,7 @@ const Dumbbell: React.FC = () => {
 
             </section>
 
-            <section className="equipment-section">
+            <section className="home-section">
                 <h2>Jump Ropes</h2>
                 <p>
                     Home gym equipments are subjects of risk.Please be mindful and follow the given steps to use them effectively:
@@ -47,7 +47,7 @@ const Dumbbell: React.FC = () => {
 
             </section>
 
-            <section className="equipment-section">
+            <section className="bike-section">
                 <h2>Exercise Bikes</h2>
                 <p>
                     Home gym equipments are subjects of risk.Please be mindful and follow the given steps to use them effectively:
