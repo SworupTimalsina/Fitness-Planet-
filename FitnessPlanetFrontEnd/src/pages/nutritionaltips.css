@@ -80,6 +80,14 @@
 
 }
 
+.veggie:hover{
+    width: 270px;
+    height: 270px;
+    transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
+    margin-right: 20px;
+}
+
 .protein{
     width: 300px;
     height: 300px;
@@ -92,6 +100,14 @@
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+}
+
+.protein:hover{
+    width: 270px;
+    height: 270px;
+    transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
+    margin-right: 20px;
 }
 
 .carbo{
@@ -108,9 +124,17 @@
     -webkit-text-stroke-color: black;
 }
 
+.carbo:hover{
+    width: 270px;
+    height: 270px;
+    transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
+    margin-right: 20px;
+}
+
 .additionaltips{
     width: 300px;
-    height: 200px;
+    height: 250px;
     background-image: url("../images/addtips.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
@@ -118,7 +142,15 @@
     font-family: Poppins, sans-serif;
     font-size: 28px;
     color: white;
-    margin-top: 50px;
+    margin-top: 35px;
+}
+
+.additionaltips:hover{
+    width: 270px;
+    height: 200px;
+    transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
+    margin-right: 20px;
 }
 
 .xyz{
@@ -170,4 +202,24 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 
+}
+
+.but-form{
+    display: flex;
+    flex-direction: row;
+}
+
+.more-tips{
+    height: 600px;
+    width: 476px;
+    background-image: url("../images/clipboard.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #C3D4A6;
+    margin-right: 70px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    font-family: 'Inknut Antiqua', serif;
 }

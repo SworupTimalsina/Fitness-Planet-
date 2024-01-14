@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
-import './dashboard.css'; // Import your CSS file
+import './dashboard.css';
+import {Link} from "react-router-dom"; // Import your CSS file
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 
 const Dashboard: React.FC = () => {
@@ -92,8 +94,8 @@ const Dashboard: React.FC = () => {
             <button className="homeworkout">Home Workout Tips</button>
                     <div className="sepbuttons">
                 <button className="gym">Gym Tips</button>
-
-                <button className="nutritional">Nutritional Tips</button>
+                        <Link to="/nutrition">
+                <button className="nutritional">Nutritional Tips</button></Link>
                     </div>
                 </div>
             </div>
@@ -106,6 +108,10 @@ const Dashboard: React.FC = () => {
                 </div>
                 <label className="copyright">Copyright © 2023 Fitness planet</label>
             </div>
+            <MessengerCustomerChat
+                pageId="185039364700360"
+                appId="628231029368079"
+            />
     </div>
         </>
 

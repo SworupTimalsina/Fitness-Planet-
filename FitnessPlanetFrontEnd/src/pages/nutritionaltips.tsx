@@ -39,6 +39,7 @@ const Nutritionaltips: React.FC = () => {
                 </div>
                 <div className="box">
                     <br/> <br/>
+                    <div className="but-form">
                     <div className="plate-but">
 
                     <button className="veggie">
@@ -56,6 +57,9 @@ const Nutritionaltips: React.FC = () => {
                     <button className="additionaltips"></button>
 
                 </div>
+                        <form className="more-tips">
+                            <b>click on any button to know more about them</b></form>
+                    </div>
                 </div>
 
             </div>
@@ -80,19 +84,6 @@ const Nutritionaltips: React.FC = () => {
             </div>
         </div>
 
-            {/*<div className="quote">*/}
-            {/*    <br/>*/}
-            {/*    <br/>*/}
-            {/*    <div className="sta">Start your fitness journey.</div>*/}
-
-            {/*</div>*/}
-
-            {/*<div className="quote2">*/}
-            {/*    <br/>*/}
-            {/*    <br/>*/}
-            {/*    <div className="sta">Let's Begin.</div>*/}
-
-            {/*</div>*/}
 
             <div className="about">
                 <div className="about-buttons">
