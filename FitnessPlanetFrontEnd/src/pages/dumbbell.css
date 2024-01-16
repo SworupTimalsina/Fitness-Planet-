@@ -1,31 +1,83 @@
-/*!* src/Dumbbell.css *!*/
-/*.dumbbell-container {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    height: 100vh;*/
-/*}*/
+/* src/Dumbbell.css */
+.dumbbell-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-/*.dumbbell {*/
-/*    position: relative;*/
-/*    width: 30px;*/
-/*    height: 200px;*/
-/*    background-color: #333;*/
-/*    border-radius: 8px;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*}*/
+.equipment-section  {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    background: url('../images/gym.png') center center no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-/*.dumbbell-handle {*/
-/*    width: 20px;*/
-/*    height: 100%;*/
-/*    background-color: #ddd;*/
-/*    border-radius: 8px;*/
-/*}*/
+.jumprope-section  {
+    position: relative;
+    width: 100vw;
+    height: 500px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    background: url('../images/ok.png') center center no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-/*.dumbbell-weight {*/
-/*    position: absolute;*/
-/*    bottom: 10px;*/
-/*    color: #fff;*/
-/*}*/
+.home-section  {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    background: url('../images/ok1.png') center center no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bike-section  {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    /*color: ;*/
+    background: url('../images/ok4.avif') center center no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dumbbell-handle {
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to bottom, #795548, #5D4037);
+    border-radius: 8px;
+}
+
+.dumbbell-weight {
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
