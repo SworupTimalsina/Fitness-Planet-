@@ -2,14 +2,28 @@ import React, { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
 import './dashboard.css';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import { useNavigate } from 'react-router-dom';
 
 
 const Dashboard: React.FC = () => {
+        const navigate = useNavigate();
 
         const [isHovered1, setHovered1] = useState(false);
         const [isHovered2, setHovered2] = useState(false);
         const [isHovered3, setHovered3] = useState(false);
         const [isHovered4, setHovered4] = useState(false);
+
+        function toPro(){
+            navigate('/products')
+        }
+
+        function toHome(){
+        navigate('/homeworkout')
+        }
+
+        function toNutri(){
+            navigate('/nutrition')
+        }
 
 
     return (
@@ -19,8 +33,8 @@ const Dashboard: React.FC = () => {
             <nav className="top-buttons">
                 <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
                 <div className="buttons">
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
+                    <a href='/dashboard' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
+                    <a href='/products' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
                 </div>
@@ -71,7 +85,7 @@ const Dashboard: React.FC = () => {
                     </button>
 
                 </div>
-                <button className="browse-btn" >
+                <button className="browse-btn" onClick={toPro}>
                     <b>Browse More</b>
 
                 </button>
@@ -90,11 +104,11 @@ const Dashboard: React.FC = () => {
                 <label className="bt-text">Beginner Tips</label>
                 <div className="bt-but">
 
-            <button className="homeworkout">Home Workout Tips</button>
+            <button className="homeworkout" onClick={toHome}>Home Workout Tips</button>
                     <div className="sepbuttons">
                 <button className="gym">Gym Tips</button>
 
-                <button className="nutritional">Nutritional Tips</button>
+                <button className="nutritional" onClick={toNutri}>Nutritional Tips</button>
                     </div>
                 </div>
             </div>

@@ -12,5 +12,8 @@
 
 .arti {
     display:flex;
+    background-color: white;
+    flex-wrap: wrap;
+    width: 1200px;
 
 }

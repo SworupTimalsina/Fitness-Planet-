@@ -1,4 +1,3 @@
-
 import React from 'react';
 import "./products.css"
 
@@ -50,6 +49,7 @@ const Products = () => {
                 </div>
 
             </div>
+
 
 
         <div className="bg-pro">

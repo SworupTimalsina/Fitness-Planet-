@@ -57,9 +57,8 @@ const RegistrationForm: React.FC = () => {
                     type="text"
                     className="firstname"
                     name="firstname"
-                    placeholder="      First Name"
+                    placeholder="   First Name"
                     required
-                    value={formData.lastname}
                     onChange={handleChange}
                 />
 
