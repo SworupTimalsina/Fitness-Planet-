@@ -74,7 +74,6 @@ const HomeWorkout: React.FC = () => {
             </div>
         </>
 
-
     );
 };
 
