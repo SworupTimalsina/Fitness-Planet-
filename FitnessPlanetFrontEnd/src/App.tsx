@@ -69,7 +69,7 @@ const router = createBrowserRouter(
         },
 
         {
-            path:"/Nutrionaltips",
+            path:"/Nutrition",
             element:<Nutritionaltips/>
         },
         {
