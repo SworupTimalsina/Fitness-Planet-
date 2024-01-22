@@ -1,12 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
 import './nutritionaltips.css';
-import nutritionaltips from "../images/nutritonaltips.png"; // Import your CSS file
+import nutritionaltips from "../images/nutritonaltips.png";
 
 
 
 const Nutritionaltips: React.FC = () => {
+    const [tips, setTips] = useState('Click on any button to know more about them');
 
+    const updateTips = (category: string) => {
+        let tips: React.ReactNode = '';
+
+        if (category === 'Carbohydrates') {
+            tips = (
+                <>
+                    1) Quinoa: High-protein grain, rich in fiber and various nutrients.<br/>
+                    2) Sweet Potatoes: Packed with vitamins, fiber, and antioxidants.<br/>
+                    3) Brown Rice: Complex carbohydrate source with fiber and minerals.<br/>
+                    4) Oats: Great for sustained energy, high in fiber and various nutrients.<br/>
+                    5) Whole Grain Pasta/Bread: Provides sustained energy and fiber.
+                </>
+            );
+        }
+
+        if (category === 'Vegetables') {
+            tips = (
+                <>
+                    Veggies
+                    1) Quinoa: High-protein grain, rich in fiber and various nutrients.<br/>
+                    2) Sweet Potatoes: Packed with vitamins, fiber, and antioxidants.<br/>
+                    3) Brown Rice: Complex carbohydrate source with fiber and minerals.<br/>
+                    4) Oats: Great for sustained energy, high in fiber and various nutrients.<br/>
+                    5) Whole Grain Pasta/Bread: Provides sustained energy and fiber.
+                </>
+            );
+        }
+
+        if (category === 'Proteins') {
+            tips = (
+                <>
+                    Proteins
+                    1) Quinoa: High-protein grain, rich in fiber and various nutrients.<br/>
+                    2) Sweet Potatoes: Packed with vitamins, fiber, and antioxidants.<br/>
+                    3) Brown Rice: Complex carbohydrate source with fiber and minerals.<br/>
+                    4) Oats: Great for sustained energy, high in fiber and various nutrients.<br/>
+                    5) Whole Grain Pasta/Bread: Provides sustained energy and fiber.
+                </>
+            );
+        }
+
+        if (category === 'Additional') {
+            tips = (
+                <>
+                    Additional
+                    1) Quinoa: High-protein grain, rich in fiber and various nutrients.<br/>
+                    2) Sweet Potatoes: Packed with vitamins, fiber, and antioxidants.<br/>
+                    3) Brown Rice: Complex carbohydrate source with fiber and minerals.<br/>
+                    4) Oats: Great for sustained energy, high in fiber and various nutrients.<br/>
+                    5) Whole Grain Pasta/Bread: Provides sustained energy and fiber.
+                </>
+            );
+        }
+
+        // @ts-ignore
+        setTips(tips || 'Click on any button to know more about them');
+    };
     return (
         <>
 
@@ -42,23 +100,23 @@ const Nutritionaltips: React.FC = () => {
                     <div className="but-form">
                     <div className="plate-but">
 
-                    <button className="veggie">
+                    <button className="veggie" onClick={() => updateTips('Vegetables')}>
                         <div className="veggie-text">Vegetables</div>
                     </button>
 
-                    <button className="protein">
+                    <button className="protein" onClick={() => updateTips('Proteins')}>
                         <div className="protein-text"> Proteins</div>
                     </button>
 
-                    <button className="carbo">
+                    <button className="carbo" onClick={() => updateTips('Carbohydrates')}>
                         <div className="carbo-text">Carbohydrates</div>
                     </button>
 
-                    <button className="additionaltips"></button>
+                    <button className="additionaltips" onClick={() => updateTips('Additional')}></button>
 
                 </div>
                         <form className="more-tips">
-                            <b>click on any button to know more about them</b></form>
+                            <b>{tips}</b></form>
                     </div>
                 </div>
 

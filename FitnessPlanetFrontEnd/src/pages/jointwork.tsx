@@ -29,7 +29,7 @@ const JointWorkout: React.FC = () => {
                     </div>
                 </nav>
 
-                <div className="top-photo-home">
+                <div className="top-photo-joint">
                     <div className="home-wor-txt">
                         Workouts for <br/>weak joints
                     </div>

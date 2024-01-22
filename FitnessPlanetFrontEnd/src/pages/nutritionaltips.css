@@ -222,4 +222,5 @@
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
     font-family: 'Inknut Antiqua', serif;
+    padding: 30px;
 }

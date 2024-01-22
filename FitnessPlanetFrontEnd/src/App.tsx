@@ -18,7 +18,7 @@ import Article from "./pages/article.tsx";
 import HomeWorkout from "./pages/homeworkout.tsx";
 import Balance from "./pages/balance.tsx";
 import JointWorkout from "./pages/jointwork.tsx";
-import HomeWorkout from "./pages/homeworkout.tsx";
+
 
 const router = createBrowserRouter(
     [
@@ -91,8 +91,16 @@ const router = createBrowserRouter(
         {
             path:"/homeworkout",
             element:<HomeWorkout/>
-        }
+        },
 
+        {
+            path:"/balance",
+            element:<Balance/>
+        },
+        {
+            path:"/joint",
+            element:<JointWorkout/>
+        }
 
 
 
