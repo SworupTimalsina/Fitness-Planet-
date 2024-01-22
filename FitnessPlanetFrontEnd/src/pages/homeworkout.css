@@ -7,8 +7,6 @@
 
 }
 
-
-
 .top-photo-home{
     width: 100%;
     max-width: 100vw;
@@ -35,8 +33,6 @@
     margin-top: 350px;
     font-size: 112px;
 
-
-
 }
 
 .ho-work-but{
@@ -60,20 +56,7 @@
 
 }
 
-.res-hov-text{
-    opacity: 0;
-}
-.res-div{
-    display: flex;
-
-}
-
-.res-div:hover{
-    background-color: lightgrey;
-    width: 100vw
-}
-
-.res-div:hover .res {
+.res:hover{
     width: 300px;
     height: 300px;
     background-color: white;
@@ -84,11 +67,8 @@
     font-family: "Poppins", sans-serif;
     font-size: 40px;
     color: white;
-    transition: all 0.3s ease;
-}
-
-.res-div:hover .res-hov-text{
-    opacity: 0;
+    transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
 }
 
 
@@ -105,29 +85,11 @@
     font-family: "Poppins", sans-serif;
     font-size: 40px;
     color: white;
-
-
-}
-
-.home-eq-dumb-hov-text{
-
-    opacity: 1;
-}
-
-.home-eq-dumb-div{
-    display: flex;
-    text-align: right;
+    margin-left: 582px;
 
 }
 
-.home-eq-dumb-div:hover{
-    background-color: lightgrey;
-    width: 100vw;
-    display:flex;
-    justify-content: flex-end;
-}
-
-.home-eq-dumb-div:hover .home-eq-dumb {
+.home-eq-dumb:hover{
     width: 300px;
     height: 300px;
     background-color: white;
@@ -136,14 +98,12 @@
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
     margin-left: 0;
+    margin-left: 0;
     font-family: "Poppins", sans-serif;
     font-size: 40px;
     color: white;
-    transition: all 0.3s ease;
-}
-
-.home-eq-dumb-div:hover .home-eq-dumb-hov-text{
-    opacity: 1;
+    transform: translateX(10px) translateY(10px);
+    transition: all 0.5s ease;
 }
 
 
@@ -164,7 +124,22 @@
 
 }
 
-.fold:hover{
+.fold-hov-text{
+    opacity: 0;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.fold-div{
+    display: flex;
+
+}
+
+.fold-div:hover{
+    background-color: lightgrey;
+    width: 100vw
+}
+
+.fold-div:hover .fold {
     width: 300px;
     height: 300px;
     background-color: white;
@@ -175,8 +150,11 @@
     font-family: "Poppins", sans-serif;
     font-size: 40px;
     color: white;
-    transform: translateX(10px) translateY(10px);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.fold-div:hover .fold-hov-text{
+    opacity: 1;
 }
 
 .all-in-one{
@@ -186,28 +164,51 @@
     background-image: url("../images/CompactAll.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
+    /*border-radius: 0;*/
     font-family: "Poppins", sans-serif;
     font-size: 40px;
     color: white;
-    margin-left: 582px;
+    /*margin-left: 582px;*/
 
 }
 
-.all-in-one:hover{
-    width: 300px;
+.all-in-one-hov-text{
+
+    opacity: 0;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.all-in-one-div{
+    display: flex;
+    text-align: right;
+
+}
+
+.all-in-one-div:hover{
+    background-color: lightgrey;
+    width: 100vw;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.all-in-one-div:hover .all-in-one {
+    width: 310px;
     height: 300px;
     background-color: white;
     background-image: url("../images/CompactAll.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    margin-left: 1150px;
-    border-radius: 0;
+    /*border-radius: 0;*/
+    margin-left: 0;
     font-family: "Poppins", sans-serif;
     font-size: 40px;
     color: white;
-    transform: translateX(10px) translateY(10px);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.all-in-one-div:hover .all-in-one-hov-text{
+    opacity: 1;
 }
 
 .jum-rop{
@@ -225,7 +226,22 @@
 
 }
 
-.jum-rop:hover{
+.jum-rop-hov-text{
+    opacity: 0;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.jum-rop-div{
+    display: flex;
+
+}
+
+.jum-rop-div:hover{
+    background-color: lightgrey;
+    width: 100vw
+}
+
+.jum-rop-div:hover .jum-rop {
     width: 300px;
     height: 300px;
     background-color: white;
@@ -236,7 +252,10 @@
     font-family: "Poppins", sans-serif;
     font-size: 40px;
     color: white;
-    transform: translateX(10px) translateY(10px);
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.jum-rop-div:hover .jum-rop-hov-text{
+    opacity: 1;
 }
 
