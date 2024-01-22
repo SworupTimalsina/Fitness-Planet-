@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 // import { useHistory } from 'react-router-dom';
 import './nutritionaltips.css';
 import nutritionaltips from "../images/nutritonaltips.png";
@@ -62,9 +62,76 @@ const Nutritionaltips: React.FC = () => {
             );
         }
 
+    const [tips, setTips] = useState('Click on any button to know more about them');
+
+    const updateTips = (category: string) => {
+        let tips: React.ReactNode = '';
+
+        if (category === 'Carbohydrates') {
+            tips = (
+                <>
+                    󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠 󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎ 󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ 󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠 ‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠 ‎ ‎ ‎ ‎ ‎<u>Carbohydrates</u><br/>
+                    <br/>
+                    1) Quinoa: High-protein grain, rich in fiber and various nutrients.<br/>
+                    2) Sweet Potatoes: Packed with vitamins, fiber, and antioxidants.<br/>
+                    3) Brown Rice: Complex carbohydrate source with fiber and minerals.<br/>
+                    4) Oats: Great for sustained energy, high in fiber and various nutrients.<br/>
+                    5) Whole Grain Pasta/Bread: Provides sustained energy and fiber.
+                </>
+            );
+        }
+
+        if (category === 'Vegetables') {
+            tips = (
+                <>
+                    󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎   󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠 ‎ ‎ ‎ ‎ ‎ ‎ 󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎ 󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎ 󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠 ‎ ‎ ‎ ‎ ‎<u>Vegetables</u><br/>
+                    <br/>
+                    1) Leafy Greens (Spinach, Kale): Rich in vitamins, minerals, and antioxidants.<br/>
+                    2) Broccoli: High in fiber, vitamins, and contains anti-inflammatory properties.<br/>
+                    3) Bell Peppers: Packed with Vitamin C and antioxidants.<br/>
+                    4) Tomatoes: Good source of Vitamin C, potassium, and antioxidants.<br/>
+                    5) Carrots: Rich in beta-carotene, promoting eye and skin health.
+                </>
+            );
+        }
+
+        if (category === 'Proteins') {
+            tips = (
+                <>
+                    󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ <u>Proteins</u><br/>
+                    <br/>
+                    1) Chicken Breast: High-quality lean protein with low fat content.<br/>
+                    2) Fish (Salmon, Tuna): Rich in omega-3 fatty acids and high-quality protein.<br/>
+                    3) Lean Beef: Provides iron, zinc, and B vitamins along with protein.<br/>
+                    4) Eggs: Complete protein source, also containing essential nutrients.<br/>
+                    5) Legumes (Lentils, Chickpeas): Plant-based protein, rich in fiber and minerals.
+                </>
+            );
+        }
+
+        if (category === 'Additional') {
+            tips = (
+                <>
+
+                    ‎<br/><br/><br/><br/><br/>
+                    󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎ 󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎ ‎󠀠󠀠󠀠󠀠󠀠‎ ‎ ‎ ‎ ‎<u>Additional Tips</u><br/>
+                    <br/>
+                    1) Nuts and Seeds: Almonds, chia seeds, flaxseeds - rich in healthy fats, protein, and fiber.<br/>
+                    2) Greek Yogurt: High in protein and probiotics for gut health.<br/>
+                    3) Tofu/Tempeh: Good vegetarian protein sources.<br/>
+                    4) Berries: Low in sugar and high in antioxidants.<br/>
+                    5) Avocado: Healthy fats and fiber for satiety.<br/>
+                    <br/>
+                    Balancing these food groups can provide the essential nutrients needed for energy, muscle repair, and overall health during fitness exercises or workouts. It's crucial to maintain a well-rounded diet that includes a variety of these foods to support your fitness goals.
+                </>
+            );
+        }
+
         // @ts-ignore
         setTips(tips || 'Click on any button to know more about them');
     };
+
+
     return (
         <>
 

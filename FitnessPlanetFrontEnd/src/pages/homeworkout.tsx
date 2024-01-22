@@ -33,44 +33,56 @@ const HomeWorkout: React.FC = () => {
 
                         <label className="sugges">Workout suggestions to do at home:</label>
 
-                        <div className="res-div"><button className="res" >
+                        <div className="res-div"><div className="res-div"><button className="res" >
                             Resistance Bands
                         </button>
-                        <div className="res-hov-text">
 
-                            Versatile for targeting specific muscle groups through a wide range of motion.<br/>
-                            Suitable for rehabilitation exercises and improving flexibility.<br/>
-                            Can be easily adjusted for different resistance levels.<br/>
-                            Perfect for home or travel workouts.<br/>
-                            Come in different resistance levels/colors for progressive training.
-
-                        </div></div>
-
-                        <div className="home-eq-dumb-div">
-                            <div className="home-eq-dumb-hov-text">
-
-                                Ideal for unilateral exercises to address muscle imbalances.<br/>
-                                Can be used for both compound and isolation exercises.<br/>
-                                Provide a more stable and controlled workout compared to some other equipment.<br/>
-                                Compact and can be stored under furniture or in a small corner.<br/>
-                                Dumbbell exercises engage stabilizing muscles for improved balance.
-
-                            </div><button className="home-eq-dumb" >
+                                </div></div><button className="home-eq-dumb" >
                             Dumbbells
+                        </button>
+
+                        <div className="fold-div"><button className="fold" >
+                            Foldable Exercise Bench
+                        </button>
+                            <div className="fold-hov-text">
+
+                                I. Bench Press:<br/>
+                                <br/>
+                                1) Setup: Adjust the bench to a flat position.<br/>
+                                2) Position: Lie on your back, gripping dumbbells or a barbell.<br/>
+                                3) Execution: Lower the weights to chest level and press back up.<br/>
+                                4) Repetition: Perform 3 sets of 8-10 reps.
+
+                            </div></div>
+
+                        <div className="all-in-one-div">
+                            <div className="all-in-one-hov-text">
+
+                                I. Lat Pulldown:<br/>
+                                <br/>
+                                1) Setup: Attach a cable or band to the high pulley.<br/>
+                                2) Grip: Sit facing the machine, grasp the bar with a wide overhand grip.<br/>
+                                3) Execution: Pull the bar down to your chest, squeezing your back muscles.<br/>
+                                4) Repetition: Perform 3 sets of 10-12 reps.
+
+                            </div><button className="all-in-one" >
+                            Compact all-in-one home gyms
                         </button>
                         </div>
 
-                        <button className="fold" >
-                            Foldable Exercise Bench
-                        </button>
-
-                        <button className="all-in-one">
-                            Compact All-in-One Home Gyms
-                        </button>
-
-                        <button className="jum-rop">
+                        <div className="jum-rop-div"><button className="jum-rop" >
                             Jump Ropes
                         </button>
+                            <div className="jum-rop-hov-text">
+
+                                I. Basic Jumping:<br/>
+                                <br/>
+                                1) Setup: Hold the handles of the jump rope at hip level.<br/>
+                                2) Stance: Stand with feet together.<br/>
+                                3) Execution: Swing the rope over your head and jump as it approaches your feet.<br/>
+                                4) Repetition: Jump continuously for 10-15 minutes.
+
+                            </div></div>
 
                     </div>
 

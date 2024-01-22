@@ -223,4 +223,5 @@
     align-items: center; /* Vertical centering */
     font-family: 'Inknut Antiqua', serif;
     padding: 30px;
+    /*padding-top: 80px;*/
 }
