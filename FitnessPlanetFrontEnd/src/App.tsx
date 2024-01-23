@@ -16,10 +16,7 @@ import BulkCut2 from "./pages/BulkCut2.tsx";
 import Gymtips from "./pages/gymtips.tsx";
 import Article from "./pages/article.tsx";
 import HomeWorkout from "./pages/homeworkout.tsx";
-import Balance from "./pages/balance.tsx";
-import JointWorkout from "./pages/jointwork.tsx";
-import Admin from "./pages/adminpanel.tsx";
-
+import Adminpanel from "./pages/adminpanel.tsx";
 
 const router = createBrowserRouter(
     [
@@ -93,19 +90,10 @@ const router = createBrowserRouter(
             path:"/homeworkout",
             element:<HomeWorkout/>
         },
-
-        {
-            path:"/balance",
-            element:<Balance/>
-        },
-        {
-            path:"/joint",
-            element:<JointWorkout/>
-        },
         {
             path:"/admin",
-            element:<Admin/>
-        },
+            element:<Adminpanel/>
+        }
 
 
 

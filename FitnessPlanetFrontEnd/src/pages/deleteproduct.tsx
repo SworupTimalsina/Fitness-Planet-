@@ -14,7 +14,7 @@ const DeletePro: React.FC = () => {
 
 
 
-                        <button className="add-pro-btn">Delete</button>
+                    <button className="add-pro-btn">Delete</button>
 
 
 

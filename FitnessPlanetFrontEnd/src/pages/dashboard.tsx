@@ -85,10 +85,11 @@ const Dashboard: React.FC = () => {
                     </button>
 
                 </div>
-                <button className="browse-btn" onClick={toPro}>
+                <Link to='/products'>
+                <button className="browse-btn" >
                     <b>Browse More</b>
-
                 </button>
+            </Link>
 
 
             </div>
@@ -103,8 +104,9 @@ const Dashboard: React.FC = () => {
             <div className="beginnertips">
                 <label className="bt-text">Beginner Tips</label>
                 <div className="bt-but">
-
-            <button className="homeworkout" onClick={toHome}>Home Workout Tips</button>
+            <Link to='/homeworkout'>
+            <button className="homeworkout">Home Workout Tips</button>
+            </Link>
                     <div className="sepbuttons">
                 <button className="gym">Gym Tips</button>
 

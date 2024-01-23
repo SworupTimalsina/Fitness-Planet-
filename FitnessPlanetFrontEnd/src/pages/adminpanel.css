@@ -8,7 +8,7 @@
     display: flex;
     width: 400px;
     flex-direction: column;
-    background-color: lightgrey;
+    background-color: grey;
     gap: 20px;
     padding-top: 150px;
 
@@ -20,13 +20,13 @@
     height: 90px;
     font-family: "Poppins", sans-serif;
     font-size: 26px;
-    background-color: darkgray;
-    color: black;
+    background-color: red;
+    color: white;
 }
 
 .admin-button:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     width: 360px;
     height: 100px;
     transition: all 0.2s ease-in-out;
@@ -35,8 +35,6 @@
 .addupdel-bg{
     width: 900px;
     background-color: lightgrey;
-    font-family: "Poppins", sans-serif;
-    font-size: 23px;
 }
 
 
@@ -62,13 +60,13 @@
 .name-div{
     display: flex;
     flex-direction: row;
-    gap: 83px;
+    gap: 20px;
 }
 
 .pri-cat{
     display: flex;
     flex-direction: row;
-
+    gap: 20px;
 
 }
 
@@ -79,18 +77,9 @@
 }
 
 .add-two-but{
-    display: flex;
-    margin-left: 230px;
-    gap: 40px;
+
 }
 
 .add-pro-btn{
-
-}
-
-.proro{
-    display: flex;
-    gap: 22px;
-    margin-left: 96px;
 
 }
