@@ -1,3 +1,96 @@
-.holder{
+.admin-bg{
+    background-color: white;
+    height: 100vh;
+}
+
+.button-holder{
+    align-items: center;
     display: flex;
+    width: 400px;
+    flex-direction: column;
+    background-color: lightgrey;
+    gap: 20px;
+    padding-top: 150px;
+
+
+}
+
+.admin-button{
+    width: 350px;
+    height: 90px;
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    background-color: darkgray;
+    color: black;
+}
+
+.admin-button:hover{
+    background-color: black;
+    color: white;
+    width: 360px;
+    height: 100px;
+    transition: all 0.2s ease-in-out;
+}
+
+.addupdel-bg{
+    width: 900px;
+    background-color: lightgrey;
+    font-family: "Poppins", sans-serif;
+    font-size: 23px;
+}
+
+
+.holder{
+    padding-top: 100px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 80%;
+
+}
+
+.add-holder{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 90px;
+    margin-top: 70px;
+    gap: 20px;
+}
+
+.name-div{
+    display: flex;
+    flex-direction: row;
+    gap: 83px;
+}
+
+.pri-cat{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.des-div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.add-two-but{
+    display: flex;
+    margin-left: 230px;
+    gap: 40px;
+}
+
+.add-pro-btn{
+
+}
+
+.proro{
+    display: flex;
+    gap: 22px;
+    margin-left: 96px;
+
 }

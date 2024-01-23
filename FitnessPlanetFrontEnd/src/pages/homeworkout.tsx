@@ -2,6 +2,7 @@ import React from 'react';
 import './homeworkout.css';
 
 
+
 const HomeWorkout: React.FC = () => {
 
 
@@ -33,13 +34,43 @@ const HomeWorkout: React.FC = () => {
 
                         <label className="sugges">Workout suggestions to do at home:</label>
 
-                        <div className="res-div"><div className="res-div"><button className="res" >
+                        <div className="res-div"><button className="res" >
                             Resistance Bands
                         </button>
+                            <div className="res-hov-text">
 
-                                </div></div><button className="home-eq-dumb" >
+                                I. Bicep Curls:<br/>
+                                1) Setup: Stand on the center of the band with feet shoulder-width apart.<br/>
+                                2) Grip: Hold one end of the band in each hand, palms facing forward.<br/>
+                                3) Execution: Curl your hands towards your shoulders, keeping elbows close to your body.<br/>
+                                4) Repetition: Perform 3 sets of 12-15 reps.
+                                <br/><br/>
+                                II. Seated Row:<br/>
+                                1) Setup: Secure the band around a fixed point at chest height.<br/>
+                                2) Grip: Sit on the floor with legs extended, hold the band with both hands.<br/>
+                                3) Execution: Pull the band towards you, squeezing your shoulder blades.<br/>
+                                4) Repetition: Perform 3 sets of 12-15 reps.
+
+                            </div></div>
+
+                        <div className="home-eq-dumb-div">
+                            <div className="home-eq-dumb-hov-text">
+
+                                I. Goblet Squats:<br/>
+                                1) Setup: Hold a dumbbell vertically with both hands close to your chest.<br/>
+                                2) Stance: Stand with feet shoulder-width apart.<br/>
+                                3) Execution: Lower your body into a squat, keeping the dumbbell close to your chest.<br/>
+                                4) Repetition: Perform 3 sets of 10-12 reps.
+                                <br/><br/>
+                                II. Overhead Shoulder Press:<br/>
+                                1) Setup: Sit or stand with a dumbbell in each hand at shoulder height.<br/>
+                                2) Execution: Press the dumbbells overhead until your arms are fully extended.<br/>
+                                3) Repetition: Perform 3 sets of 10-12 reps.
+
+                            </div><button className="home-eq-dumb" >
                             Dumbbells
                         </button>
+                        </div>
 
                         <div className="fold-div"><button className="fold" >
                             Foldable Exercise Bench
@@ -95,7 +126,7 @@ const HomeWorkout: React.FC = () => {
                         <button>Privacy Policy</button>
 
                     </div>
-                    <label className="copyright">Copyright Â© 2023 Fitness planet</label>
+                    <label className="copyright">Copyright © 2023 Fitness planet</label>
                 </div>
 
 
