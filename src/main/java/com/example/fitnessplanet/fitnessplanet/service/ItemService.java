@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ItemService {
+    void deleteByName(String productName);
     String save(ItemDTO productDTO);
     List<Item> getAll();
     Optional<Item> getById(Integer productId);

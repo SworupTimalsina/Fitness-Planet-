@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
 import './dashboard.css';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 
 const Dashboard: React.FC = () => {
@@ -13,13 +13,13 @@ const Dashboard: React.FC = () => {
         const [isHovered3, setHovered3] = useState(false);
         const [isHovered4, setHovered4] = useState(false);
 
-        function toPro(){
-            navigate('/products')
-        }
-
-        function toHome(){
-        navigate('/homeworkout')
-        }
+        // function toPro(){
+        //     navigate('/products')
+        // }
+        //
+        // function toHome(){
+        // navigate('/homeworkout')
+        // }
 
         function toNutri(){
             navigate('/nutrition')
