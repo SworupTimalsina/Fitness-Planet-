@@ -27,10 +27,7 @@ public class ItemDTO {
     private int quantity;
 
     @NotNull
-    private int size;
-
-//    @NotNull
-//    private ItemType type;
+    private String category;
 //
 //    @NotNull
 //    private ItemCategory category;

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import axios from 'axios';
 import './registration.css';
 interface FormData {
     firstname: string;
@@ -10,41 +11,39 @@ interface FormData {
 }
 
 const RegistrationForm: React.FC = () => {
-    const [formData, setFormData] = useState<FormData>({
-        firstname: '',
-        lastname:'',
-        email: '',
-        username: '',
-        password: '',
-        repeatPassword: '',
-    });
 
-    const [showPassword, setShowPassword] = useState(false);
+        const [formData, setFormData] = useState<FormData>({
+            firstname: '',
+            lastname: '',
+            email: '',
+            username: '',
+            password: '',
+            repeatPassword: '',
+        });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
-    };
+        const [showPassword, setShowPassword] = useState(false);
 
-    const togglePassword = () => {
-        setShowPassword((prevShowPassword) => !prevShowPassword);
-    };
+        const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+            const { name, value } = e.target;
+            setFormData((prevData) => ({
+                ...prevData,
+                [name]: value,
+            }));
+        };
 
-    // const validateRegistration = () => {
-    //     const { firstname, lastname, username, email, password, repeatPassword } = formData;
-    //
-    //     if (username && email && password && repeatPassword && password === repeatPassword) {
-    //         alert('Registration successful!');
-    //     } else if (password !== repeatPassword) {
-    //         alert('Passwords do not match. Please try again.');
-    //     } else {
-    //         alert('Please fill in all the fields.');
-    //     }
-    // };
+        const togglePassword = () => {
+            setShowPassword((prevShowPassword) => !prevShowPassword);
+        };
 
+        const handleRegistration = async () => {
+            try {
+                const response = await axios.post('/save', formData);
+                // Handle the response as needed
+                console.log('Registration successful:', response.data);
+            } catch (error) {
+                console.error('Error during registration:', error);
+            }
+        };
     return (
         <div className="container">
             <div className="regtxt">
@@ -59,7 +58,6 @@ const RegistrationForm: React.FC = () => {
                     name="firstname"
                     placeholder="      First Name"
                     required
-                    value={formData.lastname}
                     onChange={handleChange}
                 />
 
@@ -117,7 +115,7 @@ const RegistrationForm: React.FC = () => {
                     <label>Show Password</label>
                 </div>
 
-                <button type="button" className="regbutton" style={{backgroundColor:"red"}}>
+                <button type="button" className="regbutton" style={{backgroundColor:"red"}} onClick={handleRegistration}>
                     Register
                 </button>
             </div>
