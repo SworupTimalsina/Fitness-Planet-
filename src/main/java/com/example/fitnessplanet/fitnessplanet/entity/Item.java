@@ -33,13 +33,4 @@ public class Item {
     private String category;
 
 
-
-//    @Enumerated(EnumType.STRING)
-//    @Column(name = "type", nullable = false)
-//    private ProductType type;
-//
-//    @Enumerated(EnumType.STRING)
-//    @Column(name = "category", nullable = false)
-//    private ProductCategory category;
-//
 }

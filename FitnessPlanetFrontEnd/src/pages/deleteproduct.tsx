@@ -5,10 +5,18 @@ const DeletePro: React.FC = () => {
     const [productName, setProductName] = useState('');
 
     const handleDeleteClick = () => {
-        fetch(`http://localhost:8080/item/deleteByName?productName=${productName}`, {
+        fetch(`http://localhost:8080/item/deleteByName/${productName}`, {
             method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
         })
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => console.log(data))
             .catch(error => console.error('Error:', error));
     };

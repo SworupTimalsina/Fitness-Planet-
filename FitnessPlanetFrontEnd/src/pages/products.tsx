@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./products.css"
 
 
@@ -22,19 +22,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => (
 );
 
 const Products = () => {
-    const products: Product[] = [
-        { id: 1, name: 'Product 1', price: 19.99 },
-        { id: 2, name: 'Product 2', price: 29.99 },
-        // Add more products as needed
-        { id: 3, name: 'Product 3', price: 39.99 },
-        { id: 4, name: 'Product 4', price: 49.99 },
-        { id: 5, name: 'Product 5', price: 59.99 },
-        { id: 6, name: 'Product 6', price: 69.99 },
-        { id: 7, name: 'Product 7', price: 79.99 },
-        { id: 8, name: 'Product 8', price: 89.99 },
-        { id: 9, name: 'Product 9', price: 99.99 },
-        { id: 10, name: 'Product 10', price: 109.99 },
-    ];
+    const [products, setProducts] = useState<Product[]>([]);
+
+    useEffect(() => {
+        fetch('http://localhost:8080/item/getAll')
+            .then(response => response.json())
+            .then(data => setProducts(data))
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
 
     return (
         <>
@@ -57,15 +52,12 @@ const Products = () => {
                 categories goes here
             </div>
             <h1>Browse Products</h1>
-            <div style={{ display: 'flex', flexWrap: 'wrap' , width: '60%'}}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', width: '60%' ,color: 'black'}}>
                 {products.map((product) => (
                     <ProductCard key={product.id} product={product} />
                 ))}
             </div>
-            <h2>Shopping Cart</h2>
-            <ul>
-                {/* Render your shopping cart items here if needed */}
-            </ul>
+
         </div>
 
         </>

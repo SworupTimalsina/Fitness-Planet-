@@ -6,24 +6,34 @@ const AddPro: React.FC = () => {
         productName: '',
         description: '',
         price: 0.0,
-        category: ''
+        category: '',
     });
+
+
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+
     const handleAddClick = () => {
+
         fetch('http://localhost:8080/item/save', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
+
         })
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error('Error:', error));
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                alert("Item added.")
+
+            })
+            .catch((error) => console.error('Error:', error));
     };
+
 
     return (
         <>
@@ -83,6 +93,7 @@ const AddPro: React.FC = () => {
                     </div>
                 </div>
             </div>
+
         </>
     );
 };
