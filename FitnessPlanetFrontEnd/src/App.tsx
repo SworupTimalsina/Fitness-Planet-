@@ -15,6 +15,9 @@ import BulkCut2 from "./pages/BulkCut2.tsx";
 import Dumbbell from "./pages/dumbbell.tsx";
 import Gymtips from "./pages/gymtips.tsx";
 import Article from "./pages/article.tsx";
+import Warmup from "./pages/warmup.tsx";
+import Challenges from "./pages/challenges.tsx";
+import React from "react";
 
 const router = createBrowserRouter(
     [
@@ -85,7 +88,15 @@ const router = createBrowserRouter(
             element:<Gymtips/>
         },
 
+        {
+            path:"/warmup",
+            element:<Warmup/>
+        },
 
+        {
+            path:"/challenges",
+            element:<Challenges/>
+        },
 
 
 

@@ -1,8 +1,8 @@
 package com.example.fitnessplanet.fitnessplanet.entity;
 
 
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.;
+import lombok.;
 
 import java.util.List;
 
@@ -29,11 +29,10 @@ public class Item {
     @Column(name = "price", nullable = false)
     private float price;
 
-    @Column(name = "quantity", nullable = false)
-    private int quantity;
+    @Column(name = "category", nullable = false)
+    private String category;
 
-    @Column(name = "size", nullable = false)
-    private int size;
+
 
 //    @Enumerated(EnumType.STRING)
 //    @Column(name = "type", nullable = false)
