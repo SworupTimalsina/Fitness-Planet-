@@ -24,21 +24,11 @@ public class ItemDTO {
     private float price;
 
     @NotNull
-    private int quantity;
-
-    @NotNull
     private String category;
-//
-//    @NotNull
-//    private ItemCategory category;
 
-    public static Integer getItemId() {
-        return 1;
 
-    }
 
-    public static String getitemName() {
-        return "name";
-
+    public String getProductName() {
+        return productName;
     }
 }

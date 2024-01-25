@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import './adminpanel.css';
-// import AddPro from "./addproduct.tsx";
 import DeletePro from "./deleteproduct.tsx";
-// import UpdatePro from "./updateproducts.tsx";
+import AddPro from "./addproduct.tsx";
+import UpdatePro from "./updateproducts.tsx";
+
 
 
 const Admin: React.FC = () => {
@@ -12,13 +13,13 @@ const Admin: React.FC = () => {
     const renderComponent = () => {
         switch (selectedComponent) {
             case 'add':
-                // return <AddPro />;
+                return <AddPro />;
             case 'update':
-                // return <UpdatePro />;
+                return <UpdatePro />;
             case 'delete':
                 return <DeletePro />;
             default:
-                // return <AddPro />;
+                return <AddPro />;
         }
     };
     return (

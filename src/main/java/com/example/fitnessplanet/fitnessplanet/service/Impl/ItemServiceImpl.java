@@ -18,14 +18,24 @@ public class ItemServiceImpl implements ItemService {
     private final ItemRepository itemRepository;
 
     @Override
+    public void deleteByName(String productName) {
+        Optional<Item> optionalItem = itemRepository.findByProductName(productName);
+        if (optionalItem.isPresent()) {
+            itemRepository.delete(optionalItem.get());
+        } else {
+            throw new RuntimeException("Product not found for deletion.");
+        }
+    }
+
+    @Override
     public String save(ItemDTO itemDTO) {
 
         Item product = new Item();
 
-        if (ItemDTO.getItemId()!=null){
-            product=itemRepository.findById(itemDTO.getItemId())
-                    .orElseThrow(()->new NullPointerException("product data not found"));
-        }
+//        if (ItemDTO.getItemId()!=null){
+//            product=itemRepository.findById(itemDTO.getItemId())
+//                    .orElseThrow(()->new NullPointerException("product data not found"));
+//        }
 
 //        product.setProductName(ItemDTO.getItemName());
 //        product.setDescription(itemDTO.getDescription());

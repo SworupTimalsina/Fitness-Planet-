@@ -126,7 +126,7 @@ const HomeWorkout: React.FC = () => {
                         <button>Privacy Policy</button>
 
                     </div>
-                    <label className="copyright">Copyright Â© 2023 Fitness planet</label>
+                    <label className="copyright">Copyright © 2023 Fitness planet</label>
                 </div>
 
 
