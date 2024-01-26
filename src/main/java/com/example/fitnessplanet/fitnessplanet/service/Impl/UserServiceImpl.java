@@ -41,10 +41,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean validateLogin(String username, String password) {
-            // Retrieve the user by username from the database
+
             Optional<User> userOptional = userRepository.findByUsername(username);
 
-            // Check if the user exists and the password matches
+
             if (userOptional.isPresent()) {
                 User user = userOptional.get();
                 return user.getPassword().equals(password);

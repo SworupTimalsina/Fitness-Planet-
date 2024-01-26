@@ -1,0 +1,109 @@
+.homework-page{
+    /*height: 5000px;*/
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+}
+
+
+
+.top-photo-bal{
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    background-image: url("../images/joit.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+}
+
+
+
+.hom-wor-txt{
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 250px;
+    font-size: 112px;
+
+
+
+
+}
+
+.bbox{
+    background-color: #C3D4A6;
+    margin-top: 20px;
+}
+
+.pplate-but{
+    margin-top: 30px;
+    display: flex;
+    height: 750px;
+    width: 900px;
+    gap: 100px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-left: 80px;
+    font-size: 20px;
+
+}
+
+.vveggie{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/veggies.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.pprotein{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/proteins.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.ccarbo{
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/carbs.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.aadditionaltips{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/addtips.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+}

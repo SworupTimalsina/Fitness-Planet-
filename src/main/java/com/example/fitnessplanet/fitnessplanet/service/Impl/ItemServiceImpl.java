@@ -1,7 +1,5 @@
 package com.example.fitnessplanet.fitnessplanet.service.Impl;
 
-
-
 import com.example.fitnessplanet.fitnessplanet.dto.ItemDTO;
 import com.example.fitnessplanet.fitnessplanet.entity.Item;
 import com.example.fitnessplanet.fitnessplanet.repository.ItemRepository;
@@ -18,26 +16,36 @@ public class ItemServiceImpl implements ItemService {
     private final ItemRepository itemRepository;
 
     @Override
-    public String save(ItemDTO itemDTO) {
+    public void deleteByName(String productName) {
+        Optional<Item> optionalItem = itemRepository.findByProductName(productName);
+        if (optionalItem.isPresent()) {
+            itemRepository.delete(optionalItem.get());
+        } else {
+            throw new RuntimeException("Product not found for deletion.");
+        }
+    }
 
+    @Override
+    public String save(ItemDTO itemDTO) {
         Item product = new Item();
 
-        if (ItemDTO.getItemId()!=null){
-            product=itemRepository.findById(itemDTO.getItemId())
-                    .orElseThrow(()->new NullPointerException("product data not found"));
+        if (itemDTO.getItemId() != null) {
+            Optional<Item> existingItem = itemRepository.findById(itemDTO.getItemId());
+            if (existingItem.isPresent()) {
+                product = existingItem.get();
+            } else {
+                throw new RuntimeException("Product data not found for update.");
+            }
         }
 
-//        product.setProductName(ItemDTO.getItemName());
-//        product.setDescription(itemDTO.getDescription());
-//        product.setPrice(itemDTO.getPrice());
-//        product.setQuantity(itemDTO.getQuantity());
-//        product.setSize(ItemDTO.getSize());
-//        product.setType(ItemDTO.getType());
-//        product.setCategory(ItemDTO.getCategory());
+        product.setProductName(itemDTO.getProductName());
+        product.setDescription(itemDTO.getDescription());
+        product.setPrice(itemDTO.getPrice());
+        product.setCategory(itemDTO.getCategory());
 
         itemRepository.save(product);
 
-        return "product successfully added";
+        return "Product successfully saved/updated";
     }
 
     @Override

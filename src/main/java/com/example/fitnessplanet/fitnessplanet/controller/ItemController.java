@@ -44,5 +44,11 @@ public class ItemController {
         itemService.deleteById(productId);
         return "product deleted.";
     }
-
+    @CrossOrigin(origins = "http://localhost:5173/admin")
+    @DeleteMapping("/deleteByName/{productName}")
+    public String deleteByName(@PathVariable("productName") String productName) {
+        itemService.deleteByName(productName);
+        return "product deleted by name.";
+    }
 }
+

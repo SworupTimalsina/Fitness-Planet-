@@ -1,16 +1,29 @@
 import React, { useState } from 'react';
 // import { useHistory } from 'react-router-dom';
 import './dashboard.css';
-import {Link} from "react-router-dom"; // Import your CSS file
 import MessengerCustomerChat from 'react-messenger-customer-chat';
+import {Link, useNavigate} from 'react-router-dom';
 
 
 const Dashboard: React.FC = () => {
+        const navigate = useNavigate();
 
         const [isHovered1, setHovered1] = useState(false);
         const [isHovered2, setHovered2] = useState(false);
         const [isHovered3, setHovered3] = useState(false);
         const [isHovered4, setHovered4] = useState(false);
+
+        // function toPro(){
+        //     navigate('/products')
+        // }
+        //
+        // function toHome(){
+        // navigate('/homeworkout')
+        // }
+
+        function toNutri(){
+            navigate('/nutrition')
+        }
 
 
     return (
@@ -20,8 +33,8 @@ const Dashboard: React.FC = () => {
             <nav className="top-buttons">
                 <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
                 <div className="buttons">
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
+                    <a href='/dashboard' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
+                    <a href='/products' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
                 </div>
@@ -72,10 +85,11 @@ const Dashboard: React.FC = () => {
                     </button>
 
                 </div>
+                <Link to='/products'>
                 <button className="browse-btn" >
                     <b>Browse More</b>
-
                 </button>
+            </Link>
 
 
             </div>
@@ -90,12 +104,13 @@ const Dashboard: React.FC = () => {
             <div className="beginnertips">
                 <label className="bt-text">Beginner Tips</label>
                 <div className="bt-but">
-
+            <Link to='/homeworkout'>
             <button className="homeworkout">Home Workout Tips</button>
+            </Link>
                     <div className="sepbuttons">
                 <button className="gym">Gym Tips</button>
-                        <Link to="/nutrition">
-                <button className="nutritional">Nutritional Tips</button></Link>
+
+                <button className="nutritional" onClick={toNutri}>Nutritional Tips</button>
                     </div>
                 </div>
             </div>
@@ -108,6 +123,7 @@ const Dashboard: React.FC = () => {
                 </div>
                 <label className="copyright">Copyright © 2023 Fitness planet</label>
             </div>
+
             <MessengerCustomerChat
                 pageId="185039364700360"
                 appId="628231029368079"
