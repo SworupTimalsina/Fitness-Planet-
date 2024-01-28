@@ -1,0 +1,51 @@
+/* styles.css */
+
+/* Container styles */
+div {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Heading styles */
+h2 {
+    color: #333;
+}
+
+/* Paragraph styles */
+p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* List styles */
+ul {
+    list-style-type: disc;
+    color: #007bff;
+    padding-left: 20px;
+}
+
+/* List item styles */
+li {
+    margin-bottom: 10px;
+}
+
+/* Highlighted text styles */
+strong {
+    color: #e44d26;
+}
+
+/* Footer styles */
+div p:last-child {
+    margin-top: 20px;
+    font-style: italic;
+    color: #888;
+}
+
+body{
+    background-image: url("../images/joint.png");
+}

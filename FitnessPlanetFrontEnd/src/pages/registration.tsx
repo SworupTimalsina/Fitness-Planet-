@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import axios from 'axios';
 import './registration.css';
 import axios from 'axios'; // Import axios for making HTTP requests
 
@@ -21,19 +22,19 @@ const RegistrationForm: React.FC = () => {
         repeatPassword: '',
     });
 
-    const [showPassword, setShowPassword] = useState(false);
+        const [showPassword, setShowPassword] = useState(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
-    };
+        const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+            const { name, value } = e.target;
+            setFormData((prevData) => ({
+                ...prevData,
+                [name]: value,
+            }));
+        };
 
-    const togglePassword = () => {
-        setShowPassword((prevShowPassword) => !prevShowPassword);
-    };
+        const togglePassword = () => {
+            setShowPassword((prevShowPassword) => !prevShowPassword);
+        };
 
     const handleRegistration = () => {
         // Validate the registration data here (similar to your commented-out validation logic)

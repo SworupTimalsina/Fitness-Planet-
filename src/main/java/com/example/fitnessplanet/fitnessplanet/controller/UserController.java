@@ -2,6 +2,8 @@ package com.example.fitnessplanet.fitnessplanet.controller;
 
 
 
+import com.example.fitnessplanet.fitnessplanet.controller.Authentication.OtpEmailSender;
+import com.example.fitnessplanet.fitnessplanet.dto.UserForgetPasswordDTO;
 import com.example.fitnessplanet.fitnessplanet.entity.User;
 import com.example.fitnessplanet.fitnessplanet.dto.UserDTO;
 import com.example.fitnessplanet.fitnessplanet.service.UserService;
@@ -21,6 +23,8 @@ import java.util.Optional;
 public class UserController {
 
     private final UserService userService;
+    private final OtpEmailSender otpSender = new OtpEmailSender();
+    private final boolean[] emailOtpPassword={false, false, false};
 
     @GetMapping("/data")
     public String getData(){
@@ -42,9 +46,14 @@ public class UserController {
     }
 
     @GetMapping("/getById/{id}")
-    public Optional<User> getById(@PathVariable("id") Integer id){
-        return userService.getById(id);
-
+    public ResponseEntity<User> getById(@PathVariable("id") Integer id) {
+        Optional<User> userOptional = userService.getById(id);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            return ResponseEntity.ok(user);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @DeleteMapping("/deleteById/{id}")
@@ -64,6 +73,54 @@ public class UserController {
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
         }
+    }
+
+    @PostMapping("/sendotp")
+    public boolean sendOTP(@RequestBody UserForgetPasswordDTO newUserDTO){
+        // check if user exists in database
+
+        final String userOTP = otpSender.otp;
+
+        if (userService.getByEmail(newUserDTO.getEmail()).isPresent()) {// Email present in the database
+            if (newUserDTO.getOtp().isBlank() && !emailOtpPassword[1]) {// otp is blank so send through email.
+
+                System.out.println(otpSender.otp);
+                otpSender.sendOtpEmail(newUserDTO.getEmail());
+                emailOtpPassword[1]=true;
+                return true;
+            }
+            else {// otp is given
+                if (!newUserDTO.getOtp().equals(userOTP)){// otp doesnt match
+                    return false;
+                } else {// otp matches
+                    if (newUserDTO.getPassword().isBlank() && !emailOtpPassword[2]) {// password is not given
+                        emailOtpPassword[2]=true;
+                        return true;
+                    }
+                    else if (!newUserDTO.getPassword().isBlank()){// password is given so sets new password.
+                        User user = userService.getByEmail(newUserDTO.getEmail()).get();
+                        UserDTO userDTO = getUserDTO(newUserDTO, user);
+
+                        userService.save(userDTO);
+                        emailOtpPassword[2]=true;
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                }
+            }
+        } else {
+            return false;
+        }
+    }
+    private static UserDTO getUserDTO(UserForgetPasswordDTO newUserDTO, User user) {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setFirstName(user.getFirstName());
+        userDTO.setLastName(user.getLastName());
+        userDTO.setEmail(user.getEmail());
+        userDTO.setPassword(newUserDTO.getPassword());
+        return userDTO;
     }
 
 
