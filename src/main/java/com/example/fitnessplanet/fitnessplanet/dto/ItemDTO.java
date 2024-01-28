@@ -12,7 +12,7 @@ import org.antlr.v4.runtime.misc.NotNull;
 @AllArgsConstructor
 public class ItemDTO {
 
-    private Integer itemId;
+    private Integer product_id;
 
     @NotNull
     private String productName;

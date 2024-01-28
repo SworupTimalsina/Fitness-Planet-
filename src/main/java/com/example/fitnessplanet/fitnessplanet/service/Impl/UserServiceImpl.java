@@ -35,6 +35,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Optional<User> getByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
     public void deleteById(Integer id) {
         // Implement delete by id logic here
     }
@@ -53,5 +58,12 @@ public class UserServiceImpl implements UserService {
             return false; // Username not found or password does not match
         }
 
-
+    @Override
+    public Optional<User> getByUserDTO(UserDTO userDTO) {
+        // Retrieve the user by username from the database
+        return userRepository.findByUsername(userDTO.getUsername());
     }
+
+
+
+}
