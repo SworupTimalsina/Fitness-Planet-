@@ -1,0 +1,29 @@
+.warmup  {
+    position: relative;
+    width: 100vw;
+    height: 16S00px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    background: url('../images/w.avif') center center no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.warmup2  {
+    position: relative;
+    width: 100vw;
+    height: 1000px;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    background: url('../images/workt.jpg') center center no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
