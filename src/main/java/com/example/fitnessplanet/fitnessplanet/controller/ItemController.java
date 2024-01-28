@@ -4,6 +4,8 @@ import com.example.fitnessplanet.fitnessplanet.dto.ItemDTO;
 import com.example.fitnessplanet.fitnessplanet.entity.Item;
 import com.example.fitnessplanet.fitnessplanet.service.ItemService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,10 +24,14 @@ public class ItemController {
 
 
     @PostMapping("/save")
-    public String createData(@RequestBody ItemDTO itemDTO){
-        System.out.println(itemDTO);
-        itemService.save(itemDTO);
-        return "created data";
+    public ResponseEntity<String> createData(@RequestBody ItemDTO itemDTO) {
+        try {
+            itemService.save(itemDTO);
+            return ResponseEntity.ok("Product successfully saved/updated");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error creating/updating data");
+        }
     }
 
     @GetMapping("/getAll")

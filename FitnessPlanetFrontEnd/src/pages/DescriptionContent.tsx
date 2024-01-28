@@ -1,22 +1,42 @@
-import React from 'react';
-import './DescriptionContent.css'
+// DescriptionContent.tsx
+import React, { useEffect, useState } from 'react';
 
-const DescriptionContent: React.FC = () => {
+interface DescriptionContentProps {
+    productId: number;
+}
+
+const DescriptionContent: React.FC<DescriptionContentProps> = ({ productId }) => {
+    const [productDetails, setProductDetails] = useState<any>(null);
+
+    useEffect(() => {
+        // Fetch data for the given productId and update productDetails state
+        const fetchProductDetails = async () => {
+            try {
+                const response = await fetch(`http://localhost:8080/item/getById/${productId}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    setProductDetails(data);
+                } else {
+                    console.error('Error fetching product details:', response.status);
+                }
+            } catch (error) {
+                console.error('Error fetching product details:', error);
+            }
+        };
+
+        fetchProductDetails();
+    }, [productId]);
+
+    if (!productDetails) {
+        return <p>Loading...</p>;
+    }
+
+    // Render the product details
     return (
         <div>
-            <h2>Adjustable Dumbbell Weights – 24kg (1 Unit)</h2>
-             <h3>Rs16,500</h3>
-            <p>
-                Change weights with the simple turn of a dial. <br/>
-                Plenty of weights to work out with, and none of the
-                clutter.<br/>
-                Heavy duty construction suitable for everyday use.<br/>
-                Adjustable Dumbbell weight selection dial makes.<br/>
-                choosing the right weight for your workout quick.<br/>
-                Easily secure the chosen weight with Adjustable Dumbbell’s smart locking system.<br/>
-                Keep the adjustable dumbbells neatly organized with its holder.<br/>
-                Ergonomic contoured design makes it comfortable to grip.</p>
-
+            <h2>{productDetails.productName}</h2>
+            <p>{productDetails.description}</p>
+            {/* Add more details as needed */}
         </div>
     );
 };

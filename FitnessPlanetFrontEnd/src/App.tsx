@@ -17,6 +17,7 @@ import Gymtips from "./pages/gymtips.tsx";
 import Article from "./pages/article.tsx";
 import HomeWorkout from "./pages/homeworkout.tsx";
 import Adminpanel from "./pages/adminpanel.tsx";
+import Dumbbell from "./pages/dumbbell.tsx";
 
 const router = createBrowserRouter(
     [
@@ -93,6 +94,10 @@ const router = createBrowserRouter(
         {
             path:"/admin",
             element:<Adminpanel/>
+        },
+        {
+            path:"/dumbbell",
+            element:<Dumbbell/>
         }
 
 

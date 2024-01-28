@@ -19,7 +19,5 @@ public interface UserService {
     boolean validateLogin(String username, String password);
 
 
-
-
 }
 

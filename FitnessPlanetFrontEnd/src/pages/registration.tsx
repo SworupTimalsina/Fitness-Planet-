@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './registration.css';
+import axios from 'axios'; // Import axios for making HTTP requests
+
 interface FormData {
     firstname: string;
-    lastname:string;
+    lastname: string;
     email: string;
     username: string;
     password: string;
@@ -12,7 +14,7 @@ interface FormData {
 const RegistrationForm: React.FC = () => {
     const [formData, setFormData] = useState<FormData>({
         firstname: '',
-        lastname:'',
+        lastname: '',
         email: '',
         username: '',
         password: '',
@@ -33,17 +35,21 @@ const RegistrationForm: React.FC = () => {
         setShowPassword((prevShowPassword) => !prevShowPassword);
     };
 
-    // const validateRegistration = () => {
-    //     const { firstname, lastname, username, email, password, repeatPassword } = formData;
-    //
-    //     if (username && email && password && repeatPassword && password === repeatPassword) {
-    //         alert('Registration successful!');
-    //     } else if (password !== repeatPassword) {
-    //         alert('Passwords do not match. Please try again.');
-    //     } else {
-    //         alert('Please fill in all the fields.');
-    //     }
-    // };
+    const handleRegistration = () => {
+        // Validate the registration data here (similar to your commented-out validation logic)
+
+        // Make a POST request to your backend API
+        axios.post('http://localhost:5173/user/save', formData) // Change the URL as needed
+            .then((response) => {
+                // Handle the response from the server (e.g., show a success message)
+                console.log(response.data); // Log the response for debugging
+            })
+            .catch((error) => {
+                // Handle errors (e.g., show an error message)
+                console.error('Registration failed:', error);
+            });
+    };
+
 
     return (
         <div className="container">
@@ -59,10 +65,18 @@ const RegistrationForm: React.FC = () => {
                     name="firstname"
                     placeholder="   First Name"
                     required
+                    value={formData.firstname}
                     onChange={handleChange}
                 />
 
-                <input type="text"  placeholder="      Last Name" className="lastname"/>
+                <input
+                    type="text"
+                    className="lastname"
+                    name="lastname"
+                    placeholder="   Last Name"
+                    required
+                    value={formData.lastname}
+                    onChange={handleChange}/>
                 </div>
 
                 <input
@@ -116,7 +130,7 @@ const RegistrationForm: React.FC = () => {
                     <label>Show Password</label>
                 </div>
 
-                <button type="button" className="regbutton" style={{backgroundColor:"red"}}>
+                <button type="button" className="regbutton" style={{backgroundColor:"red"}} onClick={handleRegistration}>
                     Register
                 </button>
             </div>
