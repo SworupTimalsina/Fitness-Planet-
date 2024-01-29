@@ -18,20 +18,28 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String save(UserDTO userDTO) {
-        // Implement save logic here
-        return null;
+        User newUser = new User();
+        newUser.setFirstName(userDTO.getFirstName());
+        newUser.setLastName(userDTO.getLastName());
+        newUser.setEmail(userDTO.getEmail());
+        newUser.setUsername(userDTO.getUsername());
+        newUser.setPassword(userDTO.getPassword());
+
+        userRepository.save(newUser);
+
+        return "User successfully saved";
     }
 
     @Override
     public List<User> getAll() {
         // Implement get all logic here
-        return null;
+        return userRepository.findAll();
     }
 
     @Override
     public Optional<User> getById(Integer id) {
         // Implement get by id logic here
-        return Optional.empty();
+        return userRepository.findById(id);
     }
 
     @Override
@@ -42,28 +50,24 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteById(Integer id) {
         // Implement delete by id logic here
+        userRepository.deleteById(id);
     }
 
     @Override
     public boolean validateLogin(String username, String password) {
+        Optional<User> userOptional = userRepository.findByUsername(username);
 
-            Optional<User> userOptional = userRepository.findByUsername(username);
-
-
-            if (userOptional.isPresent()) {
-                User user = userOptional.get();
-                return user.getPassword().equals(password);
-            }
-
-            return false; // Username not found or password does not match
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            return user.getPassword().equals(password);
         }
+
+        return false;
+    }
 
     @Override
     public Optional<User> getByUserDTO(UserDTO userDTO) {
         // Retrieve the user by username from the database
         return userRepository.findByUsername(userDTO.getUsername());
     }
-
-
-
 }

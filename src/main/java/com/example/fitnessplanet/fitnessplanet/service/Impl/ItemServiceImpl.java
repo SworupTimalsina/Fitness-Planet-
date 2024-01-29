@@ -7,6 +7,7 @@ import com.example.fitnessplanet.fitnessplanet.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -27,12 +28,21 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public String save(ItemDTO itemDTO) {
+        // Check if a product with the same name already exists
+        Optional<Item> existingItem = itemRepository.findByProductName(itemDTO.getProductName());
+
+        if (existingItem.isPresent()) {
+            // If the product exists, throw an exception or handle the error accordingly
+            throw new RuntimeException("Product with the same name already exists. Cannot create a new one.");
+        }
+
+        // If the product doesn't exist, proceed with saving or updating
         Item product = new Item();
 
         if (itemDTO.getItemId() != null) {
-            Optional<Item> existingItem = itemRepository.findById(itemDTO.getItemId());
-            if (existingItem.isPresent()) {
-                product = existingItem.get();
+            Optional<Item> foundItem = itemRepository.findById(itemDTO.getItemId());
+            if (foundItem.isPresent()) {
+                product = foundItem.get();
             } else {
                 throw new RuntimeException("Product data not found for update.");
             }
@@ -42,11 +52,18 @@ public class ItemServiceImpl implements ItemService {
         product.setDescription(itemDTO.getDescription());
         product.setPrice(itemDTO.getPrice());
         product.setCategory(itemDTO.getCategory());
+        product.setImageUrl(itemDTO.getImageUrl());
 
         itemRepository.save(product);
 
         return "Product successfully saved/updated";
     }
+
+    @Override
+    public Optional<Item> getByProductName(String productName) {
+        return itemRepository.findByProductName(productName);
+    }
+
 
     @Override
     public List<Item> getAll() {
@@ -63,5 +80,26 @@ public class ItemServiceImpl implements ItemService {
         itemRepository.deleteById(productId);
     }
 
+    @Override
+    public void update(ItemDTO updatedItemDTO) {
+        // Implementation for updating an item
+        Optional<Item> existingItemOptional = itemRepository.findByProductName(updatedItemDTO.getProductName());
+
+        if (existingItemOptional.isPresent()) {
+            Item existingItem = existingItemOptional.get();
+
+            // Update the existing item with new information
+            existingItem.setPrice(updatedItemDTO.getPrice());
+            existingItem.setCategory(updatedItemDTO.getCategory());
+            existingItem.setDescription(updatedItemDTO.getDescription());
+            existingItem.setImageUrl(updatedItemDTO.getImageUrl());
+
+            // Save the updated item
+            itemRepository.save(existingItem);
+        } else {
+            // Handle the case where the item to update is not found
+            throw new RuntimeException("Item not found for update");
+        }
+    }
 
 }

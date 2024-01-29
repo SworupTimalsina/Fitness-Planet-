@@ -32,5 +32,7 @@ public class Item {
     @Column(name = "category", nullable = false)
     private String category;
 
+    @Column(name = "image_url", nullable = false)
+    private String imageUrl;
 
 }

@@ -1,7 +1,6 @@
 package com.example.fitnessplanet.fitnessplanet.controller;
 
 
-
 import com.example.fitnessplanet.fitnessplanet.controller.Authentication.OtpEmailSender;
 import com.example.fitnessplanet.fitnessplanet.dto.UserForgetPasswordDTO;
 import com.example.fitnessplanet.fitnessplanet.entity.User;
@@ -32,13 +31,14 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public String createData(@RequestBody UserDTO userDTO){
-        System.out.println(userDTO);
-        userService.save(userDTO);
-
-
-        return "Created data";
-
+    public ResponseEntity<String> createData(@RequestBody UserDTO userDTO) {
+        try {
+            userService.save(userDTO);
+            return ResponseEntity.ok("User successfully saved");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error saving user");
+        }
     }
     @GetMapping("/getAll")
     public List<User> getAll(){

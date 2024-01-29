@@ -1,18 +1,30 @@
 
 .categories{
-
+    display: flex;
+    flex-direction: column;
     position: fixed;
     height: 100vh;
-    width: 400px;
+    width: 300px;
     margin-right: 2000px;
     background-color: lightgray;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 5px;
 
 
 }
+
+.cteg-btn{
+    margin-top: 20px;
+    background-color: lightgray;
+    color: black;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
 #categ{
     height: 700px;
-    width: 400px;
+    width: 100px;
     margin-right: 2000px;
     background-color: lightgray;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -25,9 +37,26 @@
 
 
 .bg-pro{
+    margin-top: 100px;
     background-color: white;
     height: 100%;
     width: 100%;
-    display: flex;
+}
+
+
+.br-pro{
+    margin-left: 600px;
+    color: red;
+    font-family: "Poppins", sans-serif;
+}
+
+.pro-dis{
+    margin-left: 400px;
+    min-height: 100vh;
+
+}
+
+.pro-naam{
+    font-family: "Poppins", sans-serif;
 
 }
