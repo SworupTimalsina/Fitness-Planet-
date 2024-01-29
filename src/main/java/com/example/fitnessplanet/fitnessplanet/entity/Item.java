@@ -1,8 +1,8 @@
 package com.example.fitnessplanet.fitnessplanet.entity;
 
 
-import jakarta.persistence.;
-import lombok.;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
 
