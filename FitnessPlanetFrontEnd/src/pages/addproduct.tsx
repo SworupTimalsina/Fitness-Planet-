@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import React, { useState } from 'react';
 import './adminpanel.css';
 
@@ -89,6 +80,7 @@ const AddPro: React.FC = () => {
                                 value={formData.category}
                                 onChange={handleInputChange}
                             >
+                                <option>Dumbbells</option>
                                 <option>Treadmill</option>
                                 <option>Home Gyms</option>
                                 <option>Jump Ropes</option>

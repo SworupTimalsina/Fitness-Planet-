@@ -1,56 +1,58 @@
 import React, { useState } from 'react'
-import axios from 'axios';
 import './registration.css';
-import axios from 'axios'; // Import axios for making HTTP requests
+import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+
 
 interface FormData {
-    firstname: string;
-    lastname: string;
+    id?: number;
+    firstName: string;
+    lastName: string;
     email: string;
     username: string;
     password: string;
-    repeatPassword: string;
+
 }
 
 const RegistrationForm: React.FC = () => {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState<FormData>({
-        firstname: '',
-        lastname: '',
+        firstName: '',
+        lastName: '',
         email: '',
         username: '',
         password: '',
-        repeatPassword: '',
+
     });
 
         const [showPassword, setShowPassword] = useState(false);
 
-        const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-            const { name, value } = e.target;
-            setFormData((prevData) => ({
-                ...prevData,
-                [name]: value,
-            }));
-        };
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
 
         const togglePassword = () => {
             setShowPassword((prevShowPassword) => !prevShowPassword);
         };
 
     const handleRegistration = () => {
-        // Validate the registration data here (similar to your commented-out validation logic)
+        const formDataWithoutId = (({ id, ...rest }) => rest)(formData);
 
-        // Make a POST request to your backend API
-        axios.post('http://localhost:5173/user/save', formData) // Change the URL as needed
-            .then((response) => {
-                // Handle the response from the server (e.g., show a success message)
-                console.log(response.data); // Log the response for debugging
+        axios.post('http://localhost:8080/user/save', formDataWithoutId)
+            .then(response => {
+                console.log('Registration successful:', response.data);
+                alert("Registered Succesfully");
+                navigate('/login');
             })
-            .catch((error) => {
-                // Handle errors (e.g., show an error message)
-                console.error('Registration failed:', error);
+            .catch(error => {
+                console.error('Registration failed:', error.message);
             });
     };
-
 
     return (
         <div className="container">
@@ -63,20 +65,20 @@ const RegistrationForm: React.FC = () => {
                 <input
                     type="text"
                     className="firstname"
-                    name="firstname"
+                    name="firstName"
                     placeholder="   First Name"
                     required
-                    value={formData.firstname}
+                    value={formData.firstName}
                     onChange={handleChange}
                 />
 
                 <input
                     type="text"
                     className="lastname"
-                    name="lastname"
+                    name="lastName"
                     placeholder="   Last Name"
                     required
-                    value={formData.lastname}
+                    value={formData.lastName}
                     onChange={handleChange}/>
                 </div>
 
@@ -116,8 +118,6 @@ const RegistrationForm: React.FC = () => {
                     name="repeatPassword"
                     placeholder="      Repeat Password"
                     required
-                    value={formData.repeatPassword}
-                    onChange={handleChange}
                 />
                 </div>
 

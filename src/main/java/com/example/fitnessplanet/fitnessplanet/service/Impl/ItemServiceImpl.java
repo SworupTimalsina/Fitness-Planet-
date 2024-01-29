@@ -59,6 +59,11 @@ public class ItemServiceImpl implements ItemService {
         return "Product successfully saved/updated";
     }
 
+    @Override
+    public Optional<Item> getByProductName(String productName) {
+        return itemRepository.findByProductName(productName);
+    }
+
 
     @Override
     public List<Item> getAll() {
@@ -75,5 +80,26 @@ public class ItemServiceImpl implements ItemService {
         itemRepository.deleteById(productId);
     }
 
+    @Override
+    public void update(ItemDTO updatedItemDTO) {
+        // Implementation for updating an item
+        Optional<Item> existingItemOptional = itemRepository.findByProductName(updatedItemDTO.getProductName());
+
+        if (existingItemOptional.isPresent()) {
+            Item existingItem = existingItemOptional.get();
+
+            // Update the existing item with new information
+            existingItem.setPrice(updatedItemDTO.getPrice());
+            existingItem.setCategory(updatedItemDTO.getCategory());
+            existingItem.setDescription(updatedItemDTO.getDescription());
+            existingItem.setImageUrl(updatedItemDTO.getImageUrl());
+
+            // Save the updated item
+            itemRepository.save(existingItem);
+        } else {
+            // Handle the case where the item to update is not found
+            throw new RuntimeException("Item not found for update");
+        }
+    }
 
 }

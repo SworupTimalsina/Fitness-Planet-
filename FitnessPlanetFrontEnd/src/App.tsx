@@ -99,7 +99,7 @@ const router = createBrowserRouter(
         {
             path:"/dumbbell",
             element:<Dumbbell/>
-        }
+        },
         {
             path:"/profile",
             element:<Profile/>
