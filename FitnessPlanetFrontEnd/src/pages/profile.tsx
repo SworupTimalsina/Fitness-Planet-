@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
-// import axios from 'axios';
 import './profile.css';
 import logo from '../images/logo.png';
 import axios from "axios";
+
 
 const Profile: React.FC = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -60,22 +60,34 @@ const Profile: React.FC = () => {
             fetchData();
         }, []);
 
-        const handleSubmit = async () => {
-            try {
-                // Assuming you have an endpoint to update user details
-                await axios.post('http://localhost:8080/user/save', {
-                    id: 1,
-                    firstName,
-                    lastName,
-                    username,
-                    email,
-                    password,
-                });
-                console.log('User details updated successfully!');
-            } catch (error) {
-                console.error('Error updating user details:', error);
+    const handleSubmit = async () => {
+        try {
+            // Assuming you have the userId available (replace with your actual userId)
+            const userId = 1; // Replace with your actual userId
+
+            // Fetch user by ID
+            const response = await axios.get(`http://localhost:8080/user/getById/${userId}`);
+            const existingUser = response.data;
+
+            if (!existingUser) {
+                console.error('User not found for the given ID:', userId);
+                return;
             }
-        };
+
+            // Update user details
+            await axios.put(`http://localhost:8080/user/update/${existingUser.id}`, {
+                firstName,
+                lastName,
+                username,
+                email,
+                password,
+            });
+
+            console.log('User details updated successfully!');
+        } catch (error) {
+            console.error('Error updating user details:', error);
+        }
+    };
 
 
     return (
