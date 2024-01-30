@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './dashboard.css';
 import {Link, useNavigate} from 'react-router-dom';
+import BottomBar from "./components/BottomBar.tsx";
+import TopBar from "./components/topbar.tsx";
 
 
 
@@ -30,16 +32,7 @@ const Dashboard: React.FC = () => {
         <>
         <head><title>Fitness Planet</title></head>
         <div className="homepage">
-            <nav className="top-buttons">
-                <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                <div className="buttons">
-                    <a href='/dashboard' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                    <a href='/products' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                </div>
-            </nav>
-
+        <TopBar/>
             <div className="createplan">
                 <button className="createfit">CLICK HERE</button>
 
@@ -114,15 +107,7 @@ const Dashboard: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="about">
-                <div className="about-buttons">
-                <button>About Us</button>
-                <button>News</button>
-                <button>Privacy Policy</button>
-
-                </div>
-                <label className="copyright">Copyright © 2023 Fitness planet</label>
-            </div>
+            <BottomBar/>
 
             {/*<MessengerCustomerChat*/}
             {/*    pageId="185039364700360"*/}

@@ -19,6 +19,7 @@ import HomeWorkout from "./pages/homeworkout.tsx";
 import Adminpanel from "./pages/adminpanel.tsx";
 import Dumbbell from "./pages/dumbbell.tsx";
 import Profile from "./pages/profile.tsx";
+import Aboutus from "./pages/aboutus.tsx";
 
 const router = createBrowserRouter(
     [
@@ -28,7 +29,7 @@ const router = createBrowserRouter(
         },
         {
             path:"/login",
-            element:<Login />
+            element:<Login/>
         },
 
         {
@@ -70,7 +71,6 @@ const router = createBrowserRouter(
             path:"/BulkCut2",
             element:<BulkCut2/>
         },
-
         {
             path:"/Nutrition",
             element:<Nutritionaltips/>
@@ -103,6 +103,10 @@ const router = createBrowserRouter(
         {
             path:"/profile",
             element:<Profile/>
+        },
+        {
+            path:"/aboutus",
+            element:<Aboutus/>
         },
 
 

@@ -1,0 +1,19 @@
+.ab-bg{
+    background-color: black;
+    height: 77vh;
+}
+
+.ab-txt{
+    color: white;
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    font-family: "julius sans one", sans-serif;
+    width: 600px;
+}
+
+.logo-img{
+    position: absolute;
+    top: 150px;
+    left: 900px;
+}

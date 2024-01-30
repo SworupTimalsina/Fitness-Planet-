@@ -1,9 +1,12 @@
 import React from 'react';
 import './warmup.css';
+import BottomBar from "./components/BottomBar.tsx";
+import TopBar from "./components/topbar.tsx";
 
 const Warmup: React.FC = () => {
     return (
         <div className="fitness-guide">
+            <TopBar/>
             <h1>WARMUP EXERCISES</h1>
 
             <section className="warmup">
@@ -132,7 +135,9 @@ const Warmup: React.FC = () => {
                     </ol>
                 </p><br></br>
             </section>
+            <BottomBar/>
         </div>
+
     );
 };
 

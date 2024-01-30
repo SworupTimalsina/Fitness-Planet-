@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import "./products.css"
 import DescriptionContent from "./DescriptionContent.tsx";
+import BottomBar from "./components/BottomBar.tsx";
+import TopBar from "./components/topbar.tsx";
 
 
 interface Product {
@@ -54,16 +56,7 @@ const Products = () => {
     return (
         <>
 
-            <div className="top-buttons">
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                <div className="buttons">
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                </div>
-
-            </div>
+<TopBar/>
 
 
 
@@ -88,7 +81,8 @@ const Products = () => {
             </div>
 
             {selectedProductId && <DescriptionContent productId={selectedProductId} />}
-        </>
+            <BottomBar/>
+        </TopBar>
     );
 };
 

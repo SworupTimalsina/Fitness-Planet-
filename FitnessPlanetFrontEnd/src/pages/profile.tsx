@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import './profile.css';
 import logo from '../images/logo.png';
 import axios from "axios";
+import TopBar from "./components/topbar.tsx";
 
 
 const Profile: React.FC = () => {
@@ -92,16 +93,7 @@ const Profile: React.FC = () => {
 
     return (
         <>
-
-        <div className="top-buttons">
-            <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-            <div className="buttons">
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-            </div>
-        </div>
+            <TopBar/>
 
         <div className="container-ss">
             {/*<div className="p-txt">*/}
