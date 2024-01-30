@@ -9,20 +9,13 @@ import hitt from "../images/hitt.jpg";
 import skip from "../images/skip.jpg";
 import gun from "../images/gun.jpg";
 import burn from "../images/burn.jpg";
+import TopBar from "./components/topbar.tsx";
 
 
 const Article: React.FC = () => {
     return (
         <>
-            <div className="top-buttons">
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                <div className="buttons">
-                    <a href='/dashboard' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                    <a href='/products' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                </div>
-            </div>
+            <TopBar/>
             <div className="arti">
                 <div className="image-box">
                     <a href="https://www.everydayhealth.com/fitness/potential-health-benefits-of-barre/" target="_blank" rel="noopener noreferrer">

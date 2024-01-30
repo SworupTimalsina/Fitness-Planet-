@@ -416,16 +416,6 @@
     margin-right: 10px;
 }
 
-.about{
-    background-color: black;
-    height: 200px;
-    width: 100vw;
-}
-
-.about-buttons{
-    display: flex;
-    flex-direction: column;
-}
 
 .copyright{
    margin-top: 50px;

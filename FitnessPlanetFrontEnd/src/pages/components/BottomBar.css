@@ -1,0 +1,21 @@
+.ab-btn{
+    background-color: black;
+    color: white;
+    font-family: Poppins, sans-serif;
+}
+
+.copyright{
+    color: white;
+    font-family: "julius sans one", sans-serif;
+}
+
+
+.about{
+    background-color: black;
+    width: 100vw;
+}
+
+.about-buttons{
+    display: flex;
+    flex-direction: column;
+}

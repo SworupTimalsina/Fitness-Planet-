@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "./products.css"
 import DescriptionContent from "./DescriptionContent.tsx";
+import BottomBar from "./components/BottomBar.tsx";
 
 
 interface Product {
@@ -88,6 +89,7 @@ const Products = () => {
             </div>
 
             {selectedProductId && <DescriptionContent productId={selectedProductId} />}
+            <BottomBar/>
         </>
     );
 };

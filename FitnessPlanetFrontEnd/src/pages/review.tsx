@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import DescriptionContent from './DescriptionContent.tsx';
 import ReviewContent from './ReviewContent.tsx';
 import ComparePop from './comparepop.tsx';
+import TopBar from "./components/topbar.tsx";
 
 interface ItemDTO {
     itemId: number;
@@ -62,15 +63,7 @@ const Review: React.FC<ReviewProps> = () => {
     return (
         <body className="reviewbody">
         <div className="page-body">
-            <div className="top-buttons">
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                <div className="buttons">
-                    <a href='/dashboard' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                    <a href='/products' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                </div>
-            </div>
+        <TopBar/>
             <button className="coamper" onClick={handleCompareButtonClick}>
                 Compare
             </button>
