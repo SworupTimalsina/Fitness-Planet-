@@ -10,7 +10,7 @@ const TopBar: React.FC = () => {
                     <a href='/dashboard' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
                     <a href='/products' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
                     <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
+                    <a href='/aboutus' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
                 </div>
             </div>
 
