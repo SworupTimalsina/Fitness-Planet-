@@ -22,6 +22,8 @@ const Login: React.FC = () => {
             });
 
             if (response.ok) {
+                // const userData = await response.json();
+                // localStorage.setItem('userId', userData.id);
                 navigate('/dashboard');
             } else {
                 alert('Invalid username or password. Please try again.');

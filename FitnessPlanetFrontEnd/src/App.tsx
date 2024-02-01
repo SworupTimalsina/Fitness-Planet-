@@ -5,7 +5,7 @@ import ForgotPass from "./pages/forgotpass.tsx";
 import Registration from "./pages/registration.tsx";
 import Dashboard from "./pages/dashboard.tsx";
 import Review from "./pages/review.tsx";
-import DescriptionContent from "./pages/DescriptionContent.tsx";
+// import DescriptionContent from "./pages/DescriptionContent.tsx";
 import Nutritionaltips from "./pages/nutritionaltips.tsx";
 import Products from "./pages/products.tsx";
 import Trainers from "./pages/trainer.tsx";
@@ -34,7 +34,7 @@ const router = createBrowserRouter(
 
         {
             path:"/forgotpass",
-            element:<ForgotPass/>
+            element:<ForgotPass email='' otp='' password=''/>
         },
         {
             path:"/register",
@@ -45,17 +45,13 @@ const router = createBrowserRouter(
             element:<Dashboard/>
         },
         {
-            path:"/review",
+            path:"/review/:productId",
             element:<Review/>
         },
 
         {
             path:"/products",
             element:<Products/>
-        },
-        {
-            path:"/Description",
-            element:<DescriptionContent/>
         },
 
         {

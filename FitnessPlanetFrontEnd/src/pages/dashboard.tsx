@@ -34,7 +34,7 @@ const Dashboard: React.FC = () => {
         <div className="homepage">
         <TopBar/>
             <div className="createplan">
-                <button className="createfit">CLICK HERE</button>
+                {/*<button className="createfit">CLICK HERE</button>*/}
 
             </div>
 
@@ -101,7 +101,10 @@ const Dashboard: React.FC = () => {
             <button className="homeworkout">Home Workout Tips</button>
             </Link>
                     <div className="sepbuttons">
+
+                        <Link to='/gymtips'>
                 <button className="gym">Gym Tips</button>
+                        </Link>
 
                 <button className="nutritional" onClick={toNutri}>Nutritional Tips</button>
                     </div>

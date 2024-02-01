@@ -42,10 +42,9 @@ const Review: React.FC<ReviewProps> = () => {
                 if (selectedProductId !== null) {
                     const response = await fetch(`http://localhost:8080/item/getById/${selectedProductId}`);
                     if (response.ok) {
-                        const data = await response.json();
+                        const data: ItemDTO = await response.json();
                         setItemDTO(data);
-                        console.log('Image URL:', itemDTO?.imageUrl);
-
+                        console.log('Image URL:', data.imageUrl);
                     } else {
                         console.error('Error fetching product data:', response.status);
                     }
@@ -56,9 +55,8 @@ const Review: React.FC<ReviewProps> = () => {
         };
 
         fetchProductData();
-    }, [selectedProductId, itemDTO]);
+    }, [selectedProductId]);
 
-    console.log('Image URL:', itemDTO?.imageUrl);
 
     return (
         <body className="reviewbody">
@@ -69,7 +67,7 @@ const Review: React.FC<ReviewProps> = () => {
             </button>
             {comparePopVisible && <ComparePop onClose={closeComparePop} />}
             <div className="image">
-                <img src={itemDTO?.imageUrl} width="400" height="400" alt={itemDTO?.productName} />
+                <img src={itemDTO?.imageUrl} width="400" height="400" alt={itemDTO?.productName} className="img-prod"/>
             </div>
             <div className="change-page">
                 <form className="sliding-page">
@@ -81,6 +79,7 @@ const Review: React.FC<ReviewProps> = () => {
                         {checked ? (
                             <ReviewContent />
                         ) : (
+                            //@ts-ignore
                             <DescriptionContent productId={selectedProductId} />
                         )}
                     </p>

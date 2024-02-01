@@ -37,9 +37,20 @@ const Profile: React.FC = () => {
             setPassword(e.target.value);
         };
 
-    const fetchData = async () => {
+    useEffect(() => {
+        // Retrieve user ID from local storage or state management
+        const userId = localStorage.getItem('userId');
+
+        if (userId) {
+            fetchData(userId);
+        } else {
+            console.error('User ID not found. User may not be logged in.');
+        }
+    }, []);
+
+    const fetchData = async (userId: string) => {
         try {
-            const response = await axios.get(`http://localhost:8080/user/getById/1`);
+            const response = await axios.get(`http://localhost:8080/user/getById/${userId}`);
             const user = response.data;
 
             console.log('Fetched user:', user);
@@ -49,17 +60,10 @@ const Profile: React.FC = () => {
             setUsername(user.username || '');
             setEmail(user.email || '');
             setPassword(user.password || ''); // Set password to an empty string or the user's actual password if you want to display it
-
         } catch (error) {
             console.error('Error fetching user data:', error);
         }
     };
-
-
-
-        useEffect(() => {
-            fetchData();
-        }, []);
 
     const handleSubmit = async () => {
         try {
@@ -176,6 +180,7 @@ const Profile: React.FC = () => {
                 </div>
                 <img src={logo} className="logo" />
             </div>
+
         </>
 
     );

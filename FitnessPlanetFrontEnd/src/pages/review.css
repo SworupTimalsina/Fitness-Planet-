@@ -142,3 +142,8 @@ input:checked + .slider:before {
     top: 120px;
     left: 100px;
 }
+
+.img-prod{
+    margin-top: 140px;
+    margin-right: 100px;
+}
