@@ -5,7 +5,7 @@ import ForgotPass from "./pages/forgotpass.tsx";
 import Registration from "./pages/registration.tsx";
 import Dashboard from "./pages/dashboard.tsx";
 import Review from "./pages/review.tsx";
-import DescriptionContent from "./pages/DescriptionContent.tsx";
+// import DescriptionContent from "./pages/DescriptionContent.tsx";
 import Nutritionaltips from "./pages/nutritionaltips.tsx";
 import Products from "./pages/products.tsx";
 import Trainers from "./pages/trainer.tsx";
@@ -17,6 +17,10 @@ import Gymtips from "./pages/gymtips.tsx";
 import Article from "./pages/article.tsx";
 import HomeWorkout from "./pages/homeworkout.tsx";
 import Adminpanel from "./pages/adminpanel.tsx";
+import Bulk from "./pages/bulk.tsx";
+import Bulk2 from "./pages/bulk2.tsx";
+import Bulk3 from "./pages/bulk3.tsx";
+import Bulk4 from "./pages/bulk4.tsx";
 import Dumbbell from "./pages/dumbbell.tsx";
 import Profile from "./pages/profile.tsx";
 import Aboutus from "./pages/aboutus.tsx";
@@ -37,7 +41,7 @@ const router = createBrowserRouter(
 
         {
             path:"/forgotpass",
-            element:<ForgotPass/>
+            element:<ForgotPass email='' otp='' password=''/>
         },
         {
             path:"/register",
@@ -56,10 +60,10 @@ const router = createBrowserRouter(
             path:"/products",
             element:<Products/>
         },
-        {
-            path:"/Description",
-            element:<DescriptionContent/>
-        },
+        // {
+        //     path:"/Description",
+        //     element:<DescriptionContent/>
+        // },
 
         {
             path:"/article",
@@ -100,17 +104,39 @@ const router = createBrowserRouter(
             element:<Adminpanel/>
         },
         {
-            path:"/dumbbell",
-            element:<Dumbbell/>
+
+            path:"/bulk",
+            element:<Bulk/>
+},
+
+{
+    path:"/bulk2",
+        element:<Bulk2/>
+},
+
+{
+    path:"/bulk3",
+        element:<Bulk3/>
+},
+
+        {
+            path: "/bulk4",
+            element: <Bulk4/>
         },
         {
-            path:"/profile",
-            element:<Profile/>
-        },
-        {
-            path:"/aboutus",
-            element:<Aboutus/>
-        },
+
+    path:"/dumbbell",
+    element:<Dumbbell/>
+},
+{
+    path:"/profile",
+        element:<Profile/>
+},
+{
+    path:"/aboutus",
+        element:<Aboutus/>
+
+},
         {
             path:"/cut1",
             element:<Cut1/>
@@ -131,7 +157,7 @@ const router = createBrowserRouter(
 
 
 
-    ]
+]
 )
 function App() {
 
