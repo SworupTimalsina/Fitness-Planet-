@@ -3,6 +3,7 @@ import './adminpanel.css';
 import DeletePro from "./deleteproduct.tsx";
 import AddPro from "./addproduct.tsx";
 import UpdatePro from "./updateproducts.tsx";
+import TopBar from "./components/topbar.tsx";
 
 
 
@@ -24,6 +25,8 @@ const Admin: React.FC = () => {
     };
     return (
         <>
+        <TopBar/>
+
             <div className="admin-bg">
                 <div className="holder">
                     <div className="button-holder">

@@ -44,4 +44,19 @@ const ReviewContent: React.FC = () => {
 };
 
 export default ReviewContent;
+//
 
+// interface ReviewContentProps {
+//     itemDTO: ItemDTO;
+// }
+//
+// const ReviewContent: React.FC<ReviewContentProps> = ({ itemDTO }) => {
+//     // Use itemDTO to render content
+//     return (
+//         <div>
+//             {/* Render content using itemDTO */}
+//         </div>
+//     );
+// };
+//
+// export default ReviewContent;

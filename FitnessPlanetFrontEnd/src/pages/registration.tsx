@@ -1,25 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import './registration.css';
+import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+
+
 interface FormData {
-    firstname: string;
-    lastname:string;
+    id?: number;
+    firstName: string;
+    lastName: string;
     email: string;
     username: string;
     password: string;
-    repeatPassword: string;
+
 }
 
 const RegistrationForm: React.FC = () => {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState<FormData>({
-        firstname: '',
-        lastname:'',
+        firstName: '',
+        lastName: '',
         email: '',
         username: '',
         password: '',
-        repeatPassword: '',
+
     });
 
-    const [showPassword, setShowPassword] = useState(false);
+        const [showPassword, setShowPassword] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -29,21 +36,23 @@ const RegistrationForm: React.FC = () => {
         }));
     };
 
-    const togglePassword = () => {
-        setShowPassword((prevShowPassword) => !prevShowPassword);
-    };
+        const togglePassword = () => {
+            setShowPassword((prevShowPassword) => !prevShowPassword);
+        };
 
-    // const validateRegistration = () => {
-    //     const { firstname, lastname, username, email, password, repeatPassword } = formData;
-    //
-    //     if (username && email && password && repeatPassword && password === repeatPassword) {
-    //         alert('Registration successful!');
-    //     } else if (password !== repeatPassword) {
-    //         alert('Passwords do not match. Please try again.');
-    //     } else {
-    //         alert('Please fill in all the fields.');
-    //     }
-    // };
+    const handleRegistration = () => {
+        const formDataWithoutId = (({ id, ...rest }) => rest)(formData);
+
+        axios.post('http://localhost:8080/user/save', formDataWithoutId)
+            .then(response => {
+                console.log('Registration successful:', response.data);
+                alert("Registered Succesfully");
+                navigate('/login');
+            })
+            .catch(error => {
+                console.error('Registration failed:', error.message);
+            });
+    };
 
     return (
         <div className="container">
@@ -56,13 +65,21 @@ const RegistrationForm: React.FC = () => {
                 <input
                     type="text"
                     className="firstname"
-                    name="firstname"
+                    name="firstName"
                     placeholder="   First Name"
                     required
+                    value={formData.firstName}
                     onChange={handleChange}
                 />
 
-                <input type="text"  placeholder="      Last Name" className="lastname"/>
+                <input
+                    type="text"
+                    className="lastname"
+                    name="lastName"
+                    placeholder="   Last Name"
+                    required
+                    value={formData.lastName}
+                    onChange={handleChange}/>
                 </div>
 
                 <input
@@ -101,8 +118,6 @@ const RegistrationForm: React.FC = () => {
                     name="repeatPassword"
                     placeholder="      Repeat Password"
                     required
-                    value={formData.repeatPassword}
-                    onChange={handleChange}
                 />
                 </div>
 
@@ -116,7 +131,7 @@ const RegistrationForm: React.FC = () => {
                     <label>Show Password</label>
                 </div>
 
-                <button type="button" className="regbutton" style={{backgroundColor:"red"}}>
+                <button type="button" className="regbutton" style={{backgroundColor:"red"}} onClick={handleRegistration}>
                     Register
                 </button>
             </div>

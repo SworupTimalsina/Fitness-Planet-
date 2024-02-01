@@ -1,8 +1,8 @@
 package com.example.fitnessplanet.fitnessplanet.entity;
 
 
-import jakarta.persistence.;
-import lombok.;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
 
@@ -32,5 +32,7 @@ public class Item {
     @Column(name = "category", nullable = false)
     private String category;
 
+    @Column(name = "image_url", nullable = false)
+    private String imageUrl;
 
 }

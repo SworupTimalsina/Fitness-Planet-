@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
 import './dashboard.css';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+// import MessengerCustomerChat from 'react-messenger-customer-chat';
 import {Link, useNavigate} from 'react-router-dom';
+import BottomBar from "./components/BottomBar.tsx";
+import TopBar from "./components/topbar.tsx";
 
 
 const Dashboard: React.FC = () => {
@@ -30,16 +31,7 @@ const Dashboard: React.FC = () => {
         <>
         <head><title>Fitness Planet</title></head>
         <div className="homepage">
-            <nav className="top-buttons">
-                <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                <div className="buttons">
-                    <a href='/dashboard' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                    <a href='/products' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                    <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                </div>
-            </nav>
-
+        <TopBar/>
             <div className="createplan">
                 <button className="createfit">CLICK HERE</button>
 
@@ -114,20 +106,12 @@ const Dashboard: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="about">
-                <div className="about-buttons">
-                <button>About Us</button>
-                <button>News</button>
-                <button>Privacy Policy</button>
+            <BottomBar/>
 
-                </div>
-                <label className="copyright">Copyright © 2023 Fitness planet</label>
-            </div>
-
-            <MessengerCustomerChat
-                pageId="185039364700360"
-                appId="628231029368079"
-            />
+            {/*<MessengerCustomerChat*/}
+            {/*    pageId="185039364700360"*/}
+            {/*    appId="628231029368079"*/}
+            {/*/>*/}
     </div>
         </>
 

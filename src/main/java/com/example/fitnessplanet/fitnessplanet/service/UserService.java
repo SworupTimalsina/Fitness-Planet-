@@ -14,12 +14,15 @@ public interface UserService {
 
     Optional<User> getById(Integer id);
 
+    Optional<User> getByEmail(String email);
+
     void deleteById(Integer id);
 
     boolean validateLogin(String username, String password);
 
+//    Optional<User> getByUsername(String username);
 
 
-
+    Optional<User> getByUserDTO(UserDTO userDTO);
 }
 

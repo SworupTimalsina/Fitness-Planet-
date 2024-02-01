@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
 import './adminpanel.css';
 
+
 const AddPro: React.FC = () => {
     const [formData, setFormData] = useState({
         productName: '',
         description: '',
         price: 0.0,
         category: '',
+        imageUrl: '',
     });
 
-
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleAddClick = () => {
+        console.log(formData);
+        setLoading(true);
+        setError(null);
 
         fetch('http://localhost:8080/item/save', {
             method: 'POST',
@@ -23,15 +29,22 @@ const AddPro: React.FC = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
-
         })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                alert("Item added.")
-
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to add item');
+                }
+                return response.text();
             })
-            .catch((error) => console.error('Error:', error));
+            .then((message) => {
+                console.log(message);
+                alert(message);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                setError('Failed to add item. Please try again.');
+            })
+            .finally(() => setLoading(false));
     };
 
 
@@ -67,6 +80,7 @@ const AddPro: React.FC = () => {
                                 value={formData.category}
                                 onChange={handleInputChange}
                             >
+                                <option>Dumbbells</option>
                                 <option>Treadmill</option>
                                 <option>Home Gyms</option>
                                 <option>Jump Ropes</option>
@@ -86,11 +100,21 @@ const AddPro: React.FC = () => {
                             value={formData.description}
                             onChange={handleInputChange}
                         />
+
                     </div>
+                    <label>Image URL:</label>
+                    <input
+                        style={{ width: 600, backgroundColor: "white", color: "black" }}
+                        type="text"
+                        name="imageUrl"
+                        value={formData.imageUrl}
+                        onChange={handleInputChange}
+                    />
                     <div className="add-two-but">
-                        <button className="add-pro-btn">Upload Image</button>
-                        <button className="add-pro-btn" onClick={handleAddClick}>Add</button>
+
+                        <button className="add-pro-btn" onClick={handleAddClick} disabled={loading} >{loading ? 'Adding...' : 'Add'}</button>
                     </div>
+                    {error && <div style={{ color: 'red' }}>{error}</div>}
                 </div>
             </div>
 

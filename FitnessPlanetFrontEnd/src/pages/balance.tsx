@@ -1,5 +1,6 @@
 import React from 'react';
 import './balance.css';
+import TopBar from "./components/topbar.tsx";
 
 
 
@@ -11,15 +12,7 @@ const Balance: React.FC = () => {
         <>
             <head><title>Fitness Planet</title></head>
             <div className="homework-page">
-                <nav className="top-buttons">
-                    <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                    <div className="buttons">
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                    </div>
-                </nav>
+                <TopBar/>
 
                 <div className="top-photo-bal">
                     <div className="hom-wor-txt">
