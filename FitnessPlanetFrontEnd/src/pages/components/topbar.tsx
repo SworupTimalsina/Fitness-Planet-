@@ -13,7 +13,7 @@ const TopBar: React.FC = () => {
                     <a href='/aboutus' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
                 </div>
 
-                <a href='#' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
+                <a href='/profile' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
 
             </div>
 

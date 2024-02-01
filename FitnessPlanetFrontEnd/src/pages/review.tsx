@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import DescriptionContent from './DescriptionContent.tsx';
 import ReviewContent from './ReviewContent.tsx';
-import ComparePop from './comparepop.tsx';
 import TopBar from "./components/topbar.tsx";
 
 interface ItemDTO {
@@ -21,25 +20,18 @@ const Review: React.FC<ReviewProps> = () => {
     const { productId } = useParams<{ productId?: string }>();
     const selectedProductId: number | null = productId ? parseInt(productId, 10) : null;
     const [checked, setChecked] = useState(false);
-    const [comparePopVisible, setComparePopVisible] = useState(false);
+
     const [itemDTO, setItemDTO] = useState<ItemDTO | null>(null);
 
     const handleToggle = () => {
         setChecked(!checked);
     };
 
-    const handleCompareButtonClick = () => {
-        setComparePopVisible(true);
-    };
-
-    const closeComparePop = () => {
-        setComparePopVisible(false);
-    };
 
     useEffect(() => {
         const fetchProductData = async () => {
             try {
-                if (selectedProductId !== null) {
+                if (selectedProductId !== null && !isNaN(selectedProductId)) {
                     const response = await fetch(`http://localhost:8080/item/getById/${selectedProductId}`);
                     if (response.ok) {
                         const data: ItemDTO = await response.json();
@@ -62,10 +54,7 @@ const Review: React.FC<ReviewProps> = () => {
         <body className="reviewbody">
         <div className="page-body">
             <TopBar/>
-            <button className="coamper" onClick={handleCompareButtonClick}>
-                Compare
-            </button>
-            {comparePopVisible && <ComparePop onClose={closeComparePop} />}
+
             <div className="image">
                 <img src={itemDTO?.imageUrl} width="400" height="400" alt={itemDTO?.productName} className="img-prod"/>
             </div>
@@ -79,6 +68,7 @@ const Review: React.FC<ReviewProps> = () => {
                         {checked ? (
                             <ReviewContent />
                         ) : (
+                            //@ts-ignore
                             <DescriptionContent productId={selectedProductId} />
                         )}
                     </p>

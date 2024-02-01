@@ -179,7 +179,7 @@ const Products = () => {
                 <button onClick={handleConfirmOrders}>Confirm Orders</button>
             </div>
 
-            {selectedProductId && <DescriptionContent productId={selectedProductId} />}
+            {selectedProductId && <DescriptionContent key={`description-${selectedProductId}`} productId={selectedProductId} />}
         </>
     );
 };
