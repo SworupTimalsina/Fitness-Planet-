@@ -7,13 +7,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .loginForm {
     display: flex;
     margin-left: 700px;
     flex-direction: column;
-    width: 35%;
+    width: 30%;
     height: 400px;
     background-color: rgba(217, 217, 217, 0.26);
     padding: 20px;
@@ -24,7 +25,7 @@
 
 .login-text{
     position: absolute;
-    top: 65px;
+    top: 55px;
     left: 1100px;
     transform: translateX(-50%);
     font-family: Poppins, sans-serif;
@@ -38,8 +39,8 @@
 
 
 .username{
-    width: 85%;
-    height: 75px;
+    width: 80%;
+    height: 70px;
     background-color: rgba(0, 0, 0, 0.46);
     margin-left: 45px;
     margin-top: 60px;
@@ -47,20 +48,20 @@
     border: 1px solid #fff;
     border-radius: 15px 15px 0 0;
     font-family: Poppins,sans-serif;
-    font-size: 24px;
+    font-size: 20px;
 
 
 }
 .password{
-    width: 85%;
-    height: 75px;
+    width: 80%;
+    height: 70px;
     margin-left: 45px;
     background-color: rgba(0, 0, 0, 0.46);
     color: grey;
     border: 1px solid #fff;
     border-radius: 0 0 15px 15px;
     font-family: Poppins,sans-serif;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .input-boxes{
@@ -104,13 +105,17 @@
     flex-direction: row;
     font-family: Poppins, sans-serif;
     text-align: justify;
+    color: white;
 }
 
 .forgotpass{
-    margin-left: 150px;
+    margin-left: 80px;
     color: white;
     text-decoration: underline;
     transition: color 0.3s ease;
+    font-size: 15px;
+    flex-direction: row;
+    margin-top: 20px;
 
 
 }
