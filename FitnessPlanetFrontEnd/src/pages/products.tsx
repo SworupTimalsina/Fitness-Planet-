@@ -82,8 +82,7 @@ const Products = () => {
 
             {selectedProductId && <DescriptionContent productId={selectedProductId} />}
             <BottomBar/>
-            </>
-
+        </>
     );
 };
 
