@@ -20,7 +20,10 @@ import Adminpanel from "./pages/adminpanel.tsx";
 import Dumbbell from "./pages/dumbbell.tsx";
 import Profile from "./pages/profile.tsx";
 import Aboutus from "./pages/aboutus.tsx";
-
+import Cut1 from "./pages/cut1.tsx"
+import Cut2 from "./pages/cut2.tsx"
+import Cut3 from "./pages/cut3.tsx"
+import Cut4 from "./pages/cut4.tsx"
 const router = createBrowserRouter(
     [
         {
@@ -108,7 +111,22 @@ const router = createBrowserRouter(
             path:"/aboutus",
             element:<Aboutus/>
         },
-
+        {
+            path:"/cut1",
+            element:<Cut1/>
+        },
+        {
+            path: "/cut2",
+            element: <Cut2/>
+        },
+        {
+            path:"/cut3",
+            element:<Cut3/>
+        },
+        {
+            path:"/cut4",
+            element:<Cut4/>
+        },
 
 
 
