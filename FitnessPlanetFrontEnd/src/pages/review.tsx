@@ -36,40 +36,43 @@ const Review: React.FC<ReviewProps> = () => {
         setComparePopVisible(false);
     };
 
-    useEffect(() => {
-        const fetchProductData = async () => {
-            try {
-                if (selectedProductId !== null) {
-                    const response = await fetch(`http://localhost:8080/item/getById/${selectedProductId}`);
-                    if (response.ok) {
-                        const data = await response.json();
-                        setItemDTO(data);
-                        console.log('Image URL:', itemDTO?.imageUrl);
-
-                    } else {
-                        console.error('Error fetching product data:', response.status);
+        useEffect(() => {
+            const fetchProductData = async () => {
+                try {
+                    if (selectedProductId !== null) {
+                        const response = await fetch(`http://localhost:8080/item/getById/${selectedProductId}`);
+                        if (response.ok) {
+                            const data = await response.json();
+                            setItemDTO(data);
+                            console.log('Image URL:', data.imageUrl); // Log the image URL here
+                        } else {
+                            console.error('Error fetching product data:', response.status);
+                        }
                     }
+                } catch (error) {
+                    console.error('Error fetching product data:', error);
                 }
-            } catch (error) {
-                console.error('Error fetching product data:', error);
-            }
-        };
+            };
 
-        fetchProductData();
-    }, [selectedProductId, itemDTO]);
+            fetchProductData();
+        }, [selectedProductId]);
 
     console.log('Image URL:', itemDTO?.imageUrl);
 
     return (
         <body className="reviewbody">
         <div className="page-body">
-        <TopBar/>
+            <TopBar/>
             <button className="coamper" onClick={handleCompareButtonClick}>
                 Compare
             </button>
             {comparePopVisible && <ComparePop onClose={closeComparePop} />}
             <div className="image">
-                <img src={itemDTO?.imageUrl} width="400" height="400" alt={itemDTO?.productName} />
+                {itemDTO && itemDTO.imageUrl ? (
+                    <img src={itemDTO.imageUrl} width="400" height="400" alt={itemDTO.productName} />
+                ) : (
+                    <p>Loading image...</p>
+                )}
             </div>
             <div className="change-page">
                 <form className="sliding-page">
@@ -81,7 +84,7 @@ const Review: React.FC<ReviewProps> = () => {
                         {checked ? (
                             <ReviewContent />
                         ) : (
-                            <DescriptionContent productId={selectedProductId} />
+                            <DescriptionContent productId={7} />
                         )}
                     </p>
                 </form>

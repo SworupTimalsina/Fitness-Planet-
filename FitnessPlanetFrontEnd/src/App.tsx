@@ -10,9 +10,8 @@ import Nutritionaltips from "./pages/nutritionaltips.tsx";
 import Products from "./pages/products.tsx";
 import Trainers from "./pages/trainer.tsx";
 import GymTip from "./pages/gymtips.tsx";
-import BulkCut from "./pages/BulkCut.tsx";
-import BulkCut2 from "./pages/BulkCut2.tsx";
-// import Dumbbell from "./pages/dumbbell.tsx";
+import Bulking from "./pages/Bulking.tsx";
+import Cutting from "./pages/Cutting.tsx";
 import Gymtips from "./pages/gymtips.tsx";
 import Article from "./pages/article.tsx";
 import HomeWorkout from "./pages/homeworkout.tsx";
@@ -20,6 +19,7 @@ import Adminpanel from "./pages/adminpanel.tsx";
 import Dumbbell from "./pages/dumbbell.tsx";
 import Profile from "./pages/profile.tsx";
 import Aboutus from "./pages/aboutus.tsx";
+
 
 const router = createBrowserRouter(
     [
@@ -34,7 +34,7 @@ const router = createBrowserRouter(
 
         {
             path:"/forgotpass",
-            element:<ForgotPass/>
+            element:<ForgotPass email={""} otp={""} password={""}/>
         },
         {
             path:"/register",
@@ -55,7 +55,7 @@ const router = createBrowserRouter(
         },
         {
             path:"/Description",
-            element:<DescriptionContent/>
+            element:<DescriptionContent productId={7}/>
         },
 
         {
@@ -63,13 +63,13 @@ const router = createBrowserRouter(
             element:<Article/>
         },
         {
-            path:"/BulkCut",
-            element:<BulkCut/>
+            path:"/Bulking",
+            element:<Bulking/>
         },
 
         {
-            path:"/BulkCut2",
-            element:<BulkCut2/>
+            path:"/Cutting",
+            element:<Cutting/>
         },
         {
             path:"/Nutrition",

@@ -56,7 +56,7 @@ const Products = () => {
     return (
         <>
 
-<TopBar/>
+        <TopBar/>
 
 
 
@@ -82,7 +82,8 @@ const Products = () => {
 
             {selectedProductId && <DescriptionContent productId={selectedProductId} />}
             <BottomBar/>
-        </TopBar>
+            </>
+
     );
 };
 
