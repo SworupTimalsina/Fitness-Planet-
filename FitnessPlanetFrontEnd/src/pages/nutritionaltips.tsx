@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
 // import { useHistory } from 'react-router-dom';
 import './nutritionaltips.css';
-import nutritionaltips from "../images/nutritonaltips.png"; // Import your CSS file
+import nutritionaltips from "../images/nutritonaltips.png";
+import {useNavigate} from "react-router-dom";
 
 
 
 const Nutritionaltips: React.FC = () => {
+
+    const navigate = useNavigate();
 
     const [tips, setTips] = useState('Click on any button to know more about them');
 
@@ -76,6 +79,14 @@ const Nutritionaltips: React.FC = () => {
         setTips(tips || 'Click on any button to know more about them');
     };
 
+    function toCut(){
+        navigate('/cutting')
+    }
+
+    function toBulk(){
+        navigate('/bulking')
+    }
+
 
     return (
         <>
@@ -143,13 +154,14 @@ const Nutritionaltips: React.FC = () => {
                         <br/> <br/>
                         <div className="fitness-but">
 
-                            <button className="bulkplan">
+                            <button className="bulkplan" onClick={toBulk}>
                                 <div className="bulkplan-text">Bulking Diet Plans</div>
                             </button>
 
-                            <button className="cutting">
+                            <button className="cutting" onClick={toCut}>
                                 <div className="cutplan-text">Cutting Diet Plans</div>
                             </button>
+
                         </div>
                     </div>
                 </div>
