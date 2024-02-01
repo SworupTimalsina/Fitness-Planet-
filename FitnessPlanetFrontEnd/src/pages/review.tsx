@@ -61,7 +61,7 @@ const Review: React.FC<ReviewProps> = () => {
     return (
         <body className="reviewbody">
         <div className="page-body">
-        <TopBar/>
+            <TopBar/>
             <button className="coamper" onClick={handleCompareButtonClick}>
                 Compare
             </button>
@@ -79,7 +79,6 @@ const Review: React.FC<ReviewProps> = () => {
                         {checked ? (
                             <ReviewContent />
                         ) : (
-                            //@ts-ignore
                             <DescriptionContent productId={selectedProductId} />
                         )}
                     </p>

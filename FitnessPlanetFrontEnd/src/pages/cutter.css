@@ -1,0 +1,18 @@
+.cutter {
+    background: url('../images/cutter.jpg');
+    background-size: cover;
+    height: 100vh;
+    font-family: "julius sans one";
+    font-size: 15px;
+    color: white;
+}
+
+.ages{
+    margin-left: 550px;
+    font-size: 35px;
+    font-family: Poppins, sans-serif;
+}
+
+.headings{
+    font-size: 20px;
+}
