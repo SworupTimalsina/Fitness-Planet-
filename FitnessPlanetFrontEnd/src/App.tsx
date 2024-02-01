@@ -17,6 +17,10 @@ import Gymtips from "./pages/gymtips.tsx";
 import Article from "./pages/article.tsx";
 import HomeWorkout from "./pages/homeworkout.tsx";
 import Adminpanel from "./pages/adminpanel.tsx";
+import Bulk from "./pages/bulk.tsx";
+import Bulk2 from "./pages/bulk2.tsx";
+import Bulk3 from "./pages/bulk3.tsx";
+import Bulk4 from "./pages/bulk4.tsx";
 
 const router = createBrowserRouter(
     [
@@ -93,7 +97,26 @@ const router = createBrowserRouter(
         {
             path:"/admin",
             element:<Adminpanel/>
-        }
+        },
+        {
+            path:"/bulk",
+            element:<Bulk/>
+        },
+
+        {
+            path:"/bulk2",
+            element:<Bulk2/>
+        },
+
+        {
+            path:"/bulk3",
+            element:<Bulk3/>
+        },
+
+        {
+            path:"/bulk4",
+            element:<Bulk4/>
+        },
 
 
 
