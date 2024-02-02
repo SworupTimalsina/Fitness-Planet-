@@ -53,7 +53,7 @@ const AddPro: React.FC = () => {
             <div className="addupdel-bg">
                 <div className="add-holder">
                     <div className="name-div">
-                        <label>Name</label>
+                        <label>Name:</label>
                         <input
                             style={{ width: 610, backgroundColor: "white", color: "black" }}
                             type="text"
@@ -64,7 +64,7 @@ const AddPro: React.FC = () => {
                     </div>
 
                     <div className="pri-cat">
-                        <label>Price</label>
+                        <label>Price:</label>
                         <div className="proro">
                             <input
                                 style={{ width: 250, backgroundColor: "white", color: "black" }}
@@ -73,7 +73,7 @@ const AddPro: React.FC = () => {
                                 value={formData.price}
                                 onChange={handleInputChange}
                             />
-                            <label>Category</label>
+                            <label>Category:</label>
                             <select
                                 style={{ width: 150, backgroundColor: "white", color: "black" }}
                                 name="category"
@@ -92,7 +92,7 @@ const AddPro: React.FC = () => {
                         </div>
                     </div>
                     <div className="des-div">
-                        <label>Description</label>
+                        <label>Description:</label>
                         <input
                             style={{ width: 600, height: 250, backgroundColor: "white", color: "black" }}
                             type="text"

@@ -28,6 +28,7 @@ import Cut1 from "./pages/cut1.tsx"
 import Cut2 from "./pages/cut2.tsx"
 import Cut3 from "./pages/cut3.tsx"
 import Cut4 from "./pages/cut4.tsx"
+import Balance from "./pages/Balance.tsx"
 const router = createBrowserRouter(
     [
         {
@@ -152,6 +153,11 @@ const router = createBrowserRouter(
         {
             path:"/cut4",
             element:<Cut4/>
+        },
+
+        {
+            path:"/balance",
+            element:<Balance/>
         },
 
 
