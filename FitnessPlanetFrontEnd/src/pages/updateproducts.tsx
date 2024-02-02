@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './adminpanel.css';
 
 const UpdatePro: React.FC = () => {
-    const [product_id, setId] = useState(0);
+    const [productId, setId] = useState(0);
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [category, setCategory] = useState('');
@@ -21,8 +21,8 @@ const UpdatePro: React.FC = () => {
                 return response.json();
             })
             .then(data => {
-                setId(data.product_id);
-                setName(data.name);
+                setId(data.productId);
+                setName(data.productName);
                 setPrice(data.price);
                 setCategory(data.category);
                 setDescription(data.description);
@@ -47,8 +47,8 @@ const UpdatePro: React.FC = () => {
 
     const handleUpdateClick = () => {
         const updatedData = {
-            product_id: product_id,
-            name: name,
+            productId: productId,
+            productName: name,
             price: price,
             category: category,
             description: description,
