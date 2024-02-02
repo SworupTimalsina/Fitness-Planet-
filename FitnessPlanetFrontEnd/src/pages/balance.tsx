@@ -1,5 +1,8 @@
 import React from 'react';
 import './balance.css';
+import BottomBar from "./components/BottomBar.tsx";
+import TopBar from "./components/topbar.tsx";
+import {Link} from "react-router-dom";
 
 
 
@@ -10,150 +13,113 @@ const Balance: React.FC = () => {
     return (
         <>
             <head><title>Fitness Planet</title></head>
-            <div className="homework-page">
-                <nav className="top-buttons">
-                    <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                    <div className="buttons">
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                    </div>
-                </nav>
+            <div className="balance-page">
+                <TopBar/>
 
-                <div className="top-photo-bal">
-                    <div className="hom-wor-txt">
+                    <div className="balance-txt">
                         Balance  & Coordination
                     </div>
 
 
 
-                </div>
 
 
-
-                <div className="box">
+                <div className="box4">
+                    <label className="b-ex"><b>Exercises for Balance:</b></label>
                     <br/> <br/>
-                    <div className="plate-but">
+                    <div className="balance-but">
 
+                        <Link to="https://www.youtube.com/watch?v=r_6Fzs8nM3g&ab_channel=intosport">
                         <button className="kneedrive">
                             <div className="kneedrive-text">
                                 Box Step-up
                                 with Knee Drive
 
                             </div>
-                        </button>
+                        </button></Link>
 
+                        <Link to="https://www.youtube.com/watch?v=YyEFwt2CjkA&ab_channel=Men'sHealth">
                         <button className="deadlift">
                             <div className="deadlift-text">
                                 Single-Leg Romanian Deadlift
 
                             </div>
-                        </button>
+                        </button></Link>
 
+                        <Link to="https://www.youtube.com/watch?v=gwWv7aPcD88&ab_channel=HybridAthlete">
                         <button className="lunge">
                             <div className="lunge-text">
                                 Lateral Lunge
 
                             </div>
-                        </button>
+                        </button></Link>
 
+                        <Link to="https://www.youtube.com/watch?v=l_CUr6SNT9g&ab_channel=FITNIK">
                         <button className="squat">
                             <div className="lunge-text">
                                 Bodyweight Squat Jump
                             </div>
-                        </button>
+                        </button></Link>
 
+                        <Link to="https://www.youtube.com/watch?v=7j-2w4-P14I&ab_channel=NuffieldHealth">
                         <button className="romanian">
-                            <div className="romanian">
+                            <div className="romanian-text">
                                 Romanian Deadlift
                             </div>
-                        </button>
+                        </button></Link>
 
+                        <Link to="https://www.youtube.com/watch?v=O28C6YUsyhA&ab_channel=Health%26HighPerformance">
                         <button className="clock">
                             <div className="clock-text">
                                 Around the Clock
                             </div>
-                        </button>
-
-                        <button className="row">
-                            <div className="row-text">
-                                Cable Row
-                            </div>
-                        </button>
-
-                        <button className="plank">
-                            <div className="plank-text">
-                                Plank
-                            </div>
-                        </button>
-
-                        <button className="toss">
-                            <div className="toss-text">
-                                Ballon Toss
-                            </div>
-                        </button>
-
-                        <button className="juggling">
-                            <div className="Juggling-text">
-                                Juggling
-                            </div>
-                        </button>
+                        </button></Link>
 
                     </div>
                 </div>
+
+                <label className="c-ex"><b>Exercises for Coordination:</b></label>
                 <div className="box3">
+
+                    <Link to="https://www.youtube.com/shorts/KsVDnYHof9Q">
                     <button className="smallball">
                         <div className="smallball-text">
                             Small Ball Toss
                         </div>
-                    </button>
+                    </button></Link>
 
-                </div>
+
+                    <Link to="https://www.youtube.com/shorts/rBSgXBeOpX8">
                 <button className="target">
                     <div className="target-text">
-                        Target Practise
+                        Target Practice
                     </div>
-                </button>
+                </button></Link>
 
+                    <Link to="https://www.youtube.com/watch?v=KgkyALRnhxk&ab_channel=ChrisBoyd">
                 <button className="hockey">
                     <div className="hockey-text">
                         Balloon Hockey
                     </div>
-                </button>
+                </button></Link>
 
+                    <Link to="https://www.youtube.com/shorts/dS2Q0iRtwAY">
                 <button className="dribbling">
                     <div className="dribbling-text">
                         Dribbling
                     </div>
-                </button>
+                </button></Link>
 
+                    <Link to="https://www.youtube.com/watch?v=KVvmX5NjWUs&ab_channel=TomPetoTraining">
                 <button className="rings">
                     <div className="rings-text">
                         Rings
                     </div>
-                </button>
-
-                <button className="bounce">
-                    <div className="bounce-text">
-                        Wall Ball Bounce
-                    </div>
-                </button>
-
-
-            </div>
-
-
-
-
-            <div className="about">
-                <div className="about-buttons">
-                    <button>About Us</button>
-                    <button>News</button>
-                    <button>Privacy Policy</button>
+                </button></Link>
 
                 </div>
-                <label className="copyright">Copyright Â© 2023 Fitness planet</label>
+
+
             </div>
 
             <BottomBar/>

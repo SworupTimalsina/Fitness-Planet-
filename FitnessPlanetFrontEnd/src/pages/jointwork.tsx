@@ -58,10 +58,11 @@ const JointWorkout: React.FC = () => {
                             Challenges
                         </button></Link>
 
+                        <Link to="/balance">
                         <button className="stepppp">
                             Balance and
                             Coordination
-                        </button>
+                        </button></Link>
 
                         <Link to="/flexibility">
                         <button className="vibra">
