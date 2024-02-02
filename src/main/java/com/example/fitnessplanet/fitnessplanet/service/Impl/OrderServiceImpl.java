@@ -1,4 +1,4 @@
 package com.example.fitnessplanet.fitnessplanet.service.Impl;
 
-public class TrainerServiceImpl {
+public class OrderServiceImpl {
 }

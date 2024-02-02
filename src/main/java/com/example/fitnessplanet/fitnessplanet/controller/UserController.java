@@ -56,6 +56,17 @@ public class UserController {
         }
     }
 
+    @GetMapping("/getByEmail/{email}")
+    public ResponseEntity<User> getByEmail(@PathVariable("email") String email) {
+        Optional<User> userOptional = userService.getByEmail(email);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            return ResponseEntity.ok(user);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @DeleteMapping("/deleteById/{id}")
     public void delete(@PathVariable("id") Integer id){
         userService.deleteById(id);
@@ -114,6 +125,32 @@ public class UserController {
             return false;
         }
     }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<String> updateData(@PathVariable("id") Integer id, @RequestBody UserDTO userDTO) {
+        try {
+            Optional<User> userOptional = userService.getById(id);
+
+            if (userOptional.isPresent()) {
+                User existingUser = userOptional.get();
+
+                existingUser.setFirstName(userDTO.getFirstName());
+                existingUser.setLastName(userDTO.getLastName());
+                existingUser.setUsername(userDTO.getUsername());
+                existingUser.setEmail(userDTO.getEmail());
+                existingUser.setPassword(userDTO.getPassword());
+
+                userService.update(existingUser);
+
+                return ResponseEntity.ok("User details updated successfully!");
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error updating user details");
+        }
+    }
     private static UserDTO getUserDTO(UserForgetPasswordDTO newUserDTO, User user) {
         UserDTO userDTO = new UserDTO();
         userDTO.setFirstName(user.getFirstName());
@@ -122,6 +159,8 @@ public class UserController {
         userDTO.setPassword(newUserDTO.getPassword());
         return userDTO;
     }
+
+
 
 
 }

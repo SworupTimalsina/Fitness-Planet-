@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './dashboard.css';
-// import MessengerCustomerChat from 'react-messenger-customer-chat';
 import {Link, useNavigate} from 'react-router-dom';
 import BottomBar from "./components/BottomBar.tsx";
 import TopBar from "./components/topbar.tsx";
+
 
 
 const Dashboard: React.FC = () => {
@@ -14,9 +14,10 @@ const Dashboard: React.FC = () => {
         const [isHovered3, setHovered3] = useState(false);
         const [isHovered4, setHovered4] = useState(false);
 
-        // function toPro(){
-        //     navigate('/products')
-        // }
+    function toPro() {
+        // Use Link component to navigate to the Products page with 'Dumbbells' category
+        navigate('/products', { state: { category: 'Dumbbells' } });
+    }
         //
         // function toHome(){
         // navigate('/homeworkout')
@@ -33,7 +34,7 @@ const Dashboard: React.FC = () => {
         <div className="homepage">
         <TopBar/>
             <div className="createplan">
-                <button className="createfit">CLICK HERE</button>
+                {/*<button className="createfit">CLICK HERE</button>*/}
 
             </div>
 
@@ -51,7 +52,7 @@ const Dashboard: React.FC = () => {
                 <label className="pro-text">Our Products</label>
                 <div className="pro-but">
 
-                    <button className="dum" onMouseEnter={() => setHovered1(true)}  onMouseLeave={() => setHovered1(false)}> {isHovered1 ? (
+                    <button className="dum" onMouseEnter={() => setHovered1(true)}  onMouseLeave={() => setHovered1(false)} onClick={toPro}> {isHovered1 ? (
                         <div className="hover-text">Pick from<br/> our finest<br/> dumbbells</div>
                     ) : (
                         <div className="dum-text">Dumbbells</div>
@@ -100,7 +101,9 @@ const Dashboard: React.FC = () => {
             <button className="homeworkout">Home Workout Tips</button>
             </Link>
                     <div className="sepbuttons">
+                        <Link to='/gymtips'>
                 <button className="gym">Gym Tips</button>
+                        </Link>
 
                 <button className="nutritional" onClick={toNutri}>Nutritional Tips</button>
                     </div>

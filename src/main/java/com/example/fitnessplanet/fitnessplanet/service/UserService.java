@@ -9,6 +9,7 @@ import java.util.Optional;
 
 public interface UserService {
     String save(UserDTO userDTO);
+    String update(User user);
 
     List<User> getAll();
 

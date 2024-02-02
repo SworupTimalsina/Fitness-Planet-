@@ -70,4 +70,10 @@ public class UserServiceImpl implements UserService {
         // Retrieve the user by username from the database
         return userRepository.findByUsername(userDTO.getUsername());
     }
+
+    @Override
+    public String update(User user) {
+        userRepository.save(user);
+        return "User details updated successfully";
+    }
 }

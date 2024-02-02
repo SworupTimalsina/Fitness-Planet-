@@ -20,6 +20,4 @@ public class ItemDTO {
     private String category;
 
     private String imageUrl;
-
-
 }
