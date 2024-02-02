@@ -1,6 +1,5 @@
 import React from 'react';
 import './topbar.css';
-import prof from './pfp.png'
 
 const TopBar: React.FC = () => {
     return (
@@ -15,7 +14,7 @@ const TopBar: React.FC = () => {
                     <a href='/aboutus' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
                 </div>
 
-                <a href='/profile' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b><img src={prof} width={80}/></b></a>
+                <a href='/' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Log Out</b></a>
 
             </div>
 

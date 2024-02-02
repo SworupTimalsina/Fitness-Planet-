@@ -19,12 +19,13 @@ interface ProductCardProps {
     product: Product;
     onViewClick: (data: { productId: number; quantity: number }) => void;
 }
-
+//@ts-ignore
 const ProductCard: React.FC<ProductCardProps> = ({ product, onViewClick }) => {
+    //@ts-ignore
     const [products, setProducts] = useState<Product[]>([]);
 
     const navigate = useNavigate();
-
+    //@ts-ignore
     const handleBuyClick = async (product) => {
         try {
             console.log(product)

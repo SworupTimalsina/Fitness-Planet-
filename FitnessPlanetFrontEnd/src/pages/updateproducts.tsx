@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './adminpanel.css';
 
 const UpdatePro: React.FC = () => {
-    const [id, setId] = useState(0);
+    const [product_id, setId] = useState(0);
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [category, setCategory] = useState('');
@@ -21,7 +21,7 @@ const UpdatePro: React.FC = () => {
                 return response.json();
             })
             .then(data => {
-                setId(data.id);
+                setId(data.product_id);
                 setName(data.name);
                 setPrice(data.price);
                 setCategory(data.category);
@@ -47,7 +47,7 @@ const UpdatePro: React.FC = () => {
 
     const handleUpdateClick = () => {
         const updatedData = {
-            id: id,
+            product_id: product_id,
             name: name,
             price: price,
             category: category,
@@ -71,11 +71,9 @@ const UpdatePro: React.FC = () => {
             })
             .then(data => {
                 console.log('Update successful:', data);
-                // Optionally, provide user feedback here
             })
             .catch(error => {
                 console.error('Error updating data:', error);
-                // Optionally, provide user feedback here for errors
             });
     };
 
@@ -97,13 +95,13 @@ const UpdatePro: React.FC = () => {
                         <label>Price:</label>
                         <div className="proro">
                             <input
-                                style={{ width: 250, backgroundColor: 'white', color: 'black' }}
+                                style={{ width: 250, backgroundColor: 'white', color: 'black', height:'30px'}}
                                 value={price}
                                 onChange={handlePriceChange}
                             />
                             <label>Category:</label>
                             <select
-                                style={{ width: 150, backgroundColor: 'white', color: 'black' }}
+                                style={{ width: 150, backgroundColor: 'white', color: 'black', height:'30px' }}
                                 value={category}
                                 onChange={handleCategoryChange}
                             >
@@ -129,7 +127,7 @@ const UpdatePro: React.FC = () => {
 
                         <label>Image URL:</label>
                     <input
-                        style={{ width: 250, backgroundColor: 'white', color: 'black' }}
+                        style={{ width: 250, backgroundColor: 'white', color: 'black', height:'30px' }}
                         name="imageUrl"
                         value={imageUrl}
                         onChange={handlePriceChange}
