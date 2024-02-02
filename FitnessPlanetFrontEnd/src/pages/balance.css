@@ -1,4 +1,4 @@
-.homework-page{
+.balance-page{
     /*height: 5000px;*/
     max-width: 100vw;
     display: flex;
@@ -7,98 +7,117 @@
 
 }
 
-
-
-.top-photo-bal{
-    width: 100%;
-    max-width: 100vw;
-    height: 100vh;
-    background-image: url("../images/joit.png");
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-
+.b-ex{
+    font-size: 30px;
 }
 
+.c-ex{
+    font-size: 30px;
+    margin-left: 50px;
+}
 
-
-.hom-wor-txt{
-    font-family: "Nothing You Could Do", cursive;
-    font-weight: 400;
+.balance-txt{
+    font-family: "Nothing You Could Do";
+    font-size: 40px;
     font-style: normal;
-    margin-top: 250px;
-    font-size: 112px;
-
-
-
-
+    margin-top: 120px;
+    margin-left: 500px;
+    color: black;
 }
 
-.bbox{
-    background-color: #C3D4A6;
+.box4{
     margin-top: 20px;
+    margin-left: 48px;
+
 }
 
-.pplate-but{
+.box3{
+    margin-left: 200px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 1300px;
+    gap: 100px;
+    row-gap: 20px;
+
+}
+
+.balance-but{
     margin-top: 30px;
     display: flex;
-    height: 750px;
-    width: 900px;
+    height: 600px;
+    width: 100vw;
     gap: 100px;
     flex-wrap: wrap;
     row-gap: 10px;
-    margin-left: 80px;
+    margin-left: 150px;
     font-size: 20px;
 
 }
 
-.vveggie{
-    width: 300px;
-    height: 300px;
-    background-image: url("../images/veggies.png");
-    background-size: cover;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-
-}
-
-.pprotein{
-    width: 300px;
-    height: 300px;
-    background-image: url("../images/proteins.png");
-    background-size: cover;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
-
-.ccarbo{
-    width: 300px;
-    height: 300px;
-    background-image: url("../images/carbs.png");
-    background-size: cover;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
-
-.aadditionaltips{
+.kneedrive{
     width: 300px;
     height: 200px;
-    background-image: url("../images/addtips.png");
+    background-image: url("../images/box.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.deadlift{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/deadlift.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.lunge{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/lunge.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.squat{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/squat.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin-top: 50px;
+}
+
+.romanian{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/romanian.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -106,4 +125,155 @@
     font-size: 28px;
     color: white;
     margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
+
+.clock{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/clock.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.row{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/row.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.plank{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/plank.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.toss{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/toss.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.juggling{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/juggling.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.smallball{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/smallball.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.target{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/target.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.hockey{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/hockey.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.dribbling{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/dribbling.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin-left: 180px;
+}
+
+.rings{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/rings.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+

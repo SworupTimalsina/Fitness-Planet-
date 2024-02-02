@@ -6,7 +6,6 @@ import age26 from '../images/age26.png';
 import age36 from '../images/age36.png';
 import age46 from '../images/age46.png';
 import TopBar from "./components/topbar.tsx";
-import BottomBar from "./components/BottomBar.tsx";
 import {Link} from "react-router-dom";
 
 const Cutting: React.FC = () => {
@@ -31,13 +30,6 @@ const Cutting: React.FC = () => {
                 <Link to="/cut4">
                 <button className="image4"><img src={age46} width="200" height="200"/></button>
                 </Link>
-            </div>
-            {/*<div className="submit-button">*/}
-            {/*    <button type="submit" style={{ backgroundColor: 'red', color: 'black' }}>Submit</button>*/}
-            {/*</div>*/}\
-
-            <div className="bottom-div">
-                <BottomBar/>
             </div>
 
         </div>

@@ -4,10 +4,10 @@ import './dumbbell.css';
 const Dumbbell: React.FC = () => {
     return (
         <div className="fitness-guide">
-            <h1>Fitness Equipment Guide</h1>
+            <h1 className="topics">Fitness Equipment Guide</h1>
 
             <section className="equipment-section">
-                <h2>Dumbbells</h2>
+                <h2 className="forcolor">Dumbbells</h2>
                 <p>
                     Dumbbells are versatile pieces of equipment. Follow these steps to use them effectively:
                     <ol>
@@ -20,7 +20,7 @@ const Dumbbell: React.FC = () => {
             </section>
 
             <section className="jumprope-section">
-                <h2>Home Equipment</h2>
+                <h2 className="forcolor">Home Equipment</h2>
                 <p>
                     Home gym equipments are subjects of risk.Please be mindful and follow the given steps to use them effectively:
                     <ol>
@@ -34,9 +34,9 @@ const Dumbbell: React.FC = () => {
             </section>
 
             <section className="home-section">
-                <h2>Jump Ropes</h2>
+                <h2 className="forcolor">Jump Ropes</h2>
                 <p>
-                    Home gym equipments are subjects of risk.Please be mindful and follow the given steps to use them effectively:
+                    Please be mindful and follow the given steps to use them effectively:
                     <ol>
                         <li>Select a jump rope that suits your height. Stand on the middle of the rope, and the handles should reach your armpits.If your jump rope has an adjustable length, make sure it's set according to your height.</li>
                         <li>Don't jump too high; keep your jumps low and controlled.Avoid excessive arm movement; use your wrists to rotate the rope.</li>
@@ -48,9 +48,9 @@ const Dumbbell: React.FC = () => {
             </section>
 
             <section className="bike-section">
-                <h2>Exercise Bikes</h2>
+                <h2 className="forcolor">Exercise Bikes</h2>
                 <p>
-                    Home gym equipments are subjects of risk.Please be mindful and follow the given steps to use them effectively:
+                    Exercise Bikes are subjects of risk.Please be mindful and follow the given steps to use them effectively:
                     <ol>
                         <li>Set the seat height to hip level. Your knees should have a slight bend at the bottom of the pedal stroke.</li>
                         <li>Sit upright with a straight back and relaxed shoulders.Keep your elbows slightly bent, and grip the handlebars comfortably.</li>

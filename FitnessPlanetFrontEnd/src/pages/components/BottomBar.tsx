@@ -7,8 +7,8 @@ const BottomBar: React.FC = () => {
         <>
             <div className="about">
                 <div className="about-buttons">
-                    <Link to="/aboutus"><button className="ab-btn">About Us</button></Link>
-                    <Link to="/article"><button className="ab-btn">News</button></Link>
+                    <Link to="/aboutus"><button className="ab-btn3">About Us</button></Link>
+                    <Link to="/article"><button className="ab-btn2">News</button></Link>
                     <button className="ab-btn">Privacy Policy</button>
 
                 </div>

@@ -101,8 +101,8 @@ const Dashboard: React.FC = () => {
             <button className="homeworkout">Home Workout Tips</button>
             </Link>
                     <div className="sepbuttons">
-                        <Link to='/gymtips'>
-                <button className="gym">Gym Tips</button>
+                        <Link to='/joint'>
+                <button className="gym">Fitness Tips</button>
                         </Link>
 
                 <button className="nutritional" onClick={toNutri}>Nutritional Tips</button>

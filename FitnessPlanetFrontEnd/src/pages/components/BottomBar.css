@@ -3,6 +3,27 @@
     color: white;
     font-family: Poppins, sans-serif;
     display: flex;
+    margin-left: 700px;
+
+}
+
+.ab-btn2{
+    background-color: black;
+    color: white;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    margin-left: 730px;
+    align-items: center;
+
+}
+
+.ab-btn3{
+    background-color: black;
+    color: white;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    margin-left: 720px;
+    align-items: center;
 
 }
 
@@ -15,9 +36,9 @@
 .about{
     background-color: black;
     width: 100vw;
+    
 }
 
 .about-buttons{
-    display: flex;
-    flex-direction: column;
+    width: 100vw;
 }

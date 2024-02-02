@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './forgotpass.css'
+import './forgotpass.css';
 
 interface ForgotPasswordProps {
     email: string;
@@ -120,12 +120,20 @@ const forgotpass: React.FC<ForgotPasswordProps> = () => {
                         <div className="email">
                             {/*<img src={email} alt="email icon" />*/}
                             <input
+                                className="emaill"
                                 type="email"
-                                placeholder="email"
+                                placeholder="Email"
                                 value={emailInput}
                                 onChange={handleEmailChange}
                                 required
                             />
+                            {/* Submit Button */}
+                            <div className="submit">
+                                <button type="button" onClick={handleSubmit}>
+                                    {resetStep === "email" || "otp" ? "Submit" : "Reset Password"}
+                                </button>
+                            </div>
+
                         </div>
                     )}
 
@@ -133,8 +141,9 @@ const forgotpass: React.FC<ForgotPasswordProps> = () => {
                         <>
                             <div className="otp-field">
                                 <input
+                                    className="otpp"
                                     type="text"
-                                    placeholder="otp"
+                                    placeholder="Enter the Otp "
                                     value={otpInput}
                                     onChange={handleOtpChange}
                                     required
@@ -148,6 +157,7 @@ const forgotpass: React.FC<ForgotPasswordProps> = () => {
                         <>
                             <div className="password">
                                 <input
+                                    className="passwordd"
                                     type="password"
                                     placeholder="password"
                                     value={passwordInput}
@@ -157,6 +167,7 @@ const forgotpass: React.FC<ForgotPasswordProps> = () => {
                             </div>
                             <div className="confirm-password">
                                 <input
+                                    className="confirmpasswordd"
                                     type="password"
                                     placeholder="confirm password"
                                     value={confirmPasswordInput}
@@ -174,16 +185,10 @@ const forgotpass: React.FC<ForgotPasswordProps> = () => {
                         </div>
                     )}
 
-                    {/* Submit Button */}
-                    <div className="submit">
-                        <button type="button" onClick={handleSubmit}>
-                            {resetStep === "email" || "otp" ? "Submit" : "Reset Password"}
-                        </button>
-                    </div>
 
                     {/* Back to Login Link */}
                     <div className="back">
-                        <a href="/login">&lt;back to login</a>
+                        <a href="/login">Back to login</a>
                     </div>
                 </div>
             </div>

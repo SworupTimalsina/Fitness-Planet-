@@ -6,7 +6,6 @@ import age26 from '../images/age26.png';
 import age36 from '../images/age36.png';
 import age46 from '../images/age46.png';
 import TopBar from "./components/topbar.tsx";
-import BottomBar from "./components/BottomBar.tsx";
 import {Link} from "react-router-dom";
 
 const Bulking: React.FC = () => {
@@ -35,10 +34,6 @@ const Bulking: React.FC = () => {
             {/*<div className="submit-button">*/}
             {/*    <button type="submit" style={{ backgroundColor: 'red', color: 'black' }}>Submit</button>*/}
             {/*</div>*/}\
-
-        <div className="bottom-div">
-        <BottomBar/>
-        </div>
 
         </div>
 

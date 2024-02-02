@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 import './nutritionaltips.css';
 import nutritionaltips from "../images/nutritonaltips.png";
 import {useNavigate} from "react-router-dom";
+import BottomBar from "./components/BottomBar.tsx";
+import TopBar from "./components/topbar.tsx";
 
 
 
@@ -92,15 +94,8 @@ const Nutritionaltips: React.FC = () => {
         <>
 
             <div>
-                <nav className="top-buttons">
-                    <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                    <div className="buttons">
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                    </div>
-                </nav>
+
+                <TopBar/>
 
             </div>
 
@@ -166,16 +161,8 @@ const Nutritionaltips: React.FC = () => {
                     </div>
                 </div>
 
+                <BottomBar/>
 
-                <div className="about">
-                    <div className="about-buttons">
-                        <button>About Us</button>
-                        <button>News</button>
-                        <button>Privacy Policy</button>
-
-                    </div>
-                    <label className="copyright">Copyright © 2023 Fitness planet</label>
-                </div>
             </div>
         </>
 

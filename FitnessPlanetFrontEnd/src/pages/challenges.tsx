@@ -1,5 +1,7 @@
 import React from 'react';
 import './challenges.css';
+import challenge from '../images/challenges.png';
+
 
 interface FitnessAdviceProps {
     // You can extend this interface based on your needs
@@ -7,12 +9,13 @@ interface FitnessAdviceProps {
 
 const Challenges: React.FC<FitnessAdviceProps> = () => {
     return (
-        <div>
-            <h2>Overcoming Common Fitness Challenges for Beginners</h2>
-            <p>
+        <div className="Challenge-parts">
+        <div className="challenge-contents">
+            <h2 className="topic-challenge">Overcoming Common Fitness Challenges for Beginners</h2>
+            <p><b>
                 As a novice, embarking on a fitness journey can be challenging. Here are some tips to help you overcome common challenges:
-            </p>
-            <ul>
+            </b></p>
+            <ul className="items-color">
                 <li>Set realistic goals.</li>
                 <li>Stay consistent with workouts.</li>
                 <li>Balance cardio and strength training.</li>
@@ -30,8 +33,10 @@ const Challenges: React.FC<FitnessAdviceProps> = () => {
                 <li>Set aside time for both physical and mental well-being.</li>
             </ul>
             <p>
-                Remember, consistency is key, and progress takes time. Don't hesitate to seek guidance from fitness professionals and enjoy the journey to a healthier lifestyle!
+                <b>Note:</b> Remember, consistency is key, and progress takes time. Don't hesitate to seek guidance from fitness professionals and enjoy the journey to a healthier lifestyle!
             </p>
+        </div>
+            <img src={challenge} width="800px"/>
         </div>
     );
 };
