@@ -1,7 +1,5 @@
 import React from 'react';
 import './balance.css';
-import BottomBar from "./components/BottomBar.tsx";
-import TopBar from "./components/topbar.tsx";
 
 
 
@@ -13,12 +11,19 @@ const Balance: React.FC = () => {
         <>
             <head><title>Fitness Planet</title></head>
             <div className="homework-page">
-
-                <TopBar/>
+                <nav className="top-buttons">
+                    <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
+                    <div className="buttons">
+                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
+                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
+                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
+                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
+                    </div>
+                </nav>
 
                 <div className="top-photo-bal">
                     <div className="hom-wor-txt">
-                        Balance <br/> Coordination
+                        Balance  & Coordination
                     </div>
 
 
@@ -59,6 +64,30 @@ const Balance: React.FC = () => {
                             </div>
                         </button>
 
+                        <button className="romanian">
+                            <div className="romanian">
+                                Romanian Deadlift
+                            </div>
+                        </button>
+
+                        <button className="clock">
+                            <div className="clock-text">
+                                Around the Clock
+                            </div>
+                        </button>
+
+                        <button className="row">
+                            <div className="row-text">
+                                Cable Row
+                            </div>
+                        </button>
+
+                        <button className="plank">
+                            <div className="plank-text">
+                                Plank
+                            </div>
+                        </button>
+
                         <button className="toss">
                             <div className="toss-text">
                                 Ballon Toss
@@ -86,6 +115,45 @@ const Balance: React.FC = () => {
                         Target Practise
                     </div>
                 </button>
+
+                <button className="hockey">
+                    <div className="hockey-text">
+                        Balloon Hockey
+                    </div>
+                </button>
+
+                <button className="dribbling">
+                    <div className="dribbling-text">
+                        Dribbling
+                    </div>
+                </button>
+
+                <button className="rings">
+                    <div className="rings-text">
+                        Rings
+                    </div>
+                </button>
+
+                <button className="bounce">
+                    <div className="bounce-text">
+                        Wall Ball Bounce
+                    </div>
+                </button>
+
+
+            </div>
+
+
+
+
+            <div className="about">
+                <div className="about-buttons">
+                    <button>About Us</button>
+                    <button>News</button>
+                    <button>Privacy Policy</button>
+
+                </div>
+                <label className="copyright">Copyright Â© 2023 Fitness planet</label>
             </div>
 
             <BottomBar/>

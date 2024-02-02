@@ -173,7 +173,12 @@ const router = createBrowserRouter(
         {
             path:"/flexibility",
             element:<Flexibility/>
-        }
+        },
+
+        {
+            path:"/balance",
+            element:<Balance/>
+        },
 
 
 

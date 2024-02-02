@@ -17,15 +17,17 @@
     background-position: center;
     text-align: center;
     color: white;
+    margin-top: 250px;
 }
 
 
 .hom-wor-txt{
-    font-family: "Nothing You Could Do", cursive;
+    font-family: "Balance & Coordination", cursive;
     font-weight: 400;
     font-style: normal;
     margin-top: 250px;
     font-size: 112px;
+
 
 }
 
@@ -56,7 +58,7 @@
 .kneedrive{
     width: 300px;
     height: 200px;
-    background-image: url("../images/box.jpg");
+    background-image: url("../images/box.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -71,7 +73,7 @@
 .deadlift{
     width: 300px;
     height: 200px;
-    background-image: url("../images/deadlift.jpg");
+    background-image: url("../images/deadlift.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -85,7 +87,7 @@
 .lunge{
     width: 300px;
     height: 200px;
-    background-image: url("../images/lunge.jpg");
+    background-image: url("../images/lunge.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -100,7 +102,67 @@
 .squat{
     width: 300px;
     height: 200px;
-    background-image: url("../images/squat.jpg");
+    background-image: url("../images/squat.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.romanian{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/romanian.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.clock{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/clock.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.row{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/row.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.plank{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/plank.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -157,6 +219,67 @@
 .target{
     width: 300px;
     height: 200px;
+    background-image: url("../images/target.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.hockey{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/hockey.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.dribbling{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/dribbling.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.rings{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/rings.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.aadditionaltips{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/bounce.png");
     background-image: url("../images/target.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
