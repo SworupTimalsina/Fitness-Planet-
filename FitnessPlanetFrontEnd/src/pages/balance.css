@@ -60,7 +60,7 @@
 .kneedrive{
     width: 300px;
     height: 200px;
-    background-image: url("../images/box.jpg");
+    background-image: url("../images/box.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -75,7 +75,7 @@
 .deadlift{
     width: 300px;
     height: 200px;
-    background-image: url("../images/deadlift.jpg");
+    background-image: url("../images/deadlift.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -89,7 +89,7 @@
 .lunge{
     width: 300px;
     height: 200px;
-    background-image: url("../images/lunge.jpg");
+    background-image: url("../images/lunge.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -104,7 +104,7 @@
 .squat{
     width: 300px;
     height: 200px;
-    background-image: url("../images/squat.jpg");
+    background-image: url("../images/squat.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -119,7 +119,7 @@
 .romanian{
     width: 300px;
     height: 200px;
-    background-image: url("../images/squat.jpg");
+    background-image: url("../images/romanian.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -134,7 +134,7 @@
 .clock{
     width: 300px;
     height: 200px;
-    background-image: url("../images/squat.jpg");
+    background-image: url("../images/clock.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -149,7 +149,7 @@
 .row{
     width: 300px;
     height: 200px;
-    background-image: url("../images/squat.jpg");
+    background-image: url("../images/row.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -164,7 +164,7 @@
 .plank{
     width: 300px;
     height: 200px;
-    background-image: url("../images/plank.jpeg");
+    background-image: url("../images/plank.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -236,7 +236,7 @@
 .hockey{
     width: 300px;
     height: 200px;
-    background-image: url("../images/target.png");
+    background-image: url("../images/hockey.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -251,7 +251,7 @@
 .dribbling{
     width: 300px;
     height: 200px;
-    background-image: url("../images/target.png");
+    background-image: url("../images/dribbling.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -266,7 +266,7 @@
 .rings{
     width: 300px;
     height: 200px;
-    background-image: url("../images/target.png");
+    background-image: url("../images/rings.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -281,7 +281,7 @@
 .bounce{
     width: 300px;
     height: 200px;
-    background-image: url("../images/target.png");
+    background-image: url("../images/bounce.png");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
