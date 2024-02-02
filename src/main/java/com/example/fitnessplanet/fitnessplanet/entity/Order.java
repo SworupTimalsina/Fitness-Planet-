@@ -3,6 +3,8 @@ package com.example.fitnessplanet.fitnessplanet.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 
 @Builder
 @Getter
@@ -30,5 +32,8 @@ public class Order {
 
     @Column(name = "total", nullable = false)
     private Integer total;
+
+    @Column(name = "order_date", nullable = false)
+    private LocalDateTime orderDate;
 
 }

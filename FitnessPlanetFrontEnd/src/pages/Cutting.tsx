@@ -14,7 +14,7 @@ const Cutting: React.FC = () => {
         <div className="container2">
 
             <TopBar/>
-            <h2>Select Your Age</h2>
+            <h2 className="sel">Select Your Age</h2>
             <div className="image-container">
                 <Link to="/cut1">
                 <button className="image"><img src={age18} width="200" height="200"/></button>

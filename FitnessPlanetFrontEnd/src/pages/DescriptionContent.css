@@ -4,11 +4,17 @@ h3 {
     font-size: 30px;
     color: red;
 }
-h2 {
-    text-align: center;
-}
+/*h2 {*/
+/*    text-align: center;*/
+/*}*/
 
 p{
     text-align: left;
     margin-left: 30px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

@@ -50,6 +50,7 @@ const RegistrationForm: React.FC = () => {
                 navigate('/login');
             })
             .catch(error => {
+
                 console.error('Registration failed:', error.message);
             });
     };

@@ -6,6 +6,15 @@ import TopBar from "./components/topbar.tsx";
 
 
 const Profile: React.FC = () => {
+    // interface User{
+    //     id: number;
+    //     firstName: string;
+    //     lastName: string;
+    //     email: string;
+    //     username: string;
+    //     password: string;
+    //
+    // }
     const [showPassword, setShowPassword] = useState(false);
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');

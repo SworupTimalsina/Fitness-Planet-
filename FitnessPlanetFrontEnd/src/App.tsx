@@ -5,10 +5,8 @@ import ForgotPass from "./pages/forgotpass.tsx";
 import Registration from "./pages/registration.tsx";
 import Dashboard from "./pages/dashboard.tsx";
 import Review from "./pages/review.tsx";
-// import DescriptionContent from "./pages/DescriptionContent.tsx";
 import Nutritionaltips from "./pages/nutritionaltips.tsx";
 import Products from "./pages/products.tsx";
-import Trainers from "./pages/trainer.tsx";
 import GymTip from "./pages/gymtips.tsx";
 import Bulking from "./pages/Bulking.tsx";
 import Cutting from "./pages/Cutting.tsx";
@@ -27,6 +25,7 @@ import Cut1 from "./pages/cut1.tsx"
 import Cut2 from "./pages/cut2.tsx"
 import Cut3 from "./pages/cut3.tsx"
 import Cut4 from "./pages/cut4.tsx"
+import OrderHistory from "./pages/OrderHistory.tsx";
 const router = createBrowserRouter(
     [
         {
@@ -59,11 +58,6 @@ const router = createBrowserRouter(
             path:"/products",
             element:<Products/>
         },
-        // {
-        //     path:"/Description",
-        //     element:<DescriptionContent/>
-        // },
-
         {
             path:"/article",
             element:<Article/>
@@ -80,10 +74,6 @@ const router = createBrowserRouter(
         {
             path:"/Nutrition",
             element:<Nutritionaltips/>
-        },
-        {
-            path:"/Trainers",
-            element:<Trainers/>
         },
         {
             path:"/GymTips",
@@ -152,6 +142,11 @@ const router = createBrowserRouter(
             path:"/cut4",
             element:<Cut4/>
         },
+        {
+            path:"/order",
+            element:<OrderHistory/>
+        },
+
 
 
 

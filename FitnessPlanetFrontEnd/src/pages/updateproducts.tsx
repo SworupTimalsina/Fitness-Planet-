@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './adminpanel.css';
 
 const UpdatePro: React.FC = () => {
+    const [id, setId] = useState(0);
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [category, setCategory] = useState('');
@@ -20,6 +21,7 @@ const UpdatePro: React.FC = () => {
                 return response.json();
             })
             .then(data => {
+                setId(data.id);
                 setName(data.name);
                 setPrice(data.price);
                 setCategory(data.category);
@@ -45,6 +47,7 @@ const UpdatePro: React.FC = () => {
 
     const handleUpdateClick = () => {
         const updatedData = {
+            id: id,
             name: name,
             price: price,
             category: category,
@@ -54,7 +57,7 @@ const UpdatePro: React.FC = () => {
 
 
         fetch(`http://localhost:8080/item/update`, {
-            method: 'PUT', // Change to 'PUT'
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -104,6 +107,7 @@ const UpdatePro: React.FC = () => {
                                 value={category}
                                 onChange={handleCategoryChange}
                             >
+                                <option>Dumbbells</option>
                                 <option>Treadmill</option>
                                 <option>Home Gyms</option>
                                 <option>Jump Ropes</option>

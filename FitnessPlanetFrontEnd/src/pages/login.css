@@ -115,7 +115,6 @@
     transition: color 0.3s ease;
     font-size: 15px;
     flex-direction: row;
-    margin-top: 20px;
 
 
 }
@@ -133,4 +132,15 @@
 .regsiterlink:hover{
     color: red;
 }
+
+.l-admin {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Poppins, sans-serif;
+
+}
+.l-admin:hover{
+    color: red;
+}
+
+
 
