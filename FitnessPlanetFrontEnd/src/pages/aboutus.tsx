@@ -1,7 +1,6 @@
 import React from 'react';
 import './aboutus.css';
 import TopBar from "./components/topbar.tsx";
-import BottomBar from "./components/BottomBar.tsx";
 import logo from "../images/logo.png"
 
 
@@ -17,8 +16,6 @@ const Article: React.FC = () => {
 
                 <img className="logo-img" src={logo} width={400} height={400}/>
             </div>
-
-            <BottomBar/>
 
         </>
     );

@@ -6,65 +6,69 @@
     height: 100vh;
 }
 
+.forcolor{
+    color: white;
+}
+
 .equipment-section  {
     position: relative;
     width: 100vw;
     height: 400px;
-    font-family: Poppins, sans-serif;
+    font-family: "julius sans one", sans-serif;
     font-size: 20px;
     background: url('../images/gym.png') center center no-repeat;
     background-size: cover;
-    border-radius: 8px;
+    text-align: start;
     display: flex;
     flex-direction: column;
-    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
 .jumprope-section  {
     position: relative;
     width: 100vw;
-    height: 500px;
-    font-family: Poppins, sans-serif;
+    height: 400px;
+    font-family: "julius sans one", sans-serif;
     font-size: 20px;
     background: url('../images/ok.png') center center no-repeat;
     background-size: cover;
-    border-radius: 8px;
+    text-align: start;
     display: flex;
     flex-direction: column;
-    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
 .home-section  {
     position: relative;
     width: 100vw;
     height: 400px;
-    font-family: Poppins, sans-serif;
+    font-family: "julius sans one", sans-serif;
     font-size: 20px;
     background: url('../images/ok1.png') center center no-repeat;
     background-size: cover;
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: start;
 }
 
 .bike-section  {
     position: relative;
     width: 100vw;
     height: 400px;
-    font-family: Poppins, sans-serif;
+    font-family: "julius sans one", sans-serif;
     font-size: 20px;
     /*color: ;*/
     background: url('../images/ok4.avif') center center no-repeat;
     background-size: cover;
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: start;
 }
 
 .dumbbell-handle {
@@ -80,4 +84,18 @@
     color: #fff;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.fitness-guide{
+    color: white;
+    max-width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.topics{
+    color: black;
 }

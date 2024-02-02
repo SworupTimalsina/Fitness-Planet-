@@ -8,18 +8,16 @@
 }
 
 
-
 .top-photo-bal{
     width: 100%;
     max-width: 100vw;
     height: 100vh;
-    background-image: url("../images/joit.png");
+    background-image: url("../images/Balance.png");
     background-size: cover;
     background-position: center;
     text-align: center;
-
+    color: white;
 }
-
 
 
 .hom-wor-txt{
@@ -29,14 +27,17 @@
     margin-top: 250px;
     font-size: 112px;
 
-
-
-
 }
 
 .bbox{
     background-color: #C3D4A6;
     margin-top: 20px;
+}
+
+.box3{
+    display: flex;
+    flex-direction:row;
+
 }
 
 .pplate-but{
@@ -52,53 +53,39 @@
 
 }
 
-.vveggie{
-    width: 300px;
-    height: 300px;
-    background-image: url("../images/veggies.png");
-    background-size: cover;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-
-}
-
-.pprotein{
-    width: 300px;
-    height: 300px;
-    background-image: url("../images/proteins.png");
-    background-size: cover;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
-
-.ccarbo{
-    width: 300px;
-    height: 300px;
-    background-image: url("../images/carbs.png");
-    background-size: cover;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
-    font-family: Poppins, sans-serif;
-    font-size: 28px;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-}
-
-.aadditionaltips{
+.kneedrive{
     width: 300px;
     height: 200px;
-    background-image: url("../images/addtips.png");
+    background-image: url("../images/box.jpg");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+.deadlift{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/deadlift.jpg");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.lunge{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/lunge.jpg");
     background-size: cover;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 0;
@@ -106,4 +93,78 @@
     font-size: 28px;
     color: white;
     margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.squat{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/squat.jpg");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.toss{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/toss.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.juggling{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/juggling.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.smallball{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/smallball.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.target{
+    width: 300px;
+    height: 200px;
+    background-image: url("../images/target.png");
+    background-size: cover;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-family: Poppins, sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-top: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }

@@ -51,6 +51,7 @@ const RegistrationForm: React.FC = () => {
             })
             .catch(error => {
                 console.error('Registration failed:', error.message);
+                alert("Please fill in all the details correctly")
             });
     };
 

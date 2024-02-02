@@ -8,11 +8,8 @@ import Review from "./pages/review.tsx";
 // import DescriptionContent from "./pages/DescriptionContent.tsx";
 import Nutritionaltips from "./pages/nutritionaltips.tsx";
 import Products from "./pages/products.tsx";
-import Trainers from "./pages/trainer.tsx";
-import GymTip from "./pages/gymtips.tsx";
 import Bulking from "./pages/Bulking.tsx";
 import Cutting from "./pages/Cutting.tsx";
-import Gymtips from "./pages/gymtips.tsx";
 import Article from "./pages/article.tsx";
 import HomeWorkout from "./pages/homeworkout.tsx";
 import Adminpanel from "./pages/adminpanel.tsx";
@@ -27,6 +24,11 @@ import Cut1 from "./pages/cut1.tsx"
 import Cut2 from "./pages/cut2.tsx"
 import Cut3 from "./pages/cut3.tsx"
 import Cut4 from "./pages/cut4.tsx"
+import Challenges from "./pages/challenges.tsx";
+import JointWorkout from "./pages/jointwork.tsx";
+import Balance from "./pages/balance.tsx";
+import Warmup from "./pages/warmup.tsx";
+import Flexibility from "./pages/flexibility.tsx";
 const router = createBrowserRouter(
     [
         {
@@ -81,19 +83,19 @@ const router = createBrowserRouter(
             path:"/Nutrition",
             element:<Nutritionaltips/>
         },
-        {
-            path:"/Trainers",
-            element:<Trainers/>
-        },
-        {
-            path:"/GymTips",
-            element:<GymTip/>
-        },
-
-        {
-            path:"/Gymtips",
-            element:<Gymtips/>
-        },
+        // {
+        //     path:"/Trainers",
+        //     element:<Trainers/>
+        // },
+        // {
+        //     path:"/GymTip",
+        //     element:<GymTip/>
+        // },
+        //
+        // {
+        //     path:"/Gymtips",
+        //     element:<Gymtips/>
+        // },
         {
             path:"/homeworkout",
             element:<HomeWorkout/>
@@ -152,6 +154,26 @@ const router = createBrowserRouter(
             path:"/cut4",
             element:<Cut4/>
         },
+        {
+            path:"/challenges",
+            element:<Challenges/>
+        },
+        {
+            path:"/joint",
+            element:<JointWorkout/>
+        },
+        {
+            path:"/balance",
+            element:<Balance/>
+        },
+        {
+            path:"/warmup",
+            element:<Warmup/>
+        },
+        {
+            path:"/flexibility",
+            element:<Flexibility/>
+        }
 
 
 

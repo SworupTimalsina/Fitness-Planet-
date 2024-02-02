@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import './jointwork.css';
+import BottomBar from "./components/BottomBar.tsx";
+import TopBar from "./components/topbar.tsx";
+import {Link} from "react-router-dom";
 
 
 
@@ -17,21 +20,15 @@ const JointWorkout: React.FC = () => {
 
     return (
         <>
-            <head><title>Fitness Planet</title></head>
+
+
+
             <div className="homework-page">
-                <nav className="top-buttons">
-                    <a href='/login' style={{ backgroundColor: 'black', color: 'white' }} className="profile-button"><b>Profile</b></a>
-                    <div className="buttons">
-                        <a href='/dashboard' style={{ backgroundColor: 'black', color: 'white' }}><b>Home</b></a>
-                        <a href='/products' style={{ backgroundColor: 'black', color: 'white' }}><b>Products</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>Tracking</b></a>
-                        <a href='#' style={{ backgroundColor: 'black', color: 'white' }}><b>About Us</b></a>
-                    </div>
-                </nav>
+                <TopBar/>
 
                 <div className="top-photo-joint">
                     <div className="home-wor-txt">
-                        Workouts for <br/>weak joints
+                        Fitness tips and <br/> workout guidance.
                     </div>
 
 
@@ -40,12 +37,10 @@ const JointWorkout: React.FC = () => {
                 <div>
                     <div className="jo-work-but">
 
-
-
+                        <Link to="/dumbbell">
                         <button className="ellip" onClick={openModal}>
-                            Elliptical
-                            Trainer
-                        </button>
+                            Step by Step guide
+                        </button> </Link>
                         {isModalOpen && (
                             <div className="modal">
                                 <span className="close" onClick={closeModal}>&times;</span>
@@ -53,40 +48,31 @@ const JointWorkout: React.FC = () => {
                             </div>
                         )}
 
+                        <Link to="/warmup">
                         <button className="stat-bike" >
-                            Stationary Bikes
-                        </button>
+                            Warm Ups
+                        </button></Link>
 
+                        <Link to="/challenges">
                         <button className="row-mach" >
-                            Rowing Machines
-                        </button>
+                            Challenges
+                        </button></Link>
 
                         <button className="stepppp">
-                            Stepping
-                            Machine
+                            Balance and
+                            Coordination
                         </button>
 
+                        <Link to="/flexibility">
                         <button className="vibra">
-                            Vibration
-                            Plate
-                        </button>
+                            Flexibility Exercises
+                        </button></Link>
 
                     </div>
 
                 </div>
 
-                <div className="about">
-                    <div className="about-buttons">
-                        <button>About Us</button>
-                        <button>News</button>
-                        <button>Privacy Policy</button>
-
-                    </div>
-                    <label className="copyright">Copyright © 2023 Fitness planet</label>
-                </div>
-
-
-
+                <BottomBar/>
 
             </div>
         </>

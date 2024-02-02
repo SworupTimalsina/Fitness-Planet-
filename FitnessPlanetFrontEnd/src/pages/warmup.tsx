@@ -7,73 +7,75 @@ const Warmup: React.FC = () => {
     return (
         <div className="fitness-guide">
             <TopBar/>
-            <h1>WARMUP EXERCISES</h1>
+
+            <label className="warmup-exercise"><b>WARMUP EXERCISES:-</b></label>
 
             <section className="warmup">
-                <p>
-                    Gradual Intensity:
+                <p><u>
+                    Gradual Intensity:</u>
                     <ol>
                         <li>Start with low-intensity exercises and gradually increase the intensity..</li>
-                        <li>Warm up should last 5-10 minutes.</li>
+                        Warm up should last 5-10 minutes.
 
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Dynamic Movements:
+                <p><u>
+                    Dynamic Movements:</u>
                     <ol>
                         <li>Focus on dynamic movements that engage multiple muscle groups.</li>
-                        <li>Avoid static stretches before your workout; save those for post-exercise.</li>
+                        Avoid static stretches before your workout; save those for post-exercise.
 
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Joint Mobility:
+                <p><u>
+                    Joint Mobility:</u>
                     <ol>
 
                         <li>Include movements that promote joint mobility, especially for areas prone to injury.</li>
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Sport-Specific:
+                <p><u>
+                    Sport-Specific:</u>
                     <ol>
-                    <li>Tailor your warm-up to the specific demands of your workout or sport.</li>
+
+                        <li>Tailor your warm-up to the specific demands of your workout or sport.</li>
                     </ol>
 
                 </p><br></br>
 
-                <p>
-                    Cardiovascular Warm-up:
+                <p><u>
+                    Cardiovascular Warm-up:</u>
                     <ol>
                         <li>Incorporate light aerobic exercises to increase heart rate and warm up your cardiovascular system.</li>
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Jumping Jacks:
+                <p><u>
+                    Jumping Jacks:</u>
                     <ol>
                         <li>Engages the whole body and increases heart rate.</li>
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Leg Swings:
+                <p><u>
+                    Leg Swings:</u>
                     <ol>
                         <li>Improves hip mobility and warms up leg muscles.</li>
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Arm Circles:
+                <p><u>
+                    Arm Circles:</u>
                     <ol>
                         <li>Loosens up shoulders and increases blood flow.</li>
                     </ol>
                 </p><br></br>
 
-                <p>
-                    High Knees:
+                <p><u>
+                    High Knees:</u>
                     <ol>
                         <li>Loosens up shoulders and increases blood flow.</li>
                     </ol>
@@ -86,40 +88,40 @@ const Warmup: React.FC = () => {
             </section>
 
             <section className="warmup2">
-                <p>
-                    Bodyweight Squats:
+                <p><u>
+                    Bodyweight Squats:</u>
                     <ol>
                         <li>Activates the lower body muscles.</li>
 
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Dynamic Lunges and Hip Circles:
+                <p><u>
+                    Dynamic Lunges and Hip Circles:</u>
                     <ol>
                         <li>Works on leg strength and flexibility.Enhances hip mobility and flexibility.</li>
 
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Shoulder Rolls:
+                <p><u>
+                    Shoulder Rolls:</u>
                     <ol>
                         <li>Loosens up the shoulders and upper back.</li>
 
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Plank with Shoulder Taps & Butt Kicks:
+                <p><u>
+                    Plank with Shoulder Taps & Butt Kicks:</u>
                     <ol>
                         <li>Loosens up the shoulders and upper back.Activates the core and upper body.</li>
 
                     </ol>
                 </p><br></br>
 
-                <p>
-                    Side Lunges & Rotational Torso Twists::
+                <p><u>
+                    Side Lunges & Rotational Torso Twists:</u>
                     <ol>
                         <li>Engages the inner and outer thighs.Improves spinal mobility.</li>
 
@@ -127,8 +129,8 @@ const Warmup: React.FC = () => {
                 </p><br></br>
 
 
-                <p>
-                    Calf Raises & Mountain Climbers:
+                <p><u>
+                    Calf Raises & Mountain Climbers:</u>
                     <ol>
                         <li>Warms up the calves and ankles.Engages the core and promotes cardiovascular fitness.</li>
 
