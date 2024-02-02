@@ -55,7 +55,7 @@ const AddPro: React.FC = () => {
                     <div className="name-div">
                         <label>Name:</label>
                         <input
-                            style={{ width: 610, backgroundColor: "white", color: "black" }}
+                            style={{ width: 600, backgroundColor: "white", color: "black", height: 30, borderColor:'white', marginLeft:47}}
                             type="text"
                             name="productName"
                             value={formData.productName}
@@ -67,15 +67,15 @@ const AddPro: React.FC = () => {
                         <label>Price:</label>
                         <div className="proro">
                             <input
-                                style={{ width: 250, backgroundColor: "white", color: "black" }}
+                                style={{ width: 250, backgroundColor: "white", color: "black" ,height: 30, borderColor:'white', marginLeft:55}}
                                 type="number"
                                 name="price"
                                 value={formData.price}
                                 onChange={handleInputChange}
                             />
-                            <label>Category:</label>
+                            <label style={{marginLeft:20}}>Category:</label>
                             <select
-                                style={{ width: 150, backgroundColor: "white", color: "black" }}
+                                style={{ width: 225, backgroundColor: "white", color: "black" ,height: 30, borderColor:'white', marginLeft:15}}
                                 name="category"
                                 value={formData.category}
                                 onChange={handleInputChange}
@@ -94,7 +94,7 @@ const AddPro: React.FC = () => {
                     <div className="des-div">
                         <label>Description:</label>
                         <input
-                            style={{ width: 600, height: 250, backgroundColor: "white", color: "black" }}
+                            style={{ width: 600, height: 250, backgroundColor: "white", color: "black", borderColor:'white'}}
                             type="text"
                             name="description"
                             value={formData.description}
@@ -102,14 +102,16 @@ const AddPro: React.FC = () => {
                         />
 
                     </div>
+                    <div className="img-boxx" style={{display:"flex", }}>
                     <label>Image URL:</label>
                     <input
-                        style={{ width: 600, backgroundColor: "white", color: "black" }}
+                        style={{ width: 600, backgroundColor: "white", color: "black", height: 30, borderColor:'white', marginLeft:28 }}
                         type="text"
                         name="imageUrl"
                         value={formData.imageUrl}
                         onChange={handleInputChange}
                     />
+                    </div>
                     <div className="add-two-but">
 
                         <button className="add-pro-btn" onClick={handleAddClick} disabled={loading} >{loading ? 'Adding...' : 'Add'}</button>

@@ -70,6 +70,7 @@ const UpdatePro: React.FC = () => {
                 return response.json();
             })
             .then(data => {
+
                 console.log('Update successful:', data);
             })
             .catch(error => {
@@ -84,7 +85,7 @@ const UpdatePro: React.FC = () => {
                     <div className="name-div">
                         <label>Name:</label>
                         <input
-                            style={{ width: 610, backgroundColor: 'white', color: 'black' }}
+                            style={{ width: 600, backgroundColor: "white", color: "black", height: 30, borderColor:'white', marginLeft:47}}
                             value={name}
                             onChange={handleNameChange}
                         />
@@ -95,13 +96,13 @@ const UpdatePro: React.FC = () => {
                         <label>Price:</label>
                         <div className="proro">
                             <input
-                                style={{ width: 250, backgroundColor: 'white', color: 'black', height:'30px'}}
+                                style={{ width: 250, backgroundColor: "white", color: "black" ,height: 30, borderColor:'white', marginLeft:55}}
                                 value={price}
                                 onChange={handlePriceChange}
                             />
-                            <label>Category:</label>
+                            <label style={{marginLeft:20}}>Category:</label>
                             <select
-                                style={{ width: 150, backgroundColor: 'white', color: 'black', height:'30px' }}
+                                style={{ width: 225, backgroundColor: "white", color: "black" ,height: 30, borderColor:'white', marginLeft:15}}
                                 value={category}
                                 onChange={handleCategoryChange}
                             >
@@ -119,19 +120,20 @@ const UpdatePro: React.FC = () => {
                     <div className="des-div">
                         <label>Description:</label>
                         <input
-                            style={{ width: 600, height: 250, backgroundColor: 'white', color: 'black' }}
+                            style={{ width: 600, height: 250, backgroundColor: "white", color: "black", borderColor:'white'}}
                             value={description}
                             onChange={handleDescriptionChange}
                         />
                     </div>
-
+                    <div className="img-boxx" style={{display:"flex", }}>
                         <label>Image URL:</label>
                     <input
-                        style={{ width: 250, backgroundColor: 'white', color: 'black', height:'30px' }}
+                        style={{ width: 600, backgroundColor: "white", color: "black", height: 30, borderColor:'white', marginLeft:28 }}
                         name="imageUrl"
                         value={imageUrl}
                         onChange={handlePriceChange}
                     />
+                    </div>
                         <button className="add-pro-btn" onClick={handleUpdateClick}>Update</button>
 
                 </div>

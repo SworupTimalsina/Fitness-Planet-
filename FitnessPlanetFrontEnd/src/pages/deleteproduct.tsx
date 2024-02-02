@@ -6,6 +6,7 @@ const DeletePro: React.FC = () => {
 
     const handleDeleteClick = async () => {
         try {
+
             const response = await fetch(`http://localhost:8080/item/deleteByName/${productName}`, {
                 method: 'DELETE',
                 headers: {
@@ -14,9 +15,11 @@ const DeletePro: React.FC = () => {
             });
 
             if (!response.ok) {
+
                 let errorMessage: string;
 
                 try {
+
                     const errorResponse = await response.json();
                     errorMessage = errorResponse.message || 'Internal Server Error';
                 } catch (jsonError) {
@@ -25,15 +28,12 @@ const DeletePro: React.FC = () => {
                     console.error('Full Response Content:', await response.text());
                     errorMessage = 'Internal Server Error';
                 }
-
                 console.error('Error:', errorMessage);
-                // Optionally, provide user feedback here for errors
                 return;
             }
 
             const data = await response.json();
-            console.log('Success:', data); // Log the success data
-            // Optionally, provide user feedback here
+            console.log('Success:', data);
 
         } catch (error: any) {
             console.error('Error:', error.message);
@@ -46,15 +46,15 @@ const DeletePro: React.FC = () => {
             <div className="addupdel-bg">
                 <div className="add-holder">
                     <div className="name-div">
-                        <label>Name:</label>
+                        <label style={{marginTop:100}}>Name:</label>
                         <input
-                            style={{ width: 300 }}
+                            style={{ width: 600, backgroundColor: "white", color: "black", height: 30, borderColor:'white', marginLeft:47, marginTop:100}}
                             value={productName}
                             onChange={(e) => setProductName(e.target.value)}
                         />
                     </div>
 
-                    <button className="add-pro-btn" onClick={handleDeleteClick}>Delete</button>
+                    <button className="del-pro-btn" onClick={handleDeleteClick}>Delete</button>
                 </div>
             </div>
         </>

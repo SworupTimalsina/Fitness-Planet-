@@ -70,7 +70,7 @@ const DescriptionContent: React.FC<DescriptionContentProps> = ({ productId }) =>
 
     return (
         <div className="details">
-            <h2>{productDetails.productName}</h2>
+            <h3>{productDetails.productName}</h3>
             <label>Rs. {productDetails.price}</label>
             <p style={{ marginLeft: "100px" }}>
                 Description: <br />
