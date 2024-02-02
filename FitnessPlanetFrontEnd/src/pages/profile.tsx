@@ -188,6 +188,8 @@ const Profile: React.FC = () => {
                     </button>
                 </div>
                 <img src={logo} className="logo" />
+
+            <a href="/" style={{color:'white', position:'absolute', bottom:"40px", right:"30px", fontFamily:"Poppins", fontSize:"25px"}}> <u>Log Out</u> </a>
             </div>
 
         </>

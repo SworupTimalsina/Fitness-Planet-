@@ -28,6 +28,11 @@ import JointWorkout from "./pages/jointwork.tsx";
 import Balance from "./pages/balance.tsx";
 import Warmup from "./pages/warmup.tsx";
 import Flexibility from "./pages/flexibility.tsx";
+import Productsd from "./pages/produmbell.tsx";
+import OrderHistory from "./pages/OrderHistory.tsx";
+import Productse from "./pages/proex.tsx";
+import Productsh from "./pages/prohome.tsx";
+import Productsj from "./pages/projump.tsx";
 const router = createBrowserRouter(
     [
         {
@@ -61,6 +66,22 @@ const router = createBrowserRouter(
             element:<Products/>
         },
         {
+            path:"/products/dumbells",
+            element:<Productsd/>
+        },
+        {
+            path:"/products/exercise",
+            element:<Productse/>
+        },
+        {
+            path:"/products/home",
+            element:<Productsh/>
+        },
+        {
+            path:"/products/jump",
+            element:<Productsj/>
+        },
+        {
             path:"/article",
             element:<Article/>
         },
@@ -77,19 +98,6 @@ const router = createBrowserRouter(
             path:"/Nutrition",
             element:<Nutritionaltips/>
         },
-        // {
-        //     path:"/Trainers",
-        //     element:<Trainers/>
-        // },
-        // {
-        //     path:"/GymTip",
-        //     element:<GymTip/>
-        // },
-        //
-        // {
-        //     path:"/Gymtips",
-        //     element:<Gymtips/>
-        // },
         {
             path:"/homeworkout",
             element:<HomeWorkout/>
@@ -102,17 +110,17 @@ const router = createBrowserRouter(
 
             path:"/bulk1",
             element:<Bulk1/>
-},
+            },
 
-{
-    path:"/bulk2",
-        element:<Bulk2/>
-},
+            {
+                path:"/bulk2",
+                    element:<Bulk2/>
+            },
 
-{
-    path:"/bulk3",
-        element:<Bulk3/>
-},
+            {
+                path:"/bulk3",
+                    element:<Bulk3/>
+            },
 
         {
             path: "/bulk4",
@@ -120,18 +128,18 @@ const router = createBrowserRouter(
         },
         {
 
-    path:"/dumbbell",
-    element:<Dumbbell/>
-},
-{
-    path:"/profile",
-        element:<Profile/>
-},
-{
-    path:"/aboutus",
-        element:<Aboutus/>
+            path:"/dumbbell",
+            element:<Dumbbell/>
+        },
+        {
+            path:"/profile",
+                element:<Profile/>
+        },
+        {
+            path:"/aboutus",
+                element:<Aboutus/>
 
-},
+        },
         {
             path:"/cut1",
             element:<Cut1/>
@@ -172,6 +180,10 @@ const router = createBrowserRouter(
         {
             path:"/balance",
             element:<Balance/>
+        },
+        {
+            path:"/order",
+            element:<OrderHistory/>
         },
 
 

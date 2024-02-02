@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import "./products.css"
 import DescriptionContent from "./DescriptionContent.tsx";
 import TopBar from "./components/topbar.tsx";
-import { useLocation } from 'react-router-dom';
+
 
 
 
@@ -46,9 +46,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onViewClick }) => {
         </div>
     );
 };
-const Products = () => {
+const Productsj = () => {
     const [products, setProducts] = useState<Product[]>([]);
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>('Jump Ropes');
     const [selectedProductId, setSelectedProductId] = useState<number | null>(null);
     const [searchQuery, setSearchQuery] = useState<string>('');
     const navigate = useNavigate();
@@ -98,52 +98,52 @@ const Products = () => {
         }
     }, [selectedProductId]);
 
-        return (
-            <>
+    return (
+        <>
 
-                <TopBar/>
-                <div className="bg-pro">
-                    <div className="categories">
-                        <button className="cteg-btn" onClick={() => setSelectedCategory('Dumbbells')}>Dumbbells</button>
-                        <button className="cteg-btn" onClick={() => setSelectedCategory('Treadmill')}>Treadmill</button>
-                        <button className="cteg-btn" onClick={() => setSelectedCategory('Home Gyms')}>Home Gyms</button>
-                        <button className="cteg-btn" onClick={() => setSelectedCategory('Jump Ropes')}>Jump Ropes
-                        </button>
-                        <button className="cteg-btn" onClick={() => setSelectedCategory('Exercise Bikes')}>Exercise
-                            Bikes
-                        </button>
-                        <button className="cteg-btn" onClick={() => setSelectedCategory('Rowing Machines')}>Rowing
-                            Machines
-                        </button>
-                        <button className="cteg-btn" onClick={() => setSelectedCategory('Pull Up and Push Up Bar')}>Pull
-                            Up and Push Up Bar
-                        </button>
-                        <button className="cteg-btn"
-                                onClick={() => setSelectedCategory('Core and Abdominal Trainers')}>Core and Abdominal
-                            Trainers
-                        </button>
-                        <button className="cteg-btn" onClick={() => setSelectedCategory(null)}>All</button>
-                    </div>
-
-                    <input
-                        type="text"
-                        placeholder="Search products..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="search-inp"/>
-
-                    <div className="pro-dis" style={{display: 'flex', flexWrap: 'wrap', width: '70%', color: 'black'}}>
-                        {filterProducts().map((product) => (
-                            <ProductCard key={product.id} product={product} onViewClick={handleViewClick}/>
-                        ))}
-                    </div>
+            <TopBar/>
+            <div className="bg-pro">
+                <div className="categories">
+                    <button className="cteg-btn" onClick={() => setSelectedCategory('Dumbbells')}>Dumbbells</button>
+                    <button className="cteg-btn" onClick={() => setSelectedCategory('Treadmill')}>Treadmill</button>
+                    <button className="cteg-btn" onClick={() => setSelectedCategory('Home Gyms')}>Home Gyms</button>
+                    <button className="cteg-btn" onClick={() => setSelectedCategory('Jump Ropes')}>Jump Ropes
+                    </button>
+                    <button className="cteg-btn" onClick={() => setSelectedCategory('Exercise Bikes')}>Exercise
+                        Bikes
+                    </button>
+                    <button className="cteg-btn" onClick={() => setSelectedCategory('Rowing Machines')}>Rowing
+                        Machines
+                    </button>
+                    <button className="cteg-btn" onClick={() => setSelectedCategory('Pull Up and Push Up Bar')}>Pull
+                        Up and Push Up Bar
+                    </button>
+                    <button className="cteg-btn"
+                            onClick={() => setSelectedCategory('Core and Abdominal Trainers')}>Core and Abdominal
+                        Trainers
+                    </button>
+                    <button className="cteg-btn" onClick={() => setSelectedCategory(null)}>All</button>
                 </div>
 
-                {selectedProductId &&
-                    <DescriptionContent key={`description-${selectedProductId}`} productId={selectedProductId}/>}
-            </>
-        );
-    };
+                <input
+                    type="text"
+                    placeholder="Search products..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="search-inp"/>
+
+                <div className="pro-dis" style={{display: 'flex', flexWrap: 'wrap', width: '70%', color: 'black'}}>
+                    {filterProducts().map((product) => (
+                        <ProductCard key={product.id} product={product} onViewClick={handleViewClick}/>
+                    ))}
+                </div>
+            </div>
+
+            {selectedProductId &&
+                <DescriptionContent key={`description-${selectedProductId}`} productId={selectedProductId}/>}
+        </>
+    );
+};
 
 
-export default Products;
+export default Productsj;

@@ -16,7 +16,22 @@ const Dashboard: React.FC = () => {
 
     function toPro() {
         // Use Link component to navigate to the Products page with 'Dumbbells' category
-        navigate('/products', { state: { category: 'Dumbbells' } });
+        navigate('/products/dumbells');
+    }
+
+    function toProh() {
+        // Use Link component to navigate to the Products page with 'Dumbbells' category
+        navigate('/products/home');
+    }
+
+    function toProe() {
+        // Use Link component to navigate to the Products page with 'Dumbbells' category
+        navigate('/products/exercise');
+    }
+
+    function toProj() {
+        // Use Link component to navigate to the Products page with 'Dumbbells' category
+        navigate('/products/jump');
     }
         //
         // function toHome(){
@@ -59,19 +74,19 @@ const Dashboard: React.FC = () => {
                     )}
                     </button>
 
-                    <button className="home-eq" onMouseEnter={() => setHovered2(true)}  onMouseLeave={() => setHovered2(false)}> {isHovered2 ? (
+                    <button className="home-eq" onMouseEnter={() => setHovered2(true)}  onMouseLeave={() => setHovered2(false)} onClick={toProh}> {isHovered2 ? (
                         <div className="hover1-text">Explore our<br/> home equipments</div>
                     ) : (
                         <div className="home-eq-text"> Home Equipment</div>)}
                     </button>
 
-                    <button className="jump" onMouseEnter={() => setHovered3(true)}  onMouseLeave={() => setHovered3(false)}> {isHovered3 ? (
+                    <button className="jump" onMouseEnter={() => setHovered3(true)}  onMouseLeave={() => setHovered3(false)} onClick={toProj}> {isHovered3 ? (
                         <div className="hover2-text">Jump into<br/>the ropes<br/>section</div>
                     ) : (
                         <div className="jump-text">Jump Ropes</div>)}
                     </button>
 
-                    <button className="bikes" onMouseEnter={() => setHovered4(true)}  onMouseLeave={() => setHovered4(false)}> {isHovered4 ? (
+                    <button className="bikes" onMouseEnter={() => setHovered4(true)}  onMouseLeave={() => setHovered4(false)} onClick={toProe}> {isHovered4 ? (
                         <div className="hover3-text">Start your<br/>cardio journey</div>
                     ) : (
                         <div className="bikes-text">Exercise Bikes</div>)}

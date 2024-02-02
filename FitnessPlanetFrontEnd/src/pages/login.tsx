@@ -82,9 +82,9 @@ const Login: React.FC = () => {
                             onChange={() => setShowPassword(!showPassword)}
                         />
                         <label className="checkbox-label">Show Password</label>
-                        <a href="/forgotpass" className="forgotpass">
-                            Forgot Password
-                        </a>
+                        {/*<a href="/forgotpass" className="forgotpass">*/}
+                        {/*    Forgot Password*/}
+                        {/*</a>*/}
                     </div>
                     <div className="login-button">
                         <button type="button" style={{ backgroundColor: 'red' }} onClick={validateLogin} className="loginbutton">
